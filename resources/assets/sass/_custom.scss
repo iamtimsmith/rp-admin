@@ -1,0 +1,67 @@
+
+.section-monsters {
+  input {
+    width:100%;
+    font-size:$font-size-md;
+    padding:5px 10px
+  }
+  p {
+    font-size:$font-size-lg;
+    font-weight:bold;
+  }
+  ul {
+    list-style:none;
+    li {
+      a {
+        font-size:$font-size-md;
+      }
+    }
+  }
+  .abilities {
+    text-align:center;
+  }
+  .saving-throws {
+    span:after {
+      content:",";
+    }
+    span:last-child:after {
+      content:"";
+    }
+  }
+  .skills {
+    span:after {
+      content:",";
+    }
+    span:last-child:after {
+      content:"";
+    }
+  }
+  &.detail {
+    p {
+      font-size:$font-size-base;
+      font-weight:initial;
+    }
+    ul {
+      padding:0!important;
+    }
+  }
+}
+
+.section-spells {
+  input {
+    width:100%;
+    font-size:$font-size-md;
+    padding:5px 10px
+  }
+  p {
+    font-size:$font-size-md;
+  }
+  ul {
+    list-style:none;
+    li {
+      a {
+        font-size:$font-size-md;
+      }
+    }
+  }
+}
