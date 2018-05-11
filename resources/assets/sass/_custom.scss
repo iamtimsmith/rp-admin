@@ -1,3 +1,10 @@
+a {
+  text-decoration:none!important;
+}
+
+#article-ckeditor {
+  height:500px;
+}
 
 .section-monsters {
   input {
@@ -63,5 +70,23 @@
         font-size:$font-size-md;
       }
     }
+  }
+}
+
+.section-notes {
+  input {
+    width:100%;
+    font-size:$font-size-md;
+    padding:5px 10px;
+    margin-bottom:20px;
+  }
+}
+
+.section-locations {
+  input {
+    width:100%;
+    font-size:$font-size-md;
+    padding:5px 10px;
+    margin-bottom:20px;
   }
 }

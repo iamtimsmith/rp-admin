@@ -8,7 +8,9 @@
         <p class="h5 text-center">Initiative Tracker</p>
         <input type="text" id="addItem" @keyup.enter="addItem" placeholder="Enter an initiative item...">
         <ul class="list-group">
-          <li class="list-group-item" v-for="char in init">{{ char }}</li>
+          <draggable :list="init" class="dragArea">
+            <li class="list-group-item" v-for="char in init">{{ char }}</li>
+          </draggable>
         </ul>
       </div>
     </div>
@@ -17,7 +19,11 @@
 </template>
 
 <script>
+  import draggable from 'vuedraggable'
   export default {
+    components: {
+      draggable
+    },
     data() {
       return {
       init: [],
@@ -67,6 +73,16 @@
     }
     input {
       width:100%;
+    }
+    .dragArea {
+      li {
+        cursor:grab;
+        cursor:-webkit-grab;
+        &:active {
+          cursor:grabbing;
+          cursor:-webkit-grabbing;
+        }
+      }
     }
   }
 </style>

@@ -7,11 +7,20 @@
       <ul>
         <!--<li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>-->
-        <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/monsters">Monsters</a></li>
         <li><a href="/spells">Spells</a></li>
         <li><a href="/rules">Rules</a></li>
-
+      </ul>
+      <hr>
+      <ul>
+        <li>User Controls</li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li>
+          <a href="/notes">Notes</a>
+        </li>
+        <li><a href="/npcs">NPCs</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/party">Party</a></li>
       </ul>
 
       <div class="row" id="controls">
@@ -19,7 +28,7 @@
           <a href="#"><span class="fa fa-cog"></span></a>
         </div>
         <div class="col-6">
-          <a href="#"><span class="fa fa-user"></span></a>
+          <a href="/login"><span class="fa fa-user"></span></a>
         </div>
       </div>
     </div>
@@ -63,6 +72,9 @@
     &.showing {
       left:0;
     }
+    a {
+      color:#000;
+    }
     button {
       width:50px;
       .fa-close {
@@ -73,7 +85,7 @@
       list-style:none;
       li {
         a {
-          font-size:1.3rem;
+          font-size:1.1rem;
           text-decoration:none!important;
         }
       }
