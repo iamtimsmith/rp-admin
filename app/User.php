@@ -33,4 +33,7 @@ class User extends Authenticatable
     public function locations() {
         return $this->hasMany('App\Location');
     }
+    public function party() {
+        return $this->hasMany('App\Char');
+    }
 }

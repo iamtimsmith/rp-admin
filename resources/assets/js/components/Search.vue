@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  data() {
+  data: {
     search:''
   },
   methods: {
@@ -18,19 +18,19 @@ export default {
 			for (var i = 0; i < len; i++) {
 				var n = i+1;
 				var listItem = document.querySelector("#list>li:nth-child(" + n + ") > a");
-				var searchItem = document.querySelector("#list>li:nth-child(" + n + ") > a");
+				var searchItem = document.querySelector("#list>li:nth-child(" + n + ")");
 
 				// If search field is blank
 				if (this.search == '') {
-					listItem.style.display = 'block';
+					searchItem.style.display = 'block';
 				}
 				// If list items are not equal to search field
 				else if ( !listItem.innerHTML.toLowerCase().includes(this.search.toLowerCase()) ) {
-					listItem.parent.style.display = 'none';
+					searchItem.style.display = 'none';
 				}
 				// Display if equal to search terms
 				else {
-					listItem.style.display = 'block';
+					searchItem.style.display = 'block';
 				}
 			}	
 		}

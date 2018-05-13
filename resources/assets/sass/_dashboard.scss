@@ -1,0 +1,22 @@
+.section-dashboard {
+  h1,h2,h3,h4,h5,
+  .h1, .h2, .h3, .h4, .h5 {
+    font-family:"Oswald", sans-serif;
+    text-transform:uppercase;
+  }
+  .timeline {
+    position:relative;
+    .line {
+      position:absolute;
+      left:50%;
+      height:100%;
+      width:1px;
+      display:block;
+      margin:0 auto;
+      background:#999;
+    }
+    hr {
+      margin:1rem 0 0.3rem!important;
+    }
+  }
+}

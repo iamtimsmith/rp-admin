@@ -11,9 +11,11 @@
 </head>
 <body>
   <div id="app">
-    @include('partials.navbar')
+    {{--@include('partials.navbar')--}}
+    @include('partials.sidenav')
+    @include('partials.topnav')
 
-    <div class="container mt-5 pt-5 pb-5 section-@yield('class')">
+    <div class="mt-5 pt-3 pl-3 pr-3 section-@yield('class')">
       @include('partials/messages')
       @yield('content')
     </div>

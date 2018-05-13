@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600|Oswald");
 
 // Variables
 @import "variables";
@@ -11,10 +11,24 @@
 // FontAwesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-// Custom
-@import 'custom';
+// FontAwesome
+@import "node_modules/rpg-awesome/scss/rpg-awesome.scss";
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// Navigation
+@import "navigation";
+
+// Custom
+@import 'general';
+@import 'dashboard';
+@import 'monsters';
+@import 'spells';
+@import 'notes';
+@import 'locations';
+
+
+
+
+
+.ra-2x {
+  font-size:1.8rem;
 }

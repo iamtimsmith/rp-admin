@@ -19,7 +19,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('search', require('./components/Search.vue'));
 Vue.component('offcanvas-left', require('./components/offcanvasLeft.vue'));
 Vue.component('offcanvas-right', require('./components/offcanvasRight.vue'));
+Vue.component('dropdown', require('./components/dropdown.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });
