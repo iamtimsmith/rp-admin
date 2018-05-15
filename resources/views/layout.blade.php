@@ -1,3 +1,10 @@
+<?php 
+use App\User;
+
+$user_id = auth()->user()->id;
+$user = User::find($user_id);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +24,15 @@
     @include('partials.rightbar')
 
     <div class="mt-5 mb-5 pt-3 pl-3 pr-3 section-@yield('class')">
-      @include('partials/messages')
-      @yield('content')
+      <div class="row">
+        <div class="col-sm-9">
+            @include('partials/messages')
+            @yield('content')
+        </div>
+        <div class="col-sm-3">
+          {!! $user->side_notes !!}
+        </div>
+      </div>
     </div>
 
     

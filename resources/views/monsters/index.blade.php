@@ -2,8 +2,6 @@
 @section('class','monsters')
 
 @section('content')
-<div class="row">
-  <div class="col-sm-9">
       <h1>Monsters</h1>
   
       <search></search>
@@ -18,7 +16,5 @@
         @endforeach
       </ul>
       @endif
-  </div>
-</div>
 
 @endsection

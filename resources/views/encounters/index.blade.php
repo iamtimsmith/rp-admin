@@ -2,9 +2,6 @@
 @section('class', 'encounters')
 
 @section('content')
-
-<div class="row">
-  <div class="col-sm-9">
     <div>
       <h1 class="float-left">Encounters</h1>
       <a href="/encounters/create" class="btn btn-default float-right">New</a>
@@ -25,6 +22,4 @@
     @else
       <p>You don't have any encounters yet. <a href="/encounters/create">Click here to create one</a>.</p>
     @endif
-  </div>
-</div>
 @endsection

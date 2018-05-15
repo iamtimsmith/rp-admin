@@ -3,9 +3,6 @@
 
 @section('content')
 
-<div class="row">
-  <div class="col-sm-9">
-
       <h1>Edit Character</h1>
 
       {!! Form::open(['action' => ['NpcsController@update', $npc->id], 'method' => 'POST', 'class' => 'row'] ) !!}
@@ -40,8 +37,5 @@
         {{ Form::hidden('_method', 'PUT') }}
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
       {!! Form::close() !!}
-
-  </div>
-</div>
 
 @endsection

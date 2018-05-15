@@ -1,3 +1,10 @@
+<?php 
+use App\User;
+
+$user_id = auth()->user()->id;
+$user = User::find($user_id);
+?>
+
 <div id="sidenav">
   <div class="">
     <ul>
@@ -12,9 +19,10 @@
       <li class="mt-2"><a href="/spells"><span class="ra ra-flame-symbol ra-2x"></span><span class="navlabel">Spells</span></a></li>
       <li class="mt-2"><a href="/notes"><span class="ra ra-book ra-2x"></span><span class="navlabel">Notes</span></a></li>
       <li class="mt-2"><a href="/locations"><span class="fa fa-map-marker ra-2x"></span><span class="navlabel">Locations</span></a></li>
+      <li class="mt-2"><a href="/encounters"><span class="ra ra-crossed-swords ra-2x"></span><span class="navlabel">Encounters</span></a></li>
       <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
       <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
-      <li class=""><a href="/settings"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
+      <li class=""><a href="/settings/{{ $user_id }}"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
     </ul>
     
   </div>

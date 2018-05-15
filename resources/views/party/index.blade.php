@@ -3,8 +3,6 @@
 
 @section('content')
 
-<div class="row"></div>
-  <div class="col-md-9">
       <div class="clearfix">
         <h1 class="float-left">Party</h1>
         <a href="/party/create" class="btn btn-default float-right">New</a>
@@ -33,8 +31,5 @@
       <p>You don't have any characters in your party.</p>
       @endif
   
-  </div>
-  <div class="col-md-3"></div>
-</div>
 
 @endsection

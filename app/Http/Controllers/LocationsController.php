@@ -29,7 +29,7 @@ class LocationsController extends Controller
         //$notes = Note::all();
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('locations.index')->with('locations', $user->locations);
+        return view('locations.index')->with('locations', $user->locations)->with('user', $user);
     }
 
     /**
@@ -54,20 +54,20 @@ class LocationsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
-            'featured_image' => 'image|nullable|max:1999'
+            'map' => 'image|nullable|max:1999'
         ]);
 
         // Handle File Upload
-        if($request->hasFile('featured_image')) {
-            $filenameWithExt = $request->file('featured_image')->getClientOriginalName();
+        if($request->hasFile('map')) {
+            $filenameWithExt = $request->file('map')->getClientOriginalName();
             // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             // Get just extension
-            $extension = $request->file('featured_image')->getClientOriginalExtension();
+            $extension = $request->file('map')->getClientOriginalExtension();
             // Filename to store
             $filenameToStore = $filename.'_'.time().'.'.$extension;
             // Upload image
-            $path = $request->file('featured_image')->storeAs('public/featured_images', $filenameToStore);
+            $path = $request->file('map')->storeAs('public/maps', $filenameToStore);
         } else {
             $filenameToStore = 'noimage.jpg';
         }
@@ -91,8 +91,10 @@ class LocationsController extends Controller
      */
     public function show($id)
     {
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         $location = Location::find($id);
-        return view('locations.show')->with('location', $location);
+        return view('locations.show')->with('location', $location)->with('user', $user);
     }
 
     /**

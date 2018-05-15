@@ -2,8 +2,6 @@
 @section('class', 'party')
 
 @section('content')
-<div class="row"></div>
-  <div class="col-md-9">
 
       <a href="/party">&lt;&lt; Back</a>
       <h1>Create a Character</h1>
@@ -38,8 +36,5 @@
         </div>
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
       {!! Form::close() !!}
-  </div>
-</div>
-
 
 @endsection

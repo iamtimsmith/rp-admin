@@ -2,9 +2,6 @@
 @section('class', 'dashboard')
 
 @section('content')
-
-<div class="row">
-    <div class="col-md-9">
         <h1>Dashboard</h1>
         <div class="row mb-5">
             <div class="col-3">
@@ -44,18 +41,5 @@
       @else
       <p>You don't have any characters in your party.</p>
       @endif
-    </div>
-    <div class="col-md-3 timeline">
-        <p class="h4 text-center">Timeline</p>
-        <div class="line"></div>
-        <ul>
-            <li class="card mt-5 text-center bg-white"><div class="card-body">PCs arrived at lorendale and met with Valerin. <hr><small>05-09-2018</small></div></li>
-            <li class="card mt-5 text-center bg-white"><div class="card-body">Defeated the dark lord, Malumet, and completed the quest for Sylvana. Given the compass after defeating the demon lord.<hr><small>05-09-2018</small></div></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-</div>
 
 @endsection

@@ -2,9 +2,6 @@
 @section('class', 'npcs')
 
 @section('content')
-<div class="row"></div>
-  <div class="col-md-9">
-
       <a href="/npcs">&lt;&lt; Back</a>
       <h1>Create an NPC</h1>
     
@@ -42,8 +39,7 @@
         </div>
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
       {!! Form::close() !!}
-  </div>
-</div>
+
 
 
 @endsection

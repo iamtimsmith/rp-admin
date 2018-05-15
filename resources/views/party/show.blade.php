@@ -2,8 +2,7 @@
 @section('class', 'party')
 
 @section('content')
-<div class="row">
-  <div class="col-sm-9">
+
       <div class="d-flex mb-4">
           <a href="/party">&lt;&lt; Back</a>
           <div class="ml-auto">
@@ -31,9 +30,5 @@
               @endif
             </div>
           </div>
-        </div>
-  </div>
-</div>
-
 
 @endsection

@@ -3,8 +3,6 @@
 
 @section('content')
 
-<div class="row"></div>
-  <div class="col-md-9">
       <div class="clearfix">
         <h1 class="float-left">NPCs</h1>
         <a href="/npcs/create" class="btn btn-default float-right">New</a>
@@ -33,8 +31,6 @@
       <p>You don't have any NPCs yet.</p>
       @endif
   
-  </div>
-  <div class="col-md-3"></div>
-</div>
+  
 
 @endsection

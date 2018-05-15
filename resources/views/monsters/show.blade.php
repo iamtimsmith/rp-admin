@@ -2,8 +2,6 @@
 @section('class','monsters detail')
 
 @section('content')
-<div class="row justify-content-center">
-  <div class="col-8">
       <a href="/monsters"> &lt;&lt; Back</a>
       <h1 class="mt-3">{{ $monster->name }}</h1>
       <p>{{ $monster->size }} {{ $monster->type }} {{ $monster->subtype }}, {{ $monster->alignment }}</p>
@@ -93,8 +91,6 @@
         <h5 class='border-bottom'>ACTIONS</h5>
       
         {!! $monster->actions !!}
-  </div>
-</div>
 
 
 

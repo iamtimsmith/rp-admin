@@ -2,8 +2,6 @@
 @section('class','spells detail')
 
 @section('content')
-<div class="row justify-content-center">
-  <div class="col-8">
       <a href="/spells"> &lt;&lt; Back</a>
       <h1 class="mt-3">{{ $spell->name }}</h1>
       
@@ -26,8 +24,7 @@
       <div><strong>Circles </strong><span>{{ $spell->circles }}</span></div>
       <div><strong>Page </strong><span>{{ $spell->page }}</span></div>
 
-  </div>
-</div>
+
 
 
 

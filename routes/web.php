@@ -20,7 +20,7 @@ Route::get('/locations', 'LocationsController@index');
 Route::get('/party', 'PartyController@index');
 Route::get('/npcs', 'NpcsController@index');
 Route::get('/encounters', 'EncountersController@index');
-Route::get('/settings', 'PagesController@settings');
+Route::get('/settings/{user}', ['as' => 'users.edit', 'uses' => 'UserController@edit']);
 
 Route::resource('monsters', 'MonstersController');
 Route::resource('spells', 'SpellsController');
@@ -34,3 +34,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::patch('/settings/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
