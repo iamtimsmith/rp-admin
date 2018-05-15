@@ -4,7 +4,7 @@
       @guest
         <li class="mt-3 mb-5"><a href="/" class="ra ra-perspective-dice-four ra-4x"></a></li>
       @else
-        <li class="mt-3 mb-5"><a href="/dashboard" class="ra ra-perspective-dice-four ra-4x"></a></li>
+        <li class="mt-3 mb-5"><a href="/dashboard"><img src="/storage/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
       @endif
 
       <li class="mt-2"><a href="/dashboard"><span class="ra ra-quill-ink ra-2x"></span><span class="navlabel">Dashboard</span></a></li>
@@ -14,7 +14,7 @@
       <li class="mt-2"><a href="/locations"><span class="fa fa-map-marker ra-2x"></span><span class="navlabel">Locations</span></a></li>
       <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
       <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
-      <li class="mt-5"><a href="/settings"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
+      <li class=""><a href="/settings"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
     </ul>
     
   </div>

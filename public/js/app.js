@@ -543,9 +543,25 @@ Vue.component('search', __webpack_require__(14));
 Vue.component('offcanvas-left', __webpack_require__(17));
 Vue.component('offcanvas-right', __webpack_require__(23));
 Vue.component('dropdown', __webpack_require__(40));
+Vue.component('additem', __webpack_require__(47));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app',
+    methods: {
+        widgetToggle: function widgetToggle() {
+            var icon = document.querySelector('.toggle-widgets > .fa').classList;
+            var right = document.getElementById('widgets').classList;
+            if (right.contains('showing')) {
+                right.remove('showing');
+                icon.remove('fa-angle-right');
+                icon.add('fa-angle-left');
+            } else {
+                right.add('showing');
+                icon.remove('fa-angle-left');
+                icon.add('fa-angle-right');
+            }
+        }
+    }
 });
 
 /***/ }),
@@ -14925,6 +14941,156 @@ exports.push([module.i, "\n.dropdown[data-v-4dcdf8a8] {\n  position: relative;\n
 
 // exports
 
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(48)
+/* template */
+var __vue_template__ = __webpack_require__(49)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/addItem.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2c0c4ce6", Component.options)
+  } else {
+    hotAPI.reload("data-v-2c0c4ce6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuedraggable__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vuedraggable__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    draggable: __WEBPACK_IMPORTED_MODULE_0_vuedraggable___default.a
+  },
+  props: ['items'],
+  data: function data() {
+    return {};
+  },
+
+  created: {
+    addDM: function addDM() {
+      var dm = "DM";
+      items.push(dm);
+    }
+  }
+});
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "ul",
+      { staticClass: "list-group" },
+      [
+        _c(
+          "draggable",
+          { staticClass: "dragArea", attrs: { list: _vm.init } },
+          [
+            _vm._l(_vm.items, function(item) {
+              return _c(
+                "li",
+                { key: item.id, staticClass: "list-group-item" },
+                [
+                  _c("p", { staticClass: "mb-0" }, [_vm._v(_vm._s(item.name))]),
+                  _vm._v(" "),
+                  _c("span", [
+                    _c("small", [
+                      _vm._v(
+                        "AC " +
+                          _vm._s(item.ac) +
+                          " | HP " +
+                          _vm._s(item.hp) +
+                          " | PP " +
+                          _vm._s(item.pp)
+                      )
+                    ])
+                  ])
+                ]
+              )
+            }),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-group-item" }, [_vm._v("DM")])
+          ],
+          2
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2c0c4ce6", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -36,4 +36,10 @@ class User extends Authenticatable
     public function party() {
         return $this->hasMany('App\Char');
     }
+    public function npcs() {
+        return $this->hasMany('App\NPC');
+    }
+    public function encounters() {
+        return $this->hasMany('App\Encounter');
+    }
 }

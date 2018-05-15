@@ -2,7 +2,7 @@
   <div class="container">
   <div class="row">
     <div class="col-sm">
-      <input type="text" placeholder="Search...">
+      <!--<input type="text" placeholder="Search...">-->
     </div>
     <div class="col-sm">
         <ul class="text-right">

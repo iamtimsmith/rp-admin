@@ -15656,9 +15656,11 @@ a.text-dark:focus {
 }
 
 #sidenav ul {
+  position: absolute;
   padding: 0;
   list-style: none;
   width: 100%;
+  height: 100%;
   text-align: center;
 }
 
@@ -15685,12 +15687,11 @@ a.text-dark:focus {
   opacity: 1;
 }
 
-#sidenav .sidenav-bottom {
-  position: fixed;
-  bottom: 0;
+#sidenav ul li:last-child {
+  position: absolute;
+  bottom: 10px;
   left: 0;
-  width: 70px;
-  z-index: 99;
+  right: 0;
 }
 
 #topnav {
@@ -15708,12 +15709,21 @@ a.text-dark:focus {
   line-height: 35px;
 }
 
+#topnav ul ul {
+  width: 100px;
+}
+
 body {
   margin-left: 70px;
 }
 
 body a {
   text-decoration: none !important;
+}
+
+body .card {
+  -webkit-transition: all .35s;
+  transition: all .35s;
 }
 
 .section-dashboard h1,
@@ -15821,6 +15831,13 @@ body a {
   margin-bottom: 20px;
 }
 
+.section-encounters input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
 .section-locations input {
   width: 100%;
   font-size: 1rem;
@@ -15828,7 +15845,82 @@ body a {
   margin-bottom: 20px;
 }
 
+#widgets {
+  position: fixed;
+  right: -300px;
+  width: 300px;
+  top: 50px;
+  bottom: 0;
+  background: #fff;
+  z-index: 10;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#widgets.showing {
+  right: 0px;
+}
+
+#widgets .toggle-widgets {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  background: none;
+  font-size: 27px;
+}
+
+#widgets input {
+  width: 100%;
+}
+
+#widgets .dragArea li {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+#widgets .dragArea li:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
 .ra-2x {
   font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+textarea {
+  border: 1px solid #ccc !important;
+  padding: 5px 10px !important;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 

@@ -18,12 +18,17 @@ Route::get('/spells', 'SpellsController@index');
 Route::get('/notes', 'NotesController@index');
 Route::get('/locations', 'LocationsController@index');
 Route::get('/party', 'PartyController@index');
+Route::get('/npcs', 'NpcsController@index');
+Route::get('/encounters', 'EncountersController@index');
+Route::get('/settings', 'PagesController@settings');
 
 Route::resource('monsters', 'MonstersController');
 Route::resource('spells', 'SpellsController');
 Route::resource('notes', 'NotesController');
 Route::resource('locations', 'LocationsController');
 Route::resource('party', 'PartyController');
+Route::resource('npcs', 'NpcsController');
+Route::resource('encounters', 'EncountersController');
 
 Auth::routes();
 

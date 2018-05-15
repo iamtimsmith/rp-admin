@@ -1,0 +1,33 @@
+#widgets {
+  position:fixed;
+  right:-300px;
+  width:300px;
+  top:50px;
+  bottom:0;
+  background:#fff;
+  z-index:10;
+  transition:all .3s;
+  &.showing {
+    right:0px;
+  }
+  .toggle-widgets {
+    position:fixed;
+    top:50px;
+    right:10px;
+    background:none;
+    font-size:27px;
+  }
+  input {
+    width:100%;
+  }
+  .dragArea {
+    li {
+      cursor:grab;
+      cursor:-webkit-grab;
+      &:active {
+        cursor:grabbing;
+        cursor:-webkit-grabbing;
+      }
+    }
+  }
+}

@@ -14,8 +14,9 @@
     {{--@include('partials.navbar')--}}
     @include('partials.sidenav')
     @include('partials.topnav')
+    @include('partials.rightbar')
 
-    <div class="mt-5 pt-3 pl-3 pr-3 section-@yield('class')">
+    <div class="mt-5 mb-5 pt-3 pl-3 pr-3 section-@yield('class')">
       @include('partials/messages')
       @yield('content')
     </div>

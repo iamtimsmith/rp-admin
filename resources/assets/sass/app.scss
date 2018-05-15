@@ -23,12 +23,40 @@
 @import 'monsters';
 @import 'spells';
 @import 'notes';
+@import 'encounters';
 @import 'locations';
-
+@import 'rightbar';
 
 
 
 
 .ra-2x {
   font-size:1.8rem;
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  font-family:"Oswald", sans-serif;
+  text-transform:uppercase;
+}
+input[type="text"],
+textarea {
+  border:1px solid #ccc!important;
+  padding:5px 10px!important;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    //-webkit-appearance:none!important;
+    box-shadow:none!important;
 }

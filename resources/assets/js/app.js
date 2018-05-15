@@ -20,7 +20,24 @@ Vue.component('search', require('./components/Search.vue'));
 Vue.component('offcanvas-left', require('./components/offcanvasLeft.vue'));
 Vue.component('offcanvas-right', require('./components/offcanvasRight.vue'));
 Vue.component('dropdown', require('./components/dropdown.vue'));
+Vue.component('additem', require('./components/addItem.vue'));
 
 const app = new Vue({
     el: '#app',
+    methods: {
+        widgetToggle() {
+            var icon = document.querySelector('.toggle-widgets > .fa').classList;
+            var right = document.getElementById('widgets').classList;
+            if ( right.contains('showing') ) {
+                right.remove('showing');
+                icon.remove('fa-angle-right');
+                icon.add('fa-angle-left');
+            }
+            else {
+                right.add('showing');
+                icon.remove('fa-angle-left');
+                icon.add('fa-angle-right');
+            }
+        }
+    }
 });
