@@ -92,6 +92,9 @@
       
         {!! $monster->actions !!}
 
+        <hr class="mt-5">
+      <p>This is SRD material and falls under the <a href="/license">OGL License</a>.</p>
+
 
 
 @endsection

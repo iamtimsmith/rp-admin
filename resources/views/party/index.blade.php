@@ -15,6 +15,7 @@
         <th>AC</th>
         <th>HP</th>
         <th>PP</th>
+        <th>Status</th>
       </tr>
       @foreach($party as $char)
       <tr>
@@ -23,6 +24,7 @@
         <td>{{ $char->ac }}</td>
         <td>{{ $char->hp }}</td>
         <td>{{ $char->pp }}</td>
+        <td>{{ $char->active }}</td>
       </tr>
       @endforeach
     </table>

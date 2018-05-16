@@ -6,7 +6,7 @@
   
       <search></search>
       @if(count($monsters) > 0)
-      <p class="mt-4 mb-0"><span>Name</span><span class="float-right">CR</span></p>
+      <p class="mt-4 mb-0"><strong><span>Name</span><span class="float-right">CR</span></strong></p>
       <ul id="list" style="list-style:none; padding:0;">
         @foreach($monsters as $monster)
       <li>
@@ -17,4 +17,6 @@
       </ul>
       @endif
 
+      <hr class="mt-5">
+      <p>This is SRD material and falls under the <a href="/license">OGL License</a>.</p>
 @endsection

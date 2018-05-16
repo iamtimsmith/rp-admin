@@ -1,0 +1,54 @@
+$red: #E40712;
+$charcoal: #222;
+$lightgrey:#e5e5e5;
+$offwhite:#f1f1f1;
+
+.light-theme {
+    background-color:white!important;
+  a {
+    color:$charcoal;
+  }
+
+  .btn-primary {
+    background:white;
+    border:1px solid $charcoal;
+    color:$charcoal;
+    &:hover {
+      background:$charcoal;
+      border-color:$charcoal;
+      color:white;
+    }
+  }
+
+  .bg-dark {
+    background-color:white!important;
+    border:1px solid $charcoal;
+    span {
+      color:$charcoal!important;
+    }
+    &:hover {
+      background:$charcoal!important;
+      span {
+        color:white!important;
+      }
+    }
+  }
+
+  table {
+    tr:nth-child(even) {
+      background:$offwhite!important;
+    }
+  }
+
+
+  #sidenav {
+    background:white;
+    border-right:1px solid $lightgrey;
+    img {
+      filter:invert(100%);
+    }
+    a {
+      color:$charcoal;
+    }
+  }
+}

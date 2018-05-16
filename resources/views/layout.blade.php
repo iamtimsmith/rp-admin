@@ -14,9 +14,9 @@ $user = User::find($user_id);
 
 
   <link rel="stylesheet" href="/css/app.css">
-  <title>Laravel</title>
+  <title>{{ config('app.name', 'RP Admin') }}</title>
 </head>
-<body>
+<body class="{{ $user->theme }}-theme">
   <div id="app">
     {{--@include('partials.navbar')--}}
     @include('partials.sidenav')
@@ -37,6 +37,9 @@ $user = User::find($user_id);
 
     
   </div>
+
+  @include('partials.footer')
+
 
   <script src="/js/app.js"></script>
   <script src="/laravel-ckeditor/ckeditor.js"></script>

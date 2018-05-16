@@ -21,8 +21,8 @@ class PagesController extends Controller
         return view('about');
     }
 
-    public function settings()
+    public function license()
     {
-        return view('settings');
+        return view('license');
     }
 }

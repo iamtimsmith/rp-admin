@@ -34,5 +34,6 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/license', 'PagesController@license');
 
 Route::patch('/settings/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);

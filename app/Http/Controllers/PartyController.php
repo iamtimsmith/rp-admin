@@ -57,7 +57,8 @@ class PartyController extends Controller
             'ac' => 'required',
             'hp' => 'required',
             'pp' => 'required',
-            'notes' => '',
+            'active' => 'required',
+            'notes' => 'nullable',
             'portrait' => 'image|nullable|max:1999'
         ]);
 
@@ -83,6 +84,7 @@ class PartyController extends Controller
         $char->ac = $request->input('ac');
         $char->hp = $request->input('hp');
         $char->pp = $request->input('pp');
+        $char->active = $request->input('active');
         $char->notes = $request->input('notes');
         $char->user_id = auth()->user()->id;
         $char->portrait = $filenameToStore;
@@ -134,7 +136,9 @@ class PartyController extends Controller
             'ac' => 'required',
             'hp' => 'required',
             'pp' => 'required',
-            'notes' => ''
+            'active' => 'nullable',
+            'notes' => 'nullable',
+            'portrait' => 'nullable'
         ]);
         // Update post
         $char = Char::find($id);
@@ -143,6 +147,7 @@ class PartyController extends Controller
         $char->ac = $request->input('ac');
         $char->hp = $request->input('hp');
         $char->pp = $request->input('pp');
+        $char->active = $request->input('active');
         $char->notes = $request->input('notes');
         $char->save();
         return redirect('/party')->with('success', 'Character Updated');

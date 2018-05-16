@@ -15664,6 +15664,15 @@ a.text-dark:focus {
   text-align: center;
 }
 
+#sidenav ul li {
+  /* &:last-child {
+        position:absolute;
+        bottom:10px;
+        left:0;
+        right:0;
+      } */
+}
+
 #sidenav ul li a {
   color: white;
 }
@@ -15685,13 +15694,6 @@ a.text-dark:focus {
 
 #sidenav ul li a:hover .navlabel {
   opacity: 1;
-}
-
-#sidenav ul li:last-child {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
 }
 
 #topnav {
@@ -15764,45 +15766,44 @@ body .card {
   padding: 5px 10px;
 }
 
-.section-monsters p {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.section-monsters ul {
+.section-monsters ul#list {
   list-style: none;
 }
 
-.section-monsters ul li a {
+.section-monsters ul#list li a {
   font-size: 1rem;
 }
 
-.section-monsters .abilities {
+.section-monsters.detail .col-sm-9 ul {
+  list-style: none;
+}
+
+.section-monsters.detail .abilities {
   text-align: center;
 }
 
-.section-monsters .saving-throws span:after {
+.section-monsters.detail .saving-throws span:after {
   content: ",";
 }
 
-.section-monsters .saving-throws span:last-child:after {
+.section-monsters.detail .saving-throws span:last-child:after {
   content: "";
 }
 
-.section-monsters .skills span:after {
+.section-monsters.detail .skills span:after {
   content: ",";
 }
 
-.section-monsters .skills span:last-child:after {
+.section-monsters.detail .skills span:last-child:after {
   content: "";
 }
 
-.section-monsters.detail p {
+.section-monsters.detail.detail p {
   font-size: 0.9rem;
   font-weight: initial;
 }
 
-.section-monsters.detail ul {
+.section-monsters.detail.detail ul {
   padding: 0 !important;
 }
 
@@ -15812,15 +15813,11 @@ body .card {
   padding: 5px 10px;
 }
 
-.section-spells p {
-  font-size: 1rem;
-}
-
-.section-spells ul {
+.section-spells .col-sm-9 ul {
   list-style: none;
 }
 
-.section-spells ul li a {
+.section-spells .col-sm-9 ul li a {
   font-size: 1rem;
 }
 
@@ -15881,6 +15878,95 @@ body .card {
 #widgets .dragArea li:active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
+}
+
+.red-theme {
+  background: white;
+}
+
+.red-theme a {
+  color: #222;
+}
+
+.red-theme .btn-primary {
+  background: #222;
+  border: 1px solid #222;
+}
+
+.red-theme .btn-primary:hover {
+  background: black;
+  border-color: black;
+}
+
+.red-theme .bg-dark {
+  background-color: #222 !important;
+}
+
+.red-theme .bg-dark:hover {
+  background: black !important;
+}
+
+.red-theme table tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.red-theme #sidenav {
+  background: #E40712;
+}
+
+.light-theme {
+  background-color: white !important;
+}
+
+.light-theme a {
+  color: #222;
+}
+
+.light-theme .btn-primary {
+  background: white;
+  border: 1px solid #222;
+  color: #222;
+}
+
+.light-theme .btn-primary:hover {
+  background: #222;
+  border-color: #222;
+  color: white;
+}
+
+.light-theme .bg-dark {
+  background-color: white !important;
+  border: 1px solid #222;
+}
+
+.light-theme .bg-dark span {
+  color: #222 !important;
+}
+
+.light-theme .bg-dark:hover {
+  background: #222 !important;
+}
+
+.light-theme .bg-dark:hover span {
+  color: white !important;
+}
+
+.light-theme table tr:nth-child(even) {
+  background: #f1f1f1 !important;
+}
+
+.light-theme #sidenav {
+  background: white;
+  border-right: 1px solid #e5e5e5;
+}
+
+.light-theme #sidenav img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.light-theme #sidenav a {
+  color: #222;
 }
 
 .ra-2x {

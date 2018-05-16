@@ -22,7 +22,7 @@ $user = User::find($user_id);
       <li class="mt-2"><a href="/encounters"><span class="ra ra-crossed-swords ra-2x"></span><span class="navlabel">Encounters</span></a></li>
       <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
       <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
-      <li class=""><a href="/settings/{{ $user_id }}"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
+      <li class="mt-4"><a href="/settings/{{ $user_id }}"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li>
     </ul>
     
   </div>

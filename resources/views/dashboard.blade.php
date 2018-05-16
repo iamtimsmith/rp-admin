@@ -28,13 +28,15 @@
         <th>PP</th>
       </tr>
       @foreach($party as $char)
-      <tr>
-        <td><a href="/party/{{ $char->id }}">{{ $char->name }}</a></td>
-        <td>{{ $char->player }}</td>
-        <td>{{ $char->ac }}</td>
-        <td>{{ $char->hp }}</td>
-        <td>{{ $char->pp }}</td>
-      </tr>
+        @if($char->active == 'Active')
+        <tr>
+            <td><a href="/party/{{ $char->id }}">{{ $char->name }}</a></td>
+            <td>{{ $char->player }}</td>
+            <td>{{ $char->ac }}</td>
+            <td>{{ $char->hp }}</td>
+            <td>{{ $char->pp }}</td>
+        </tr>
+        @endif
       @endforeach
     </table>
 
