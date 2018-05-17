@@ -15717,6 +15717,10 @@ a.text-dark:focus {
 
 body {
   margin-left: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 body a {

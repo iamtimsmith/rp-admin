@@ -7,14 +7,17 @@
         <h1 class="float-left">NPCs</h1>
         <a href="/npcs/create" class="btn btn-default float-right">New</a>
       </div>
+      <div class="card mt-4">
+        <div class="card-body">
+
     @if(count($npcs) > 0)
-    <table class="table mt-4">
+    <table class="table">
       <tr>
-        <th>Name</th>
-        <th>Race</th>
-        <th>Class</th>
-        <th>Gender</th>
-        <th>Affiliation</th>
+        <th class="border-0">Name</th>
+        <th class="border-0">Race</th>
+        <th class="border-0">Class</th>
+        <th class="border-0">Gender</th>
+        <th class="border-0">Affiliation</th>
       </tr>
       @foreach($npcs as $npc)
       <tr>
@@ -31,6 +34,8 @@
       <p>You don't have any NPCs yet.</p>
       @endif
   
+    </div>
+  </div>
   
 
 @endsection

@@ -18,14 +18,17 @@
             </div>
         </div>
         <p class="h4">Your Party</p>
+
+        <div class="card">
+            <div class="card-body">
         @if(count($party) > 0)
-    <table class="table mt-4">
+    <table class="table">
       <tr>
-        <th>Name</th>
-        <th>Player</th>
-        <th>AC</th>
-        <th>HP</th>
-        <th>PP</th>
+        <th class="border-0">Name</th>
+        <th class="border-0">Player</th>
+        <th class="border-0">AC</th>
+        <th class="border-0">HP</th>
+        <th class="border-0">PP</th>
       </tr>
       @foreach($party as $char)
         @if($char->active == 'Active')
@@ -43,5 +46,8 @@
       @else
       <p>You don't have any characters in your party.</p>
       @endif
+
+    </div>
+</div>
 
 @endsection

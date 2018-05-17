@@ -1,9 +1,14 @@
 body {
   margin-left:70px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-attachment:fixed;
   a {
   text-decoration:none!important;
   }
   .card {
     transition:all .35s;
   }
+  
 }

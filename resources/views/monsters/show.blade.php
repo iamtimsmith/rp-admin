@@ -76,8 +76,8 @@
           </li>
           <li><strong>Damage Vulnerabilities</strong> {{ $monster->damage_vulnerabilities }}</li>
           <li><strong>Damage Resistance</strong> {{ $monster->damage_resistance }}</li>
-          <li><strong>Damage Inmmunities</strong> {{ $monster->damage_immunities }}</li>
-          <li><strong>Condition Inmmunities</strong> {{ $monster->condition_immunities }}</li>
+          <li><strong>Damage Immmunities</strong> {{ $monster->damage_immunities }}</li>
+          <li><strong>Condition Immmunities</strong> {{ $monster->condition_immunities }}</li>
           <li><strong>Senses</strong> {{ $monster->senses }}</li>
           <li><strong>Languages</strong> {{ $monster->languages }}</li>
           <li><strong>Challenge Rating</strong> {{ $monster->challenge_rating }}</li>

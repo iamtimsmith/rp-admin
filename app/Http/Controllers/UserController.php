@@ -35,6 +35,8 @@ class UserController extends Controller
         //$user->password = bcrypt( request('password') );
         
         $user->theme = request('theme');
+        $user->bg_image = request('bgImage');
+        $user->detail_level = request('detail');
         $user->side_notes = request('side_notes');
         
 

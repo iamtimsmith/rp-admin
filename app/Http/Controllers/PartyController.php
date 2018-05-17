@@ -39,7 +39,9 @@ class PartyController extends Controller
      */
     public function create()
     {
-        return view('party.create');
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('party.create')->with('user', $user);
     }
 
     /**

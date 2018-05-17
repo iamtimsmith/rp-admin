@@ -16,7 +16,7 @@ $user = User::find($user_id);
   <link rel="stylesheet" href="/css/app.css">
   <title>{{ config('app.name', 'RP Admin') }}</title>
 </head>
-<body class="{{ $user->theme }}-theme">
+<body class="{{ $user->theme }}-theme" >
   <div id="app">
     {{--@include('partials.navbar')--}}
     @include('partials.sidenav')
