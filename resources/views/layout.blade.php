@@ -13,6 +13,7 @@ $user = User::find($user_id);
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
+  <link rel="stylesheet" href="/quill/dist/quill.snow.css">
   <link rel="stylesheet" href="/css/app.css">
   <title>{{ config('app.name', 'RP Admin') }}</title>
 </head>
@@ -42,11 +43,22 @@ $user = User::find($user_id);
 
 
   <script src="/js/app.js"></script>
-  <script src="/laravel-ckeditor/ckeditor.js"></script>
+  <script src="/quill/dist/quill.min.js"></script>
   <script>
-      CKEDITOR.replace( 'article-ckeditor' );
+  var toolbarOptions = [
+  [{ 'size': ['huge', 'large', false, 'small'] }], 
+  [{ 'font': [] }],
+  [{ 'color': [] }, { 'background': [] }],        
+  ['bold', 'italic', 'underline', 'strike'],  
+  [{ 'align': [] }],
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  ['link'],
+  ['image'],
+  ['blockquote', 'code-block'],
+  ['clean']                     // remove formatting button
+  ];
   </script>
-
+  @yield('contentjs')
   
 </body>
 </html>

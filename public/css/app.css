@@ -15715,6 +15715,16 @@ a.text-dark:focus {
   width: 100px;
 }
 
+.ql-toolbar {
+  background: white;
+  border-bottom: 1px solid white !important;
+}
+
+.ql-container {
+  background: white;
+  height: 400px;
+}
+
 body {
   margin-left: 70px;
   background-size: cover;
@@ -15977,16 +15987,7 @@ body .card {
   font-size: 1.8rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
+.header {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }

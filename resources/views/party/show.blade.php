@@ -13,7 +13,7 @@
               {!! Form::close() !!}
           </div>
         </div>
-        <h1>{{ $char->name }}</h1>
+        <h1 class="header">{{ $char->name }}</h1>
           <div class="d-flex">
             <div class="col-sm-6">
                 <p><strong>Player</strong> {{ $char->player }}</p>

@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <h1>{{ $location->title }}</h1>
+  <h1 class="header">{{ $location->title }}</h1>
   
   <hr>
 

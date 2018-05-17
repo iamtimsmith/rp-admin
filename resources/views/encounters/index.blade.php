@@ -3,7 +3,7 @@
 
 @section('content')
     <div>
-      <h1 class="float-left">Encounters</h1>
+      <h1 class="float-left header">Encounters</h1>
       <a href="/encounters/create" class="btn btn-default float-right">New</a>
     </div>
 

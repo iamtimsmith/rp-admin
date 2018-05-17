@@ -25,8 +25,6 @@ class LocationsController extends Controller
      */
     public function index()
     {
-        //$notes = Note::orderBy('id', 'desc')->get();
-        //$notes = Note::all();
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         return view('locations.index')->with('locations', $user->locations)->with('user', $user);
