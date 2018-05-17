@@ -4,7 +4,7 @@
 @section('content')
 
       <div class="clearfix">
-        <h1 class="float-left">NPCs</h1>
+        <h1 class="float-left header">NPCs</h1>
         <a href="/npcs/create" class="btn btn-default float-right">New</a>
       </div>
       <div class="card mt-4">

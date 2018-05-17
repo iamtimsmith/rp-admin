@@ -13,7 +13,7 @@
           {!! Form::close() !!}
       </div>
     </div>
-    <h1>{{ $npc->name }}</h1>
+    <h1 class="header">{{ $npc->name }}</h1>
       <div class="d-flex">
         <div class="col-sm-6">
             <p><strong>Gender</strong> {{ $npc->gender }}</p>

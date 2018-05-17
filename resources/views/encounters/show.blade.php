@@ -12,7 +12,7 @@
       {!! Form::close() !!}
   </div>
 </div>
-<h1>{{ $encounter->title }}</h1>
+<h1 class="header">{{ $encounter->title }}</h1>
 
 <hr>
 

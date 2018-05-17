@@ -11,11 +11,14 @@
 // FontAwesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-// FontAwesome
+// RPGAwesome
 @import "node_modules/rpg-awesome/scss/rpg-awesome.scss";
 
 // Navigation
 @import "navigation";
+
+// Quill
+@import "quill";
 
 // Custom
 @import 'general';
@@ -36,8 +39,7 @@
 .ra-2x {
   font-size:1.8rem;
 }
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+.header {
   font-family:"Oswald", sans-serif;
   text-transform:uppercase;
 }
