@@ -21,6 +21,9 @@ Vue.component('offcanvas-left', require('./components/offcanvasLeft.vue'));
 Vue.component('offcanvas-right', require('./components/offcanvasRight.vue'));
 Vue.component('dropdown', require('./components/dropdown.vue'));
 Vue.component('additem', require('./components/addItem.vue'));
+Vue.component('thumbnails', require('./components/thumbnails.vue'));
+Vue.component('VueAffix', require('vue-affix'));
+
 
 const app = new Vue({
     el: '#app',

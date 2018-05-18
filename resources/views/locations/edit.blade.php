@@ -13,6 +13,7 @@
         <div id="location-notes">{!! $location->content !!}</div>
         {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
       </div>
+        
         {{ Form::hidden('_method', 'PUT') }}
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
         <a href="/locations/{{ $location->id }}" class="btn btn-default text-danger">Cancel</a>

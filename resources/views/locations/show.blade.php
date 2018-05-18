@@ -13,15 +13,31 @@
     </div>
   </div>
 
-  <h1 class="header">{{ $location->title }}</h1>
-  
-  <hr>
 
-  @if ($location->map !== 'noimage.jpg')
-  <img src="/storage/maps/{{ $location->map }}" alt="{{ $location->title }}" class="col-sm-12 mb-3">
-  @endif
+  <div class="row">
+    <div class="col-md-10" id="show-details">
+        <div class="card">
+            <div class="card-body">
+        <h1 class="header">{{ $location->title }}</h1>
   
-  <div>
-    {!! $location->content !!}
+        <hr>
+
+        <div>
+          {!! $location->content !!}
+        </div>
+    </div>
   </div>
+</div>
+<div class="col-md-2">
+    <affix class="" relative-element-selector="#show-details" style="width:200px" :offset="{top:50, bottom:20}">
+        
+        @if ($location->map !== 'noimage.jpg')
+          <p class="h5 header">Maps</p>
+          <thumbnails image="/storage/maps/{{$location->map}}"></thumbnails>
+        @endif
+      </affix>
+</div>
+  </div>
+
+  
 @endsection

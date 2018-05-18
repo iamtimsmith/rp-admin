@@ -46,7 +46,7 @@ $user = User::find($user_id);
   <script src="/quill/dist/quill.min.js"></script>
   <script>
   var toolbarOptions = [
-  [{ 'size': ['huge', 'large', false, 'small'] }], 
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
   [{ 'font': [] }],
   [{ 'color': [] }, { 'background': [] }],        
   ['bold', 'italic', 'underline', 'strike'],  
