@@ -545,6 +545,7 @@ Vue.component('offcanvas-right', __webpack_require__(23));
 Vue.component('dropdown', __webpack_require__(40));
 Vue.component('additem', __webpack_require__(47));
 Vue.component('thumbnails', __webpack_require__(50));
+Vue.component('monsters', __webpack_require__(67));
 Vue.component('VueAffix', __webpack_require__(66));
 
 var app = new Vue({
@@ -17246,6 +17247,515 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ })
 /******/ ]);
 });
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(68)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(70)
+/* template */
+var __vue_template__ = __webpack_require__(71)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-01b54470"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/monsters.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-01b54470", Component.options)
+  } else {
+    hotAPI.reload("data-v-01b54470", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(69);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("311ef300", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-01b54470\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./monsters.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-01b54470\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./monsters.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.sweet-modal-overlay[data-v-01b54470] {\n  background: rgba(0, 0, 0, 0.2);\n}\nli[data-v-01b54470] {\n  text-align: left;\n}\n.max-height-500 .sweet-modal.has-content[data-v-01b54470] {\n  max-height: 100px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__ = __webpack_require__(55);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['stats'],
+  components: {
+    SweetModal: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["a" /* SweetModal */], SweetModalTab: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["b" /* SweetModalTab */]
+  },
+  methods: {
+    showModal: function showModal() {
+      this.$refs.monster.open();
+    }
+  }
+});
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "a",
+        { attrs: { href: "javascript:void(0)" }, on: { click: _vm.showModal } },
+        [_vm._v(_vm._s(_vm.stats.name))]
+      ),
+      _vm._v(" "),
+      _c("sweet-modal", { ref: "monster", staticClass: "max-height-500" }, [
+        _c("h1", { staticClass: "mt-3" }, [_vm._v(_vm._s(_vm.stats.name))]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            _vm._s(_vm.stats.size) +
+              " " +
+              _vm._s(_vm.stats.type) +
+              " " +
+              _vm._s(_vm.stats.subtype) +
+              ", " +
+              _vm._s(_vm.stats.alignment)
+          )
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [
+            _c("strong", [_vm._v("Armor Class")]),
+            _vm._v(" " + _vm._s(_vm.stats.armor_class))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Hit Points")]),
+            _vm._v(" " + _vm._s(_vm.stats.hit_points))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Speed")]),
+            _vm._v(" " + _vm._s(_vm.stats.speed))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row abilities" }, [
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("STR")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.str))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("DEX")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.dex))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("CON")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.con))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("INT")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.int))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("WIS")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.wis))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm" }, [
+            _c("p", [_c("strong", [_vm._v("CHA")])]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.stats.cha))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", { staticClass: "saving-throws" }, [
+            _c("strong", [_vm._v("Saving Throws")]),
+            _vm._v(" "),
+            _vm.stats.str_save !== 0
+              ? _c("span", [_vm._v(" Str +" + _vm._s(_vm.stats.str_save))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.dex_save !== 0
+              ? _c("span", [_vm._v(" Dex +" + _vm._s(_vm.stats.dex_save))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.con_save !== 0
+              ? _c("span", [_vm._v(" Con +" + _vm._s(_vm.stats.con_save))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.int_save !== 0
+              ? _c("span", [_vm._v(" Int +" + _vm._s(_vm.stats.int_save))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.wis_save !== 0
+              ? _c("span", [_vm._v(" Wis +" + _vm._s(_vm.stats.wis_save))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.cha_save !== 0
+              ? _c("span", [_vm._v(" Cha +" + _vm._s(_vm.stats.cha_save))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "skills" }, [
+            _c("strong", [_vm._v("Skills")]),
+            _vm._v(" "),
+            _vm.stats.acrobatics !== 0
+              ? _c("span", [
+                  _vm._v(" Acrobatics +" + _vm._s(_vm.stats.acrobatics))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.animal_handling !== 0
+              ? _c("span", [
+                  _vm._v(
+                    " Animal Handling +" + _vm._s(_vm.stats.animal_handling)
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.arcana !== 0
+              ? _c("span", [_vm._v(" Arcana +" + _vm._s(_vm.stats.arcana))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.athletics !== 0
+              ? _c("span", [
+                  _vm._v(" Athletics +" + _vm._s(_vm.stats.athletics))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.deception !== 0
+              ? _c("span", [
+                  _vm._v(" Deception +" + _vm._s(_vm.stats.deception))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.history !== 0
+              ? _c("span", [_vm._v(" History +" + _vm._s(_vm.stats.history))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.insight !== 0
+              ? _c("span", [_vm._v(" Insight +" + _vm._s(_vm.stats.insight))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.intimidation !== 0
+              ? _c("span", [
+                  _vm._v(" Intimidation +" + _vm._s(_vm.stats.intimidation))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.investigation !== 0
+              ? _c("span", [
+                  _vm._v(" Investigation +" + _vm._s(_vm.stats.investigation))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.medicine !== 0
+              ? _c("span", [_vm._v(" Medicine +" + _vm._s(_vm.stats.medicine))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.nature !== 0
+              ? _c("span", [_vm._v(" Nature +" + _vm._s(_vm.stats.nature))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.perception !== 0
+              ? _c("span", [
+                  _vm._v(" Perception +" + _vm._s(_vm.stats.perception))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.performance !== 0
+              ? _c("span", [
+                  _vm._v(" Performance +" + _vm._s(_vm.stats.performance))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.persuasion !== 0
+              ? _c("span", [
+                  _vm._v(" Persuasion +" + _vm._s(_vm.stats.persuasion))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.religion !== 0
+              ? _c("span", [_vm._v(" Religion +" + _vm._s(_vm.stats.religion))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.sleight_of_hand !== 0
+              ? _c("span", [
+                  _vm._v(
+                    " Sleight of Hand +" + _vm._s(_vm.stats.sleight_of_hand)
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.stealth !== 0
+              ? _c("span", [_vm._v(" Stealth +" + _vm._s(_vm.stats.stealth))])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.stats.survival !== 0
+              ? _c("span", [_vm._v(" Survival +" + _vm._s(_vm.stats.survival))])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Damage Vulnerabilities")]),
+            _vm._v(" " + _vm._s(_vm.stats.damage_vulnerabilities))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Damage Resistance")]),
+            _vm._v(" " + _vm._s(_vm.stats.damage_resistance))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Damage Immmunities")]),
+            _vm._v(" " + _vm._s(_vm.stats.damage_immunities))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Condition Immmunities")]),
+            _vm._v(" " + _vm._s(_vm.stats.condition_immunities))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Senses")]),
+            _vm._v(" " + _vm._s(_vm.stats.senses))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Languages")]),
+            _vm._v(" " + _vm._s(_vm.stats.languages))
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Challenge Rating")]),
+            _vm._v(" " + _vm._s(_vm.stats.challenge_rating))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "text-left",
+          domProps: { innerHTML: _vm._s(_vm.stats.special_abilities) }
+        }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("h5", { staticClass: "border-bottom text-left" }, [
+          _vm._v("ACTIONS")
+        ]),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "text-left",
+          domProps: { innerHTML: _vm._s(_vm.stats.actions) }
+        }),
+        _vm._v(" "),
+        _c("hr", { staticClass: "mt-5 mb-2" }),
+        _vm._v(" "),
+        _c("small", [
+          _vm._v("This is SRD material and falls under the "),
+          _c("a", { attrs: { href: "/license" } }, [_vm._v("OGL License")]),
+          _vm._v(".")
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-01b54470", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

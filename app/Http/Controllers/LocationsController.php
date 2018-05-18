@@ -51,6 +51,7 @@ class LocationsController extends Controller
         // Validate input
         $this->validate($request, [
             'title' => 'required',
+            'monsters' => 'nullable',
             'content' => 'required',
             'map' => 'image|nullable|max:1999'
         ]);
@@ -73,6 +74,7 @@ class LocationsController extends Controller
         // Create Note to store
         $location = new Location;
         $location->title = $request->input('title');
+        $location->monsters = $request->input('monsters');
         $location->content = $request->input('content');
         $location->user_id = auth()->user()->id;
         $location->map = $filenameToStore;
@@ -123,11 +125,13 @@ class LocationsController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
+            'monsters' => 'nullable',
             'content' => 'required'
         ]);
         // Update post
         $location = Location::find($id);
         $location->title = $request->input('title');
+        $location->monsters = $request->input('monsters');
         $location->content = $request->input('content');
         $location->save();
         return redirect('/locations')->with('success', 'Note Updated');

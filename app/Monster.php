@@ -10,7 +10,8 @@ class Monster extends Model
     protected $table = '5e_srd_monsters';
 
     // Primary Key
-    public $primaryKey = 'id';
+    public $primaryKey = 'name';
+    public $incrementing = false;
 
     // Timestamps
     public $timestamps = false;

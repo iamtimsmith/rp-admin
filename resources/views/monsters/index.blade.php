@@ -11,7 +11,7 @@
         @foreach($monsters as $monster)
       <li>
           {{--<a href="/monsters/{{ $monster->id }}">{{ $monster->name }}</a>--}}
-        <a href="/monsters/{{ $monster->id }}"><span>{{ $monster->name }}</span><span class="float-right">{{ $monster->challenge_rating }}</span></a>
+        <a href="/monsters/{{ $monster->name }}"><span>{{ $monster->name }}</span><span class="float-right">{{ $monster->challenge_rating }}</span></a>
       </li>
         @endforeach
       </ul>
