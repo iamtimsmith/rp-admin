@@ -2,6 +2,10 @@
 @section('class', 'encounter')
 
 @section('content')
+<?php
+  use App\Monster;
+  $names = explode(',',ucwords($encounter->monsters));
+?>
 <div class="d-flex mb-4">
   <a href="/encounters">&lt;&lt; Back</a>
   <div class="ml-auto">
@@ -12,11 +16,37 @@
       {!! Form::close() !!}
   </div>
 </div>
-<h1 class="header">{{ $encounter->title }}</h1>
+<div class="row">
+  <div class="col-md-10" id="show-details">
+      <h1 class="header">{{ $encounter->title }}</h1>
 
-<hr>
+      <hr>
+      
+      <div>
+        {!! $encounter->content !!}
+      </div>
+  </div>
 
-<div>
-  {!! $encounter->content !!}
+<div class="col-md-2">
+    <affix class="" relative-element-selector="#show-details" style="width:200px" :offset="{top:50, bottom:20}">
+      
+        {{-- Monsters --}}
+        @if ( $encounter->monsters !== null )
+        <p class="h5 header mt-5">Monsters</p>
+        
+        <ul class="pl-3">
+          @foreach ($names as $name)
+            <?php $stats = Monster::find(trim($name)); ?>
+            <li>
+              <monsters :stats="{{json_encode($stats)}}"></monsters>
+            </li>
+          @endforeach
+        </ul>
+        @endif
+
+
+        
+      </affix>
+</div>
 </div>
 @endsection

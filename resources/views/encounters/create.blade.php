@@ -10,6 +10,11 @@
     {{ Form::text('title', '', ['class' => 'form-control']) }}
   </div>
   <div class="form-group">
+    {{ Form::label('monsters', 'Monsters') }}
+    <small>List the monsters that will be in this location (names must be singular).</small>
+    {{ Form::text('monsters', '', ['class' => 'form-control']) }}
+  </div>
+  <div class="form-group">
     {{ Form::label('content', 'Notes') }}
     <div id="encounter-notes"></div>
     {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
@@ -29,7 +34,7 @@
   var quill = new Quill('#encounter-notes', {
     theme:'snow',
     modules: {
-      toolbar: toolbarOptions
+      toolbar: toolbarOptions,
     }
   });
   

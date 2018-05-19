@@ -23,6 +23,7 @@ Vue.component('dropdown', require('./components/dropdown.vue'));
 Vue.component('additem', require('./components/addItem.vue'));
 Vue.component('thumbnails', require('./components/thumbnails.vue'));
 Vue.component('monsters', require('./components/monsters.vue'));
+Vue.component('sort-items', require('./components/sortItems.vue'));
 Vue.component('VueAffix', require('vue-affix'));
 
 

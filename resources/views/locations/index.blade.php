@@ -9,6 +9,7 @@
 
 <search></search>
 @if (count($locations) > 0)
+
 <ul class="list-group" id="list">
   @foreach($locations as $location)
     <li class="list-group-item"><a href="/locations/{{$location->id}}">{{ $location->title }}</a>
@@ -19,8 +20,14 @@
     </li>
   @endforeach
 </ul>
+
 @else
   <p>You don't have any locations yet. <a href="/locations/create">Click here to create one</a>.</p>
 @endif
+
+@endsection
+
+
+@section('contentjs')
 
 @endsection

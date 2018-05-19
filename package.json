@@ -25,6 +25,7 @@
         "rpg-awesome": "^0.1.1",
         "sweet-modal-vue": "^2.0.0",
         "vue-affix": "^0.2.4",
+        "vue-good-table": "^2.5.2",
         "vuedraggable": "^2.16.0"
     }
 }

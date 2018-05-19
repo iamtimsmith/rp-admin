@@ -3,7 +3,7 @@
 @section('content')
       <h1>User Settings</h1>
 
-      {!! Form::open(['action' => ['UserController@update', $user], 'method' => 'POST'] ) !!}
+      {!! Form::open(['action' => ['UserController@update', $user], 'method' => 'POST', 'id' => 'form'] ) !!}
           {{ csrf_field() }}
           {{ method_field('patch') }}
     
@@ -54,7 +54,9 @@
         <div class="col-sm-12 mt-5 form-group">
             <label for="side_notes">Sidebar Notes</label><br>
             <small class="mb-5">These notes will be placed on the right hand side of each page and work as a good place for useful links, campaign notes, or helpful reminders.</small>
-            <textarea name="side_notes" id="article-ckeditor" cols="30" rows="10" class="form-control">{{ $user->side_notes }}</textarea>
+            <div id="sidebar-notes" class='form-control'>{!! $user->side_notes !!}</div>
+            {{ Form::text('side_notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+            
           </div>
         </div>
         </div>
@@ -62,4 +64,24 @@
             <input type="submit" value="Save" class="btn btn-primary mt-3">
       {!! Form::close() !!}
 
+@endsection
+
+
+@section('contentjs')
+<script>
+  var quill = new Quill('#sidebar-notes', {
+    theme:'snow',
+    modules: {
+      toolbar: toolbarOptions
+    }
+  });
+  
+  var form = document.querySelector('#form');
+  form.onsubmit = function() {
+    var textarea = document.querySelector('#content');
+    textarea.value = quill.root.innerHTML;
+  }
+  
+
+</script>
 @endsection

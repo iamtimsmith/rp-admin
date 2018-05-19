@@ -53,6 +53,7 @@ class EncountersController extends Controller
         // Validate input
         $this->validate($request, [
             'title' => 'required',
+            'monsters' => 'nullable',
             'content' => 'required',
             'featured_image' => 'image|nullable|max:1999'
         ]);
@@ -75,6 +76,7 @@ class EncountersController extends Controller
         // Create Encounter to store
         $encounter = new Encounter;
         $encounter->title = $request->input('title');
+        $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
         $encounter->user_id = auth()->user()->id;
         $encounter->featured_image = $filenameToStore;
@@ -122,11 +124,13 @@ class EncountersController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
+            'monsters' => 'nullable',
             'content' => 'required'
         ]);
         // Update post
         $encounter = Encounter::find($id);
         $encounter->title = $request->input('title');
+        $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
         $encounter->save();
         return redirect('/encounters')->with('success', 'Encounter Updated');
