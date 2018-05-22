@@ -76,11 +76,13 @@ class LocationsController extends Controller
         $location->title = $request->input('title');
         $location->monsters = $request->input('monsters');
         $location->content = $request->input('content');
+        $location->encounters = $request->input('encounters');
         $location->user_id = auth()->user()->id;
         $location->map = $filenameToStore;
 
         $location->save();
-        return redirect('locations')->with('success', 'Location Created');
+        return redirect()->route('location', ['id'=>$location->id])->with('success', 'Location Created');
+        
     }
 
     /**
@@ -132,9 +134,10 @@ class LocationsController extends Controller
         $location = Location::find($id);
         $location->title = $request->input('title');
         $location->monsters = $request->input('monsters');
+        $location->encounters = $request->input('encounters');
         $location->content = $request->input('content');
         $location->save();
-        return redirect('/locations')->with('success', 'Note Updated');
+        return redirect()->route('location', ['id'=>$location->id])->with('success', 'Note Updated');
     }
 
     /**

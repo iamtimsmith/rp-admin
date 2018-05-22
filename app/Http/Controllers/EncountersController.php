@@ -82,7 +82,7 @@ class EncountersController extends Controller
         $encounter->featured_image = $filenameToStore;
 
         $encounter->save();
-        return redirect('encounters')->with('success', 'Encounter Created');
+        return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Created');
     }
 
     /**
@@ -133,7 +133,7 @@ class EncountersController extends Controller
         $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
         $encounter->save();
-        return redirect('/encounters')->with('success', 'Encounter Updated');
+        return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Updated');
     }
 
     /**

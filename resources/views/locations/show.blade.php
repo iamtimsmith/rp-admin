@@ -4,7 +4,9 @@
 @section('content')
 <?php
   use App\Monster;
+  use App\Encounter;
   $names = explode(',',ucwords($location->monsters));
+  $encounters = explode(',',ucwords($location->encounters));
 ?>
 <div class="d-flex mb-4">
     <a href="/locations">&lt;&lt; Back</a>
@@ -32,13 +34,28 @@
     </div>
   </div>
 </div>
-<div class="col-md-2">
+<div class="col-md-2 on-top">
     <affix class="" relative-element-selector="#show-details" style="width:200px" :offset="{top:50, bottom:20}">
         
       {{-- Maps --}}
         @if ($location->map !== 'noimage.jpg')
           <p class="h5 header">Maps</p>
           <thumbnails image="/storage/maps/{{$location->map}}"></thumbnails>
+        @endif
+
+      
+        {{-- Encounters --}}
+        @if ( $location->encounters !== null )
+        <p class="h5 header mt-5">Encounters</p>
+        
+        <ul class="pl-3">
+          @foreach ($encounters as $encounter)
+            <?php $notes = Encounter::find(trim($encounter)); ?>
+            <li>
+              <encounters :notes="{{json_encode($notes)}}"></encounters>
+            </li>
+          @endforeach
+        </ul>
         @endif
 
 

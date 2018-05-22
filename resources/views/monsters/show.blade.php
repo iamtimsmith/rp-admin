@@ -7,6 +7,8 @@
       <p>{{ $monster->size }} {{ $monster->type }} {{ $monster->subtype }}, {{ $monster->alignment }}</p>
       
       <hr>
+      <div class="card">
+        <div class="card-body">
       
       <ul>
         <li><strong>Armor Class</strong> {{ $monster->armor_class }}</li>
@@ -92,9 +94,10 @@
       
         {!! $monster->actions !!}
 
-        <hr class="mt-5">
-      <p>This is SRD material and falls under the <a href="/license">OGL License</a>.</p>
-
+      
+      <p class="mt-5 pt-5"><small>This is SRD material and falls under the <a href="/license">OGL License</a>.</small></p>
+    </div>
+  </div>
 
 
 @endsection

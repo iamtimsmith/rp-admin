@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Oswald);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600|Oswald|Asul);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
@@ -34,7 +34,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", sans-serif;
+  --font-family-sans-serif: "Lato", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -73,7 +73,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6268,7 +6268,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6393,7 +6393,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -15725,6 +15725,37 @@ a.text-dark:focus {
   height: 400px;
 }
 
+/* Editor applied styles */
+
+.ql-align-left {
+  text-align: left;
+}
+
+.ql-align-center {
+  text-align: center;
+}
+
+.ql-align-right {
+  text-align: right;
+}
+
+.ql-align-justify {
+  text-align: justify;
+}
+
+.ql-font-sans-serif {
+  font-family: "Lato", sans-serif;
+}
+
+.ql-font-serif {
+  font-family: "Asul", serif;
+}
+
+.ql-indent-1 {
+  margin-left: 25px;
+  list-style-type: circle;
+}
+
 body {
   margin-left: 70px;
   background-size: cover;
@@ -15740,6 +15771,10 @@ body a {
 body .card {
   -webkit-transition: all .35s;
   transition: all .35s;
+}
+
+body .on-top {
+  z-index: 11;
 }
 
 .section-dashboard h1,
@@ -15902,6 +15937,10 @@ body .card {
   color: #222;
 }
 
+.red-theme #topnav {
+  background: white;
+}
+
 .red-theme .btn-primary {
   background: #222;
   border: 1px solid #222;
@@ -15934,6 +15973,10 @@ body .card {
 
 .light-theme a {
   color: #222;
+}
+
+.light-theme #topnav {
+  background: white;
 }
 
 .light-theme .btn-primary {
@@ -16013,13 +16056,5 @@ label:focus,
   outline: 0px !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-}
-
-.ql-align-center {
-  text-align: center;
-}
-
-.ql-align-right {
-  text-align: right;
 }
 

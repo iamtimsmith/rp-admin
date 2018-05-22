@@ -13,9 +13,12 @@
           {!! Form::close() !!}
       </div>
     </div>
+    
     <h1 class="header">{{ $npc->name }}</h1>
+    <div class="card">
+      <div class="card-body">
       <div class="d-flex">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
             <p><strong>Gender</strong> {{ $npc->gender }}</p>
             <p><strong>Race</strong> {{ $npc->race }}</p>
             <p><strong>Class</strong> {{ $npc->class }}</p>
@@ -25,11 +28,13 @@
             <hr class="mt-0 mb-3">
             {!! $npc->notes !!}
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5">
           @if($npc->portrait !== "noimage.jpg")
             <img class="col" src="/storage/portraits/{{ $npc->portrait }}" alt="{{ $npc->name }}">
           @endif
         </div>
       </div>
+    </div>
+  </div>
 
 @endsection

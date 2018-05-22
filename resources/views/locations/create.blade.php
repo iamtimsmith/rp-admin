@@ -15,6 +15,11 @@
     {{ Form::text('monsters', '', ['class' => 'form-control']) }}
   </div>
   <div class="form-group">
+    {{ Form::label('encounters', 'Encounters') }}
+    <small>List the encounters that will be in this location (names must match encounter name).</small>
+    {{ Form::text('encounters', '', ['class' => 'form-control']) }}
+  </div>
+  <div class="form-group">
     {{ Form::label('content', 'Content') }}
     <div id="location-notes"></div>
     {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
@@ -43,7 +48,5 @@
     var textarea = document.querySelector('#content');
     textarea.value = quill.root.innerHTML;
   }
-  
-
 </script>
 @endsection

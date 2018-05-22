@@ -44,4 +44,22 @@ class UserController extends Controller
         
         return redirect()->route('users.edit', [$user->id])->with('success', 'Settings Updated');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
+    {
+        $user = Auth::user();
+
+        Auth::logout();
+
+        if ($user->delete()) {
+
+            return Redirect::route('site-home')->with('global', 'Your account has been deleted!');
+        }
+    }
 }

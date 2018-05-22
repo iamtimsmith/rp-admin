@@ -80,7 +80,7 @@ class NotesController extends Controller
         $note->featured_image = $filenameToStore;
 
         $note->save();
-        return redirect('notes')->with('success', 'Note Created');
+        return redirect()->route('note', ['id'=>$note->id])->with('success', 'Note Created');
     }
 
     /**
@@ -129,7 +129,7 @@ class NotesController extends Controller
         $note->title = $request->input('title');
         $note->content = $request->input('content');
         $note->save();
-        return redirect('/notes')->with('success', 'Note Updated');
+        return redirect()->route('note', ['id'=>$note->id])->with('success', 'Note Updated');
     }
 
     /**

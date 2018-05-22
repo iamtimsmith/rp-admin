@@ -14,10 +14,13 @@
 </div>
 <h1 class="header">{{ $note->title }}</h1>
 
-<hr>
 
+<div class="card">
+  <div class="card-body">
 <div>
   {!! $note->content !!}
+</div>
+</div>
 </div>
 
 @endsection

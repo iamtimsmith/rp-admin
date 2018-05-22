@@ -92,7 +92,7 @@ class PartyController extends Controller
         $char->portrait = $filenameToStore;
 
         $char->save();
-        return redirect('party')->with('success', 'Character Created');
+        return redirect()->route('character', ['id'=>$char->id])->with('success', 'Character Created');
     }
 
     /**
@@ -152,7 +152,7 @@ class PartyController extends Controller
         $char->active = $request->input('active');
         $char->notes = $request->input('notes');
         $char->save();
-        return redirect('/party')->with('success', 'Character Updated');
+        return redirect()->route('character', ['id'=>$char->id])->with('success', 'Character Updated');
     }
 
     /**

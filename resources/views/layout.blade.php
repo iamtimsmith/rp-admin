@@ -1,6 +1,5 @@
 <?php 
 use App\User;
-
 $user_id = auth()->user()->id;
 $user = User::find($user_id);
 ?>

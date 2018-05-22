@@ -35,5 +35,13 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/license', 'PagesController@license');
+Route::get('/delete-account', 'PagesController@delete');
+
+// Named Routes
+Route::get('/locations/{id}', 'LocationsController@show')->name('location');
+Route::get('/notes/{id}', 'NotesController@show')->name('note');
+Route::get('/party/{id}', 'PartyController@show')->name('character');
+Route::get('/npcs/{id}', 'NpcsController@show')->name('npc');
+Route::get('/encounters/{id}', 'EncounterController@show')->name('encounter');
 
 Route::patch('/settings/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);

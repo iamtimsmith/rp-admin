@@ -12,7 +12,7 @@
       <ul class="list-group" id="list">
       @foreach($encounters as $encounter)
         <li class="list-group-item"><a href="/encounters/{{$encounter->id}}">{{ $encounter->title }}</a>
-          {!! Form::open(['action' => ['NotesController@destroy', $encounter->id], 'method'=>'POST', 'class'=>'float-right']) !!}
+          {!! Form::open(['action' => ['EncountersController@destroy', $encounter->id], 'method'=>'POST', 'class'=>'float-right']) !!}
             {{ Form::hidden('_method', 'DELETE') }}
             {{ Form::submit('Delete', ['class'=>'btn btn-link text-danger pt-0 pb-0 mb-0', 'style'=>'font-size:1em']) }}
           {!! Form::close() !!}

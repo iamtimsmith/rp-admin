@@ -87,7 +87,7 @@ class NpcsController extends Controller
         $npc->portrait = $filenameToStore;
 
         $npc->save();
-        return redirect('npcs')->with('success', 'NPC Created');
+        return redirect()->route('npc', ['id'=>$npc->id])->with('success', 'NPC Created');
     }
 
     /**
@@ -146,7 +146,7 @@ class NpcsController extends Controller
         $npc->affiliation = $request->input('affiliation');
         $npc->notes = $request->input('notes');
         $npc->save();
-        return redirect('/npcs')->with('success', 'NPC Updated');
+        return redirect()->route('npc', ['id'=>$npc->id])->with('success', 'NPC Updated');
     }
 
     /**

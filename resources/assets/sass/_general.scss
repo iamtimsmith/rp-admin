@@ -10,5 +10,7 @@ body {
   .card {
     transition:all .35s;
   }
-  
+  .on-top {
+    z-index:11;
+  }
 }
