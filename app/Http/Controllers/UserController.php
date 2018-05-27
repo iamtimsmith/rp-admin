@@ -15,7 +15,8 @@ class UserController extends Controller
 
     public function edit(User $user) {
         $user = Auth::user();
-        return view('users.edit')->with('user', $user);
+        $user_id = auth()->user()->id;
+        return view('users.edit')->with('user', $user)->with('user_id', $user_id);
     }
 
     public function update(User $user) {
@@ -45,6 +46,12 @@ class UserController extends Controller
         return redirect()->route('users.edit', [$user->id])->with('success', 'Settings Updated');
     }
 
+    public function deleteaccount(User $user) {
+        $user = Auth::user();
+        $user_id = auth()->user()->id;
+        return view('users.delete')->with('user', $user)->with('user_id', $user_id);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -58,8 +65,7 @@ class UserController extends Controller
         Auth::logout();
 
         if ($user->delete()) {
-
-            return Redirect::route('site-home')->with('global', 'Your account has been deleted!');
+            return redirect()->route('deleted');
         }
     }
 }

@@ -1,36 +1,21 @@
 <template>
 <div>
-  <button class="btn btn-outline-light" @click="openLeft"><i class="fa fa-bars"></i></button>
-  <div class="card" id="offcanvas-left">
-    <button class="btn ml-auto" @click="closeLeft"><i class="fa fa-close"></i></button>
+<button class="btn btn-default bg-light text-dark" @click="openLeft"><i class="fa fa-bars"></i></button>
+  <div class="card bg-dark" id="offcanvas-left">
+    <button class="btn btn-default bg-dark text-light ml-auto" @click="closeLeft"><i class="fa fa-close"></i></button>
     <div class="card-body">
       <ul>
-        <!--<li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>-->
-        <li><a href="/monsters">Monsters</a></li>
-        <li><a href="/spells">Spells</a></li>
-        <li><a href="/rules">Rules</a></li>
+          <li class="mt-3 mb-5"><a href="/dashboard"><img src="/storage/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
+          <li class="mt-2"><a href="/dashboard"><span class="ra ra-quill-ink ra-2x"></span><span class="navlabel">Dashboard</span></a></li>
+          <li class="mt-2"><a href="/monsters"><span class="ra ra-hydra ra-2x"></span><span class="navlabel">Monsters</span></a></li>
+          <li class="mt-2"><a href="/spells"><span class="ra ra-flame-symbol ra-2x"></span><span class="navlabel">Spells</span></a></li>
+          <li class="mt-2"><a href="/notes"><span class="ra ra-book ra-2x"></span><span class="navlabel">Notes</span></a></li>
+          <li class="mt-2"><a href="/locations"><span class="fa fa-map-marker ra-2x"></span><span class="navlabel">Locations</span></a></li>
+          <li class="mt-2"><a href="/encounters"><span class="ra ra-crossed-swords ra-2x"></span><span class="navlabel">Encounters</span></a></li>
+          <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
+          <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
+          
       </ul>
-      <hr>
-      <ul>
-        <li>User Controls</li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li>
-          <a href="/notes">Notes</a>
-        </li>
-        <li><a href="/npcs">NPCs</a></li>
-        <li><a href="/locations">Locations</a></li>
-        <li><a href="/party">Party</a></li>
-      </ul>
-
-      <div class="row" id="controls">
-        <div class="col-6">
-          <a href="#"><span class="fa fa-cog"></span></a>
-        </div>
-        <div class="col-6">
-          <a href="/login"><span class="fa fa-user"></span></a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -38,9 +23,6 @@
 
 <script>
   export default {
-    data: {
-
-    },
     methods: {
       openLeft() {
         var offcanvas = document.getElementById('offcanvas-left');
@@ -55,53 +37,54 @@
 </script>
 
 <style lang="scss" scoped>
-.btn-outline-light {
+.btn-default {
+    margin-top:5px;
     border:none!important;
     .fa-bars {
       font-size:1.5rem;
     }
   }
   #offcanvas-left {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:-300px;
-    width:300px;
-    z-index:9;
-    transition:all .3s;
-    &.showing {
-      left:0;
+  visibility:hidden;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:-300px;
+  width:300px;
+  z-index:9;
+  transition:all .3s;
+  &.showing {
+    visibility:visible;
+    left:0;
+  }
+  .card-body {
+    overflow-y:scroll;
+  }
+  a {
+    color:#fff;
+  }
+  button {
+    width:50px;
+    .fa-close {
+      font-size:1.5rem;
     }
-    a {
-      color:#000;
-    }
-    button {
-      width:50px;
-      .fa-close {
-        font-size:1.5rem;
-      }
-    }
-    ul {
-      list-style:none;
-      li {
-        a {
-          font-size:1.1rem;
-          text-decoration:none!important;
+  }
+  ul {
+    list-style:none;
+    padding:0;
+    li {
+      a {
+        font-size:1.1rem;
+        text-decoration:none!important;
+        img {
+          max-width:100px;
+        }
+        .fa, .ra {
+          font-size:0.9rem;
+          margin-right:10px;
         }
       }
     }
-    #controls {
-      position:absolute;
-      bottom:0;
-      left:0;
-      right:0;
-      padding:15px 20px 15px 15px;
-      .fa {
-        font-size:1.5rem;
-      }
-      div:nth-child(2) {
-        text-align:right;
-      }
-    }
   }
+}
 </style>

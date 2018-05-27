@@ -1,4 +1,5 @@
 @extends('layout')
+@section('class', 'locations')
 
 @section('content')
   <h1 class="header">Edit Locations</h1>
@@ -22,6 +23,13 @@
         {{ Form::label('content', 'Content') }}
         <div id="location-notes">{!! $location->content !!}</div>
         {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+      </div>
+
+
+      <div class="form-group">
+        {{ Form::label('map', 'Images') }}
+        <image-handler :images="{{ $location->map }}"></image-handler>
+        {{  Form::text('map', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
       </div>
         
         {{ Form::hidden('_method', 'PUT') }}
@@ -47,6 +55,14 @@
     textarea.value = quill.root.innerHTML;
   }
   
+
+  // Thumbnail
+  var thumbnail = document.getElementByClassName('thumbnail')[0];
+  var input = document.querySelector('#inputMap');
+  function removePhoto() {
+    input.value = "noimage.png";
+    
+  }
 
 </script>
 @endsection

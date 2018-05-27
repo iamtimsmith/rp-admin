@@ -35,12 +35,6 @@ $sidenav-width:70px;
           }
         }
       }
-      /* &:last-child {
-        position:absolute;
-        bottom:10px;
-        left:0;
-        right:0;
-      } */
     }
   }
 }
@@ -58,7 +52,23 @@ $sidenav-width:70px;
     list-style:none;
     line-height:35px;
     ul {
-      width:100px;
+      width:250px;
+    }
+  }
+}
+
+
+
+
+
+@media (max-width:768px) {
+  body {
+    margin-left:0!important;
+    #topnav {
+      left:0!important;
+    }
+    #sidenav {
+      display:none;
     }
   }
 }

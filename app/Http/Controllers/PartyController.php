@@ -56,12 +56,29 @@ class PartyController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'player' => 'required',
-            'ac' => 'required',
-            'hp' => 'required',
-            'pp' => 'required',
+            'ac' => 'nullable',
+            'hp' => 'nullable',
+            'pp' => 'nullable',
+            'speed' => 'nullable',
             'active' => 'required',
+            'str' => 'nullable',
+            'dex' => 'nullable',
+            'con' => 'nullable',
+            'int' => 'nullable',
+            'wis' => 'nullable',
+            'cha' => 'nullable',
+            'saving_throws' => 'nullable',
+            'skills' => 'nullable',
+            'damage_vulnerabilities' => 'nullable',
+            'damage_resistances' => 'nullable',
+            'condition_immunities' => 'nullable',
+            'senses' => 'nullable',
+            'languages' => 'nullable',
+            'abilities' => 'nullable',
+            'actions' => 'nullable',
+            'equipment' => 'nullable',
             'notes' => 'nullable',
-            'portrait' => 'image|nullable|max:1999'
+            'portrait' => 'nullable|max:1999'
         ]);
 
         // Handle File Upload
@@ -86,7 +103,24 @@ class PartyController extends Controller
         $char->ac = $request->input('ac');
         $char->hp = $request->input('hp');
         $char->pp = $request->input('pp');
-        $char->active = $request->input('active');
+        $char->speed = $request->input('speed');
+        $char->status = $request->input('active');
+        $char->str = $request->input('str');
+        $char->dex = $request->input('dex');
+        $char->con = $request->input('con');
+        $char->int = $request->input('int');
+        $char->wis = $request->input('wis');
+        $char->cha = $request->input('cha');
+        $char->saving_throws = $request->input('saving_throws');
+        $char->skills = $request->input('skills');
+        $char->damage_vulnerabilities = $request->input('damage_vulnerabilities');
+        $char->damage_resistances = $request->input('damage_resistances');
+        $char->condition_immunities = $request->input('condition_immunities');
+        $char->senses = $request->input('senses');
+        $char->languages = $request->input('languages');
+        $char->abilities = $request->input('abilities');
+        $char->actions = $request->input('actions');
+        $char->equipment = $request->input('equipment');
         $char->notes = $request->input('notes');
         $char->user_id = auth()->user()->id;
         $char->portrait = $filenameToStore;
@@ -103,8 +137,18 @@ class PartyController extends Controller
      */
     public function show($id)
     {
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         $char = Char::find($id);
-        return view('party.show')->with('char', $char);
+
+        if ( isset($char) ) {
+            if (auth()->user()->id !== $char->user_id) {
+                return redirect('/party')->with('error', 'Unauthorized Page');
+            }
+            return view('party.show')->with('char', $char)->with('user', $user);
+        } else {
+            return redirect('/party')->with('error', "Character doesn't exist");
+        }
     }
 
     /**
@@ -115,12 +159,18 @@ class PartyController extends Controller
      */
     public function edit($id)
     {
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         $char = Char::find($id);
 
-        if (auth()->user()->id !== $char->user_id) {
-            return redirect('/party')->with('error', 'Unauthorized Page');
+        if ( isset($char) ) {
+            if (auth()->user()->id !== $char->user_id) {
+                return redirect('/party')->with('error', 'Unauthorized Page');
+            }
+            return view('party.edit')->with('char', $char)->with('user', $user);
+        } else {
+            return redirect('/party')->with('error', "Character doesn't exist");
         }
-        return view('party.edit')->with('char',$char);
     }
 
     /**
@@ -132,16 +182,35 @@ class PartyController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Validate input
         $this->validate($request, [
             'name' => 'required',
             'player' => 'required',
-            'ac' => 'required',
-            'hp' => 'required',
-            'pp' => 'required',
-            'active' => 'nullable',
+            'ac' => 'nullable',
+            'hp' => 'nullable',
+            'pp' => 'nullable',
+            'speed' => 'nullable',
+            'active' => 'required',
+            'str' => 'nullable',
+            'dex' => 'nullable',
+            'con' => 'nullable',
+            'int' => 'nullable',
+            'wis' => 'nullable',
+            'cha' => 'nullable',
+            'saving_throws' => 'nullable',
+            'skills' => 'nullable',
+            'damage_vulnerabilities' => 'nullable',
+            'damage_resistances' => 'nullable',
+            'condition_immunities' => 'nullable',
+            'senses' => 'nullable',
+            'languages' => 'nullable',
+            'abilities' => 'nullable',
+            'actions' => 'nullable',
+            'equipment' => 'nullable',
             'notes' => 'nullable',
-            'portrait' => 'nullable'
+            'portrait' => 'nullable|max:1999'
         ]);
+        
         // Update post
         $char = Char::find($id);
         $char->name = $request->input('name');
@@ -149,7 +218,24 @@ class PartyController extends Controller
         $char->ac = $request->input('ac');
         $char->hp = $request->input('hp');
         $char->pp = $request->input('pp');
-        $char->active = $request->input('active');
+        $char->speed = $request->input('speed');
+        $char->status = $request->input('active');
+        $char->str = $request->input('str');
+        $char->dex = $request->input('dex');
+        $char->con = $request->input('con');
+        $char->int = $request->input('int');
+        $char->wis = $request->input('wis');
+        $char->cha = $request->input('cha');
+        $char->saving_throws = $request->input('saving_throws');
+        $char->skills = $request->input('skills');
+        $char->damage_vulnerabilities = $request->input('damage_vulnerabilities');
+        $char->damage_resistances = $request->input('damage_resistances');
+        $char->condition_immunities = $request->input('condition_immunities');
+        $char->senses = $request->input('senses');
+        $char->languages = $request->input('languages');
+        $char->abilities = $request->input('abilities');
+        $char->actions = $request->input('actions');
+        $char->equipment = $request->input('equipment');
         $char->notes = $request->input('notes');
         $char->save();
         return redirect()->route('character', ['id'=>$char->id])->with('success', 'Character Updated');

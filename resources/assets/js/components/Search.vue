@@ -12,25 +12,26 @@ export default {
   methods: {
     searchList() {
 			// Get number of items in the list
-			var len = document.getElementById("list").getElementsByTagName("li").length;
+			var len = document.getElementById("sortable").getElementsByTagName("tr").length;
 			
 			// Loop through items in ul
 			for (var i = 0; i < len; i++) {
-				var n = i+1;
-				var listItem = document.querySelector("#list>li:nth-child(" + n + ") > a");
-				var searchItem = document.querySelector("#list>li:nth-child(" + n + ")");
+				var n = i+2;
+
+				var searchItem = document.querySelector("#sortable>tr:nth-child(" + n + ")");
+				console.log(searchItem);
 
 				// If search field is blank
 				if (this.search == '') {
-					searchItem.style.display = 'block';
+					searchItem.style.display = 'table-row';
 				}
 				// If list items are not equal to search field
-				else if ( !listItem.innerHTML.toLowerCase().includes(this.search.toLowerCase()) ) {
+				else if ( !searchItem.innerHTML.toLowerCase().includes(this.search.toLowerCase()) ) {
 					searchItem.style.display = 'none';
 				}
 				// Display if equal to search terms
 				else {
-					searchItem.style.display = 'block';
+					searchItem.style.display = 'table-row';
 				}
 			}	
 		}

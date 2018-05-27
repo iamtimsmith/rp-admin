@@ -2,28 +2,21 @@
 @section('class', 'locations')
 
 @section('content')
-<div>
-  <h1 class="float-left header">Location Notes</h1>
-  <a href="/locations/create" class="btn btn-default float-right">New</a>
+<div class="d-flex">
+  <h1 class=" header">Location Notes</h1>
+  <a href="/locations/create" class="btn btn-default ml-auto">New</a>
 </div>
+<div class="card">
+  <div class="card-body">
 
-<search></search>
-@if (count($locations) > 0)
-
-<ul class="list-group" id="list">
-  @foreach($locations as $location)
-    <li class="list-group-item"><a href="/locations/{{$location->id}}">{{ $location->title }}</a>
-      {!! Form::open(['action' => ['LocationsController@destroy', $location->id], 'method'=>'POST', 'class'=>'float-right']) !!}
-        {{ Form::hidden('_method', 'DELETE') }}
-        {{ Form::submit('Delete', ['class'=>'btn btn-link text-danger pt-0 pb-0 mb-0', 'style'=>'font-size:1em']) }}
-      {!! Form::close() !!}
-    </li>
-  @endforeach
-</ul>
-
+@if(count($locations) > 0)
+<sort-items :items="{{ json_encode($locations) }}" section="locations" :columns="['title', 'campaign']" />
 @else
-  <p>You don't have any locations yet. <a href="/locations/create">Click here to create one</a>.</p>
+<p>You don't have any locations yet. <a href="/locations/create">Click here to create one</a>.</p>
 @endif
+
+</div>
+</div>
 
 @endsection
 

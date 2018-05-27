@@ -28,9 +28,8 @@ class PagesController extends Controller
         return view('license');
     }
 
-    public function delete(User $user) 
-    {
-        $user = Auth::user();
-        return view ('delete')->with('user', $user);
+    public function deleted() 
+    {    
+        return view('users.deleted');
     }
 }

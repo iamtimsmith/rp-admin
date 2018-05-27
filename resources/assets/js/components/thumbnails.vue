@@ -1,8 +1,12 @@
 <template>
   <div>
-    <a href="javascript:void(0)" @click="showModal" class="col-sm-2 img-thumbnail" :style="{ backgroundImage: `url(${image})`}"></a>
-    <sweet-modal ref="modal" width="60%">
-      <img class="modal-image" :src="image" alt="" />
+    <div v-for="image in images" :key="image">
+      <a href="javascript:void(0)" @click="showModal(image)" class="col-sm-2 img-thumbnail" :style="{ backgroundImage: `url(${image})`}"></a>
+    </div>
+    <sweet-modal ref="modal" width="60%" enable-mobile-fullscreen="true">
+      <sweet-modal-tab v-for="(image, index) in images" :key="image" :title="`Image ${index+1}`" :id="image">
+        <img class="modal-image" :src="image" alt="" />
+      </sweet-modal-tab>
     </sweet-modal>
   </div>
 </template>
@@ -11,14 +15,19 @@
 import { SweetModal, SweetModalTab } from 'sweet-modal-vue';
 export default {
   props: [
-    'image'
+    'images'
   ],
+  data() {
+    return {
+      
+    }
+  },
   components: {
     SweetModal, SweetModalTab
   },
   methods: {
-    showModal() {
-      this.$refs.modal.open();
+    showModal(image) {
+      this.$refs.modal.open(image);
     }
   }
 }
@@ -41,4 +50,13 @@ export default {
 .modal-image {
   max-width:100%;
 }
+
+@media (max-width:769px) {
+  .img-thumbnail {
+    width:100%;
+    height:200px;
+  }
+}
+
+
 </style>

@@ -10,6 +10,7 @@ $user = User::find($user_id);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
 
 
   <link rel="stylesheet" href="/quill/dist/quill.snow.css">
@@ -18,18 +19,17 @@ $user = User::find($user_id);
 </head>
 <body class="{{ $user->theme }}-theme" >
   <div id="app">
-    {{--@include('partials.navbar')--}}
     @include('partials.sidenav')
     @include('partials.topnav')
     @include('partials.rightbar')
 
     <div class="mt-5 mb-5 pt-3 pl-3 pr-3 section-@yield('class')">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-md-8 col-lg-9 mb-3">
             @include('partials/messages')
             @yield('content')
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-4 col-lg-3">
           {!! $user->side_notes !!}
         </div>
       </div>

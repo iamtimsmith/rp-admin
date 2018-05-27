@@ -4,11 +4,10 @@
   
   <ul class="list-group">
     <draggable :list="init" class="dragArea">
-      <li class="list-group-item" v-for="item in items" :key="item.id">
+      <li class="list-group-item" v-for="item in init" :key="item.id">
         <p class="mb-0">{{ item.name }}</p>
         <span><small>AC {{ item.ac }} | HP {{ item.hp }} | PP {{ item.pp }}</small></span>
       </li>
-      <li class="list-group-item">DM</li>
     </draggable>
   </ul>
   </div>
@@ -26,13 +25,22 @@ export default {
   ],
   data() {
     return {
-      
+      init: this.items
     }
   },
-  created: {
-    addDM() {
-      var dm = "DM";
-      items.push(dm);
+  watch: {
+    init: {
+      handler() {
+        localStorage.setItem('initiative', JSON.stringify(this.init));
+      }
+    }
+  },
+  mounted: function() {
+    if (localStorage.getItem('initiative')) {
+      this.init = JSON.parse(localStorage.getItem('initiative'))
+    } else {
+      var dm = {id:0, name:'DM'};
+      this.init.push(dm);
     }
   }
 }

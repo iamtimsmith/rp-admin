@@ -27,7 +27,7 @@ class LocationsController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('locations.index')->with('locations', $user->locations)->with('user', $user);
+        return view('locations.index')->with('locations', $user->locations->sortBy('title')->values()->all())->with('user', $user);
     }
 
     /**
@@ -53,11 +53,11 @@ class LocationsController extends Controller
             'title' => 'required',
             'monsters' => 'nullable',
             'content' => 'required',
-            'map' => 'image|nullable|max:1999'
+            'map' => 'nullable'
         ]);
 
         // Handle File Upload
-        if($request->hasFile('map')) {
+        if($request->hasFile('')) {
             $filenameWithExt = $request->file('map')->getClientOriginalName();
             // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
@@ -78,7 +78,7 @@ class LocationsController extends Controller
         $location->content = $request->input('content');
         $location->encounters = $request->input('encounters');
         $location->user_id = auth()->user()->id;
-        $location->map = $filenameToStore;
+        $location->map = $request->input('map');
 
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Location Created');
@@ -96,7 +96,14 @@ class LocationsController extends Controller
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         $location = Location::find($id);
-        return view('locations.show')->with('location', $location)->with('user', $user);
+        if( isset($location) ) {
+            if (auth()->user()->id !== $location->user_id) {
+                return redirect('/locations')->with('error', 'Unauthorized Page');
+            }
+            return view('locations.show')->with('location', $location)->with('user', $user);
+        } else {
+            return redirect('/locations')->with('error', "Location doesn't exist.");
+        }
     }
 
     /**
@@ -109,10 +116,14 @@ class LocationsController extends Controller
     {
         $location = Location::find($id);
 
-        if (auth()->user()->id !== $location->user_id) {
-            return redirect('/locations')->with('error', 'Unauthorized Page');
+        if( isset($location) ) {
+            if (auth()->user()->id !== $location->user_id) {
+                return redirect('/locations')->with('error', 'Unauthorized Page');
+            }
+            return view('locations.edit')->with('location',$location);
+        } else {
+            return redirect('/locations')->with('error', "Location doesn't exist.");
         }
-        return view('locations.edit')->with('location',$location);
     }
 
     /**
@@ -128,7 +139,8 @@ class LocationsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'monsters' => 'nullable',
-            'content' => 'required'
+            'content' => 'required',
+            'map' => 'nullable'
         ]);
         // Update post
         $location = Location::find($id);
@@ -136,6 +148,7 @@ class LocationsController extends Controller
         $location->monsters = $request->input('monsters');
         $location->encounters = $request->input('encounters');
         $location->content = $request->input('content');
+        $location->map = $request->input('map');
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Note Updated');
     }

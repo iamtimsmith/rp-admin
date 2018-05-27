@@ -92,7 +92,15 @@ class NotesController extends Controller
     public function show($id)
     {
         $note = Note::find($id);
-        return view('notes.show')->with('note', $note);
+
+        if ( isset($note) ) {
+            if (auth()->user()->id !== $note->user_id) {
+                return redirect('/notes')->with('error', 'Unauthorized Page');
+            }
+            return view('notes.show')->with('note', $note);
+        } else {
+            return redirect('/notes')->with('error', "Note doesn't exist.");
+        }
     }
 
     /**
@@ -105,10 +113,14 @@ class NotesController extends Controller
     {
         $note = Note::find($id);
 
-        if (auth()->user()->id !== $note->user_id) {
-            return redirect('/notes')->with('error', 'Unauthorized Page');
+        if ( isset($note) ) {
+            if (auth()->user()->id !== $note->user_id) {
+                return redirect('/notes')->with('error', 'Unauthorized Page');
+            }
+            return view('notes.edit')->with('note', $note);
+        } else {
+            return redirect('/notes')->with('error', "Note doesn't exist.");
         }
-        return view('notes.edit')->with('note',$note);
     }
 
     /**

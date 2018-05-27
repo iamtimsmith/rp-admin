@@ -3,35 +3,21 @@
 
 @section('content')
 
-      <div class="clearfix">
-        <h1 class="float-left header">Party</h1>
-        <a href="/party/create" class="btn btn-default float-right">New</a>
-      </div>
-    @if(count($party) > 0)
-    <table class="table mt-4">
-      <tr>
-        <th>Name</th>
-        <th>Player</th>
-        <th>AC</th>
-        <th>HP</th>
-        <th>PP</th>
-        <th>Status</th>
-      </tr>
-      @foreach($party as $char)
-      <tr>
-        <td><a href="/party/{{ $char->id }}">{{ $char->name }}</a></td>
-        <td>{{ $char->player }}</td>
-        <td>{{ $char->ac }}</td>
-        <td>{{ $char->hp }}</td>
-        <td>{{ $char->pp }}</td>
-        <td>{{ $char->active }}</td>
-      </tr>
-      @endforeach
-    </table>
-
-      @else
-      <p>You don't have any characters in your party.</p>
-      @endif
+<div class="d-flex">
+    <h1 class=" header">Party</h1>
+    <a href="/party/create" class="btn btn-default ml-auto">New</a>
+  </div>
+  <div class="card">
+    <div class="card-body">
+  
+  @if(count($party) > 0)
+  <sort-items :items="{{ json_encode($party) }}" section="party" :columns="['name', 'player', 'ac', 'hp', 'pp', 'status']" />
+  @else
+  <p>You don't have any party yet. <a href="/party/create">Click here to create one</a>.</p>
+  @endif
+  
+  </div>
+  </div>
   
 
 @endsection

@@ -25,8 +25,6 @@ class EncountersController extends Controller
      */
     public function index()
     {
-        //$encounters = Encounter::orderBy('id', 'desc')->get();
-        //$encounters = Encounter::all();
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         return view('encounters.index')->with('encounters', $user->encounters);
@@ -94,7 +92,14 @@ class EncountersController extends Controller
     public function show($id)
     {
         $encounter = Encounter::find($id);
+        if ( isset($encounter) ) {
+        if (auth()->user()->id !== $encounter->user_id) {
+            return redirect('/encounters')->with('error', 'Unauthorized Page');
+        }
         return view('encounters.show')->with('encounter', $encounter);
+    } else {
+        return redirect('/encounters')->with('error', "Encounter doesn't exist.");
+    }
     }
 
     /**
@@ -107,10 +112,14 @@ class EncountersController extends Controller
     {
         $encounter = Encounter::find($id);
 
-        if (auth()->user()->id !== $encounter->user_id) {
-            return redirect('/encounters')->with('error', 'Unauthorized Page');
+        if ( isset($encounter) ) {
+            if (auth()->user()->id !== $encounter->user_id) {
+                return redirect('/encounters')->with('error', 'Unauthorized Page');
+            }
+            return view('encounters.edit')->with('encounter',$encounter);
+        } else {
+            return redirect('/encounters')->with('error', "Encounter doesn't exist.");
         }
-        return view('encounters.edit')->with('encounter',$encounter);
     }
 
     /**

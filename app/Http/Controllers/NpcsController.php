@@ -99,7 +99,14 @@ class NpcsController extends Controller
     public function show($id)
     {
         $npc = NPC::find($id);
-        return view('npcs.show')->with('npc', $npc);
+        if ( isset($npc) ) {
+            if (auth()->user()->id !== $npc->user_id) {
+                return redirect('/npcs')->with('error', 'Unauthorized Page');
+            }
+            return view('npcs.show')->with('npc', $npc);
+        } else {
+            return redirect('/npcs')->with('error', "NPC doesn't exist.");
+        }
     }
 
     /**
@@ -111,11 +118,14 @@ class NpcsController extends Controller
     public function edit($id)
     {
         $npc = NPC::find($id);
-
-        if (auth()->user()->id !== $npc->user_id) {
-            return redirect('/npcs')->with('error', 'Unauthorized Page');
+        if ( isset($npc) ) {
+            if (auth()->user()->id !== $npc->user_id) {
+                return redirect('/npcs')->with('error', 'Unauthorized Page');
+            }
+            return view('npcs.edit')->with('npc',$npc);
+        } else {
+            return redirect('/npcs')->with('error', "NPC doesn't exist.");
         }
-        return view('npcs.edit')->with('npc',$npc);
     }
 
     /**

@@ -3,19 +3,20 @@
 
 @section('content')
 
-        <h1>Spells</h1>
-    
-        <search></search>
-        @if(count($spells) > 0)
-        <p class="mt-4 mb-0"><span>Name</span><span class="float-right">Level</span></p>
-        <ul id="list" style="list-style:none; padding:0;">
-          @foreach($spells as $spell)
-        <li><a href="/spells/{{ $spell->id }}"><span>{{ $spell->name }}</span><span class="float-right">{{ $spell->level }}</span></a></li>
-          @endforeach
-        </ul>
-        @endif
+<div class="d-flex">
+    <h1 class=" header">Spells</h1>
+  </div>
+  <div class="card">
+    <div class="card-body">
   
-        <hr class="mt-5">
-      <p>This is SRD material and falls under the <a href="/license">OGL License</a>.</p>
+  @if(count($spells) > 0)
+  <sort-items :items="{{ json_encode($spells) }}" section="spells" :columns="['name', 'class', 'level']" />
+  @endif
+  
+  </div>
+  </div>
+
+  <hr class="mt-5">
+  <p>This is SRD material and falls under the <a href="/license">OGL License</a>.</p>
 
 @endsection

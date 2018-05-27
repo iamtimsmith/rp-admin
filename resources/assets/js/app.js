@@ -15,7 +15,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('search', require('./components/Search.vue'));
 Vue.component('offcanvas-left', require('./components/offcanvasLeft.vue'));
 Vue.component('offcanvas-right', require('./components/offcanvasRight.vue'));
@@ -25,6 +24,7 @@ Vue.component('thumbnails', require('./components/thumbnails.vue'));
 Vue.component('monsters', require('./components/monsters.vue'));
 Vue.component('encounters', require('./components/encounters.vue'));
 Vue.component('sort-items', require('./components/sortItems.vue'));
+Vue.component('image-handler', require('./components/imageHandler.vue'));
 Vue.component('VueAffix', require('vue-affix'));
 
 
@@ -44,6 +44,7 @@ const app = new Vue({
                 icon.remove('fa-angle-left');
                 icon.add('fa-angle-right');
             }
-        }
+        },
     }
 });
+

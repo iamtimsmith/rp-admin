@@ -1,9 +1,5 @@
 body {
   margin-left:70px;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-attachment:fixed;
   a {
   text-decoration:none!important;
   }
@@ -12,5 +8,10 @@ body {
   }
   .on-top {
     z-index:11;
+  }
+  .affix {
+    height:100%;
+    overflow-y:scroll;
+    padding-bottom:100px;
   }
 }

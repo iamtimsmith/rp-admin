@@ -4,19 +4,27 @@
     font-family:"Oswald", sans-serif;
     text-transform:uppercase;
   }
-  .timeline {
-    position:relative;
-    .line {
-      position:absolute;
-      left:50%;
-      height:100%;
-      width:1px;
-      display:block;
-      margin:0 auto;
-      background:#999;
-    }
-    hr {
-      margin:1rem 0 0.3rem!important;
+  .quick-nav {
+    div {
+      a {
+        span {
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          position:absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+        }
+      }
+      a:after {
+        content:'';
+        display:block;
+        padding-bottom:100%;
+        box-sizing:inherit;
+      }
     }
   }
 }
+
