@@ -53,23 +53,8 @@ class LocationsController extends Controller
             'title' => 'required',
             'monsters' => 'nullable',
             'content' => 'required',
-            'map' => 'nullable'
+            'images' => 'nullable'
         ]);
-
-        // Handle File Upload
-        if($request->hasFile('')) {
-            $filenameWithExt = $request->file('map')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just extension
-            $extension = $request->file('map')->getClientOriginalExtension();
-            // Filename to store
-            $filenameToStore = $filename.'_'.time().'.'.$extension;
-            // Upload image
-            $path = $request->file('map')->storeAs('public/maps', $filenameToStore);
-        } else {
-            $filenameToStore = 'noimage.jpg';
-        }
 
         // Create Note to store
         $location = new Location;
@@ -78,7 +63,7 @@ class LocationsController extends Controller
         $location->content = $request->input('content');
         $location->encounters = $request->input('encounters');
         $location->user_id = auth()->user()->id;
-        $location->map = $request->input('map');
+        $location->images = $request->input('images');
 
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Location Created');
@@ -140,7 +125,7 @@ class LocationsController extends Controller
             'title' => 'required',
             'monsters' => 'nullable',
             'content' => 'required',
-            'map' => 'nullable'
+            'images' => 'nullable'
         ]);
         // Update post
         $location = Location::find($id);
@@ -148,7 +133,7 @@ class LocationsController extends Controller
         $location->monsters = $request->input('monsters');
         $location->encounters = $request->input('encounters');
         $location->content = $request->input('content');
-        $location->map = $request->input('map');
+        $location->images = $request->input('images');
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Note Updated');
     }

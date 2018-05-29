@@ -134,9 +134,11 @@
   <div class="col-sm-2">
     <affix>
       <div>
-        @if ($char->portrait !== 'noimage.jpg')
-        <thumbnails image="/storage/portraits/{{$char->portrait}}"></thumbnails>
-        @endif
+        {{-- Images --}} 
+        @if ($char->images !== null )
+          <p class="h5 header">Images</p>
+          <thumbnails :images="[{{ $char->images }}]"></thumbnails>
+        @endif 
       </div>
     </affix>
   </div>

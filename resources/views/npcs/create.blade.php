@@ -36,10 +36,14 @@
           {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
         </div>
         <div class="form-group col-sm-12">
-          {{  Form::file('portrait') }}
+          {{ Form::label('images', 'Images') }}
+          <image-handler></image-handler>
+          {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
         </div>
-        {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
-        <a href="/npcs/" class="btn btn-default text-danger">Cancel</a>
+        <div class="col-sm-12">
+          {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
+          <a href="/npcs/" class="btn btn-default text-danger">Cancel</a>
+        </div>
       {!! Form::close() !!}
 
 

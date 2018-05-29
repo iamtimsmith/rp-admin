@@ -10,7 +10,8 @@ class Spell extends Model
     protected $table = '5e_srd_spells';
 
     // Primary Key
-    public $primaryKey = 'id';
+    public $primaryKey = 'name';
+    public $incrementing = false;
 
     // Timestamps
     public $timestamps = false;

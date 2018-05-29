@@ -10,7 +10,7 @@
   <div class="card-body">
 
 @if(count($locations) > 0)
-<sort-items :items="{{ json_encode($locations) }}" section="locations" :columns="['title', 'campaign']" />
+<sort-items :items="{{ json_encode($locations) }}" section="locations" :columns="['title', 'campaign']" url="id" />
 @else
 <p>You don't have any locations yet. <a href="/locations/create">Click here to create one</a>.</p>
 @endif

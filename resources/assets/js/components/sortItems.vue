@@ -3,7 +3,7 @@
   <table-component :data="items" :sort-by="columns[0]" sort-order="asc" filter-placeholder="Search...">
     <table-column :show="columns[0]">
       <template slot-scope="row">
-        <a :href="`/${section}/${row.id}`">{{ row[columns[0]] }}</a>
+          <a :href="`/${section}/${row[url]}`">{{ row[columns[0]] }}</a>
       </template>
     </table-column>
     <table-column v-if="columns.length > 1" :show="columns[1]"></table-column>
@@ -20,14 +20,14 @@
 import { TableComponent, TableColumn } from 'vue-table-component';
 export default {
   components: {
-    
     TableComponent,
     TableColumn
   },
   props:[
     'items',
     'columns',
-    'section'
+    'section',
+    'url'
   ],
   beforeUpdate() {
     var col = document.getElementsByTagName('TH');

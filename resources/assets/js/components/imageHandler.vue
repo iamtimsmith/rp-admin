@@ -7,7 +7,7 @@
     </div>
     <div class="input">
       <input type="text" placeholder="Place the url for your image here...">
-      <a href="javascript:void(0)" @click="addImage" class="btn btn-default"><i class="fa fa-plus"></i></a>
+      <a href="javascript:void(0)" @click="addImage" class="btn btn-default ml-auto"><i class="fa fa-plus"></i></a>
     </div>
   </div>
 </template>
@@ -37,20 +37,23 @@ export default {
     }
   },
   mounted: function() {
-    for(var i=0;i < this.images.length; i++) {
-      this.arr.push( this.images[i] );
+    if (this.images !== null) {
+      for(var i=0;i < this.images.length; i++) {
+        this.arr.push( this.images[i] );
+      }
     }
   },
   watch: {
     arr: {
       handler() {
         var hiddenInput = document.querySelector("#inputMap");
-        var str = "[";
+        var str = "";
 
+        if (this.arr.length > 0) {
         for (var i = 0; i < this.arr.length; i++) {
           str = str + `"${this.arr[i]}",`;
         }
-        str = str+"]";
+        }
 
         hiddenInput.value = str;
       }
@@ -84,6 +87,7 @@ export default {
   input {
     margin-bottom:0;
     border:none!important;
+    width:100%;
   }
 }
 </style>

@@ -11,7 +11,7 @@
     <div class="card-body">
   
   @if(count($party) > 0)
-  <sort-items :items="{{ json_encode($party) }}" section="party" :columns="['name', 'player', 'ac', 'hp', 'pp', 'status']" />
+  <sort-items :items="{{ json_encode($party) }}" section="party" :columns="['name', 'player', 'ac', 'hp', 'pp', 'status']" url="id" />
   @else
   <p>You don't have any party yet. <a href="/party/create">Click here to create one</a>.</p>
   @endif

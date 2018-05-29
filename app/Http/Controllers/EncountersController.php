@@ -53,23 +53,9 @@ class EncountersController extends Controller
             'title' => 'required',
             'monsters' => 'nullable',
             'content' => 'required',
-            'featured_image' => 'image|nullable|max:1999'
+            'images' => 'nullable'
         ]);
 
-        // Handle File Upload
-        if($request->hasFile('featured_image')) {
-            $filenameWithExt = $request->file('featured_image')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just extension
-            $extension = $request->file('featured_image')->getClientOriginalExtension();
-            // Filename to store
-            $filenameToStore = $filename.'_'.time().'.'.$extension;
-            // Upload image
-            $path = $request->file('featured_image')->storeAs('public/featured_images', $filenameToStore);
-        } else {
-            $filenameToStore = 'noimage.jpg';
-        }
 
         // Create Encounter to store
         $encounter = new Encounter;
@@ -77,7 +63,7 @@ class EncountersController extends Controller
         $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
         $encounter->user_id = auth()->user()->id;
-        $encounter->featured_image = $filenameToStore;
+        $encounter->images = $request->input('images');
 
         $encounter->save();
         return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Created');
@@ -141,6 +127,7 @@ class EncountersController extends Controller
         $encounter->title = $request->input('title');
         $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
+        $encounter->images = $request->input('images');
         $encounter->save();
         return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Updated');
     }

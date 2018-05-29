@@ -14,6 +14,11 @@
         <div id="note-body">{!! $note->content !!}</div>
         {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
       </div>
+      <div class="form-group">
+        {{ Form::label('images', 'Images') }}
+        <image-handler :images="[{{ $note->images }}]"></image-handler>
+        {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
+      </div>
         {{ Form::hidden('_method', 'PUT') }}
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
         <a href="/notes/{{ $note->id }}" class="btn btn-default text-danger">Cancel</a>

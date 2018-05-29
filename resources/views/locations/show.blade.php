@@ -37,10 +37,10 @@
 <div class="d-none d-md-block col-md-2 on-top">
     <affix class="" relative-element-selector="#show-details" style="width:150px" :offset="{top:50, bottom:20}">
         <div>
-        {{-- Maps --}}
-        @if ($location->map !== '')
-          <p class="h5 header">Maps</p>
-          <thumbnails :images="{{ $location->map }}"></thumbnails>
+        {{-- Images --}}
+        @if ($location->images !== '[]')
+          <p class="h5 header">Images</p>
+          <thumbnails :images="[{{ $location->images }}]"></thumbnails>
         @endif
 
       
@@ -78,10 +78,10 @@
       </affix>
 </div>
 <div class="d-md-none col-12 mt-4">
-      {{-- Maps --}}
-      @if ($location->map !== '')
-        <p class="h5 header">Maps</p>
-        <thumbnails :images="{{ $location->map }}"></thumbnails>
+      {{-- Images --}}
+      @if ($location->images !== '[]')
+        <p class="h5 header">Images</p>
+        <thumbnails :images="[{{ $location->images }}]"></thumbnails>
       @endif
 
     

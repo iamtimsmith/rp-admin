@@ -14,9 +14,11 @@
     <div id="note-body"></div>
     {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
   </div>
-    <div class="form-group">
-      {{  Form::file('featured_image') }}
-    </div>
+  <div class="form-group">
+    {{ Form::label('images', 'Images') }}
+    <image-handler></image-handler>
+    {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
+  </div>
     {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
     <a href="/notes/" class="btn btn-default text-danger">Cancel</a>
 {!! Form::close() !!}

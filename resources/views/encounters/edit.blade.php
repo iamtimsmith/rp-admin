@@ -8,16 +8,24 @@
         {{ Form::label('title', 'Title') }}
         {{ Form::text('title', $encounter->title, ['class' => 'form-control']) }}
       </div>
+      
+      <div class="form-group">
+        {{ Form::label('content', 'Notes') }}
+        <div id="encounter-notes">{!! $encounter->content !!}</div>
+        {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+      </div>
+      
       <div class="form-group">
         {{ Form::label('monsters', 'Monsters') }}
         <small>List the monsters that will be in this location (names must be singular).</small>
         {{ Form::text('monsters', $encounter->monsters, ['class' => 'form-control']) }}
       </div>
       <div class="form-group">
-        {{ Form::label('content', 'Notes') }}
-        <div id="encounter-notes">{!! $encounter->content !!}</div>
-        {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+        {{ Form::label('images', 'Images') }}
+        <image-handler :images="[{{ $encounter->images }}]"></image-handler>
+        {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
       </div>
+      
         {{ Form::hidden('_method', 'PUT') }}
         {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
         <a href="/encounters/{{ $encounter->id }}" class="btn btn-default text-danger">Cancel</a>

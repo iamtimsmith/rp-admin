@@ -56,23 +56,8 @@ class NpcsController extends Controller
             'class' => 'nullable',
             'alignment' => 'nullable',
             'notes' => 'nullable',
-            'portrait' => 'image|nullable|max:1999'
+            'images' => 'nullable'
         ]);
-
-        // Handle File Upload
-        if($request->hasFile('portrait')) {
-            $filenameWithExt = $request->file('portrait')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just extension
-            $extension = $request->file('portrait')->getClientOriginalExtension();
-            // Filename to store
-            $filenameToStore = $filename.'_'.time().'.'.$extension;
-            // Upload image
-            $path = $request->file('portrait')->storeAs('public/portraits', $filenameToStore);
-        } else {
-            $filenameToStore = 'noimage.jpg';
-        }
 
         // Create Note to store
         $npc = new NPC;
@@ -84,7 +69,7 @@ class NpcsController extends Controller
         $npc->affiliation = $request->input('affiliation');
         $npc->notes = $request->input('notes');
         $npc->user_id = auth()->user()->id;
-        $npc->portrait = $filenameToStore;
+        $npc->images = $request->input('images');
 
         $npc->save();
         return redirect()->route('npc', ['id'=>$npc->id])->with('success', 'NPC Created');
@@ -144,7 +129,8 @@ class NpcsController extends Controller
             'class' => 'nullable',
             'alignment' => 'nullable',
             'affiliation' => 'nullable',
-            'notes' => 'nullable'
+            'notes' => 'nullable',
+            'images' => 'nullable'
         ]);
         // Update post
         $npc = NPC::find($id);
@@ -155,6 +141,7 @@ class NpcsController extends Controller
         $npc->alignment = $request->input('alignment');
         $npc->affiliation = $request->input('affiliation');
         $npc->notes = $request->input('notes');
+        $npc->images = $request->input('images');
         $npc->save();
         return redirect()->route('npc', ['id'=>$npc->id])->with('success', 'NPC Updated');
     }

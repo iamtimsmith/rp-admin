@@ -11,7 +11,7 @@
     <div class="card-body">
   
   @if(count($npcs) > 0)
-  <sort-items :items="{{ json_encode($npcs) }}" section="npcs" :columns="['name', 'gender', 'race', 'class', 'affiliation']" />
+  <sort-items :items="{{ json_encode($npcs) }}" section="npcs" :columns="['name', 'gender', 'race', 'class', 'affiliation']" url="id" />
   @else
   <p>You don't have any locations yet. <a href="/npcs/create">Click here to create one</a>.</p>
   @endif

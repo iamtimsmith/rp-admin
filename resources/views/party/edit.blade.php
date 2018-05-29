@@ -133,11 +133,15 @@
             {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
           </div>
           <div class="form-group col-sm-12">
-            {{  Form::file('portrait') }}
+            {{ Form::label('images', 'Images') }}
+            <image-handler :images="[{{ $char->images }}]"></image-handler>
+            {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
           </div>
-        {{ Form::hidden('_method', 'PUT') }}
-        {{ Form::submit('Submit',['class' => 'btn btn-primary ml-3']) }}
-        <a href="/party/{{ $char->id }}" class="btn btn-default text-danger">Cancel</a>
+          <div class="col-sm-12">
+            {{ Form::hidden('_method', 'PUT') }}
+            {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
+            <a href="/party/{{ $char->id }}" class="btn btn-default text-danger">Cancel</a>
+          </div>
       {!! Form::close() !!}
     </div>
   </div>

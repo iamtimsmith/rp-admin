@@ -22,5 +22,12 @@
 </div>
 </div>
 </div>
+<div>
+    {{-- Images --}}
+    @if ($note->images !== null )
+      <p class="h5 header">Images</p>
+      <thumbnails :images="[{{ $note->images }}]"></thumbnails>
+    @endif
+</div>
 
 @endsection

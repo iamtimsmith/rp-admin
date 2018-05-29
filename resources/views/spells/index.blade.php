@@ -10,7 +10,7 @@
     <div class="card-body">
   
   @if(count($spells) > 0)
-  <sort-items :items="{{ json_encode($spells) }}" section="spells" :columns="['name', 'class', 'level']" />
+  <sort-items :items="{{ json_encode($spells) }}" section="spells" :columns="['name', 'class', 'level']" url="name" />
   @endif
   
   </div>

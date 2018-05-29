@@ -54,30 +54,15 @@ class NotesController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
-            'featured_image' => 'image|nullable|max:1999'
+            'images' => 'nullable'
         ]);
-
-        // Handle File Upload
-        if($request->hasFile('featured_image')) {
-            $filenameWithExt = $request->file('featured_image')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just extension
-            $extension = $request->file('featured_image')->getClientOriginalExtension();
-            // Filename to store
-            $filenameToStore = $filename.'_'.time().'.'.$extension;
-            // Upload image
-            $path = $request->file('featured_image')->storeAs('public/featured_images', $filenameToStore);
-        } else {
-            $filenameToStore = 'noimage.jpg';
-        }
 
         // Create Note to store
         $note = new Note;
         $note->title = $request->input('title');
         $note->content = $request->input('content');
         $note->user_id = auth()->user()->id;
-        $note->featured_image = $filenameToStore;
+        $note->images = $request->input('images');
 
         $note->save();
         return redirect()->route('note', ['id'=>$note->id])->with('success', 'Note Created');
@@ -134,12 +119,14 @@ class NotesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'images' => 'nullable'
         ]);
         // Update post
         $note = Note::find($id);
         $note->title = $request->input('title');
         $note->content = $request->input('content');
+        $note->images = $request->input('images');
         $note->save();
         return redirect()->route('note', ['id'=>$note->id])->with('success', 'Note Updated');
     }

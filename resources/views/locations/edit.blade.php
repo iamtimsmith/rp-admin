@@ -10,14 +10,8 @@
         {{ Form::text('title', $location->title, ['class' => 'form-control']) }}
       </div>
       <div class="form-group">
-        {{ Form::label('monsters', 'Monsters') }}
-        <small>List the monsters that will be in this location (names must be singular).</small>
-        {{ Form::text('monsters', $location->monsters, ['class' => 'form-control']) }}
-      </div>
-      <div class="form-group">
-        {{ Form::label('encounters', 'Encounters') }}
-        <small>List the encounters that will be in this location (names must match the encounter).</small>
-        {{ Form::text('encounters', $location->encounters, ['class' => 'form-control']) }}
+        {{ Form::label('campaign', 'Campaign') }}
+        {{ Form::text('campaign', $location->campaign, ['class' => 'form-control']) }}
       </div>
       <div class="form-group">
         {{ Form::label('content', 'Content') }}
@@ -25,11 +19,21 @@
         {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
       </div>
 
+      <div class="form-group">
+          {{ Form::label('monsters', 'Monsters') }}
+          <small class="text-secondary">List the monsters that will be in this location (names must be singular and match a monster in the SRD material).</small>
+          {{ Form::text('monsters', $location->monsters, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+          {{ Form::label('encounters', 'Encounters') }}
+          <small class="text-secondary">List the encounters that will be in this location (names must match the encounter).</small>
+          {{ Form::text('encounters', $location->encounters, ['class' => 'form-control']) }}
+        </div>
 
       <div class="form-group">
-        {{ Form::label('map', 'Images') }}
-        <image-handler :images="{{ $location->map }}"></image-handler>
-        {{  Form::text('map', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
+        {{ Form::label('images', 'Images') }}
+        <image-handler :images="{{ $location->images }}"></image-handler>
+        {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
       </div>
         
         {{ Form::hidden('_method', 'PUT') }}

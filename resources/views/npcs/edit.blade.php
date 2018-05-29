@@ -31,13 +31,20 @@
           {{ Form::text('title', $npc->affiliation, ['name' => 'affiliation', 'class' => 'form-control', 'placeholder' => 'Affiliation']) }}
         </div>
         <div class="form-group col-sm-12">
-            {{ Form::label('notes', 'Notes') }}
-            <div id="npc-notes">{!! $npc->notes !!}</div>
-            {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
-          </div>
-        {{ Form::hidden('_method', 'PUT') }}
-        {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
-        <a href="/npcs/{{ $npc->id }}" class="btn btn-default text-danger">Cancel</a>
+          {{ Form::label('notes', 'Notes') }}
+          <div id="npc-notes">{!! $npc->notes !!}</div>
+          {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+        </div>
+        <div class="form-group col-sm-12">
+          {{ Form::label('images', 'Images') }}
+          <image-handler :images="[{{ $npc->images }}]"></image-handler>
+          {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
+        </div>
+        <div class="col-sm-12">
+          {{ Form::hidden('_method', 'PUT') }}
+          {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
+          <a href="/npcs/{{ $npc->id }}" class="btn btn-default text-danger">Cancel</a>
+        </div>
       {!! Form::close() !!}
 
 @endsection

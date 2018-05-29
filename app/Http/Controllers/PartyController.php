@@ -78,23 +78,8 @@ class PartyController extends Controller
             'actions' => 'nullable',
             'equipment' => 'nullable',
             'notes' => 'nullable',
-            'portrait' => 'nullable|max:1999'
+            'images' => 'nullable'
         ]);
-
-        // Handle File Upload
-        if($request->hasFile('portrait')) {
-            $filenameWithExt = $request->file('portrait')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just extension
-            $extension = $request->file('portrait')->getClientOriginalExtension();
-            // Filename to store
-            $filenameToStore = $filename.'_'.time().'.'.$extension;
-            // Upload image
-            $path = $request->file('portrait')->storeAs('public/portraits', $filenameToStore);
-        } else {
-            $filenameToStore = 'noimage.jpg';
-        }
 
         // Create Note to store
         $char = new Char;
@@ -123,7 +108,7 @@ class PartyController extends Controller
         $char->equipment = $request->input('equipment');
         $char->notes = $request->input('notes');
         $char->user_id = auth()->user()->id;
-        $char->portrait = $filenameToStore;
+        $char->images = $request->input('images');
 
         $char->save();
         return redirect()->route('character', ['id'=>$char->id])->with('success', 'Character Created');
@@ -208,7 +193,7 @@ class PartyController extends Controller
             'actions' => 'nullable',
             'equipment' => 'nullable',
             'notes' => 'nullable',
-            'portrait' => 'nullable|max:1999'
+            'images' => 'nullable'
         ]);
         
         // Update post
@@ -237,6 +222,7 @@ class PartyController extends Controller
         $char->actions = $request->input('actions');
         $char->equipment = $request->input('equipment');
         $char->notes = $request->input('notes');
+        $char->images = $request->input('images');
         $char->save();
         return redirect()->route('character', ['id'=>$char->id])->with('success', 'Character Updated');
     }

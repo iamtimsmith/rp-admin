@@ -10,7 +10,7 @@
     <div class="card-body">
   
   @if(count($notes) > 0)
-  <sort-items :items="{{ json_encode($notes) }}" section="notes" :columns="['title', 'campaign']" />
+  <sort-items :items="{{ json_encode($notes) }}" section="notes" :columns="['title', 'campaign']" url="id" />
   @else
   <p>You don't have any notes yet. <a href="/notes/create">Click here to create one</a>.</p>
   @endif

@@ -9,24 +9,29 @@
     {{ Form::label('title', 'Title') }}
     {{ Form::text('title', '', ['class' => 'form-control']) }}
   </div>
-  <div class="form-group">
-    {{ Form::label('monsters', 'Monsters') }}
-    <small>List the monsters that will be in this location (names must be singular).</small>
-    {{ Form::text('monsters', '', ['class' => 'form-control']) }}
-  </div>
-  <div class="form-group">
-    {{ Form::label('encounters', 'Encounters') }}
-    <small>List the encounters that will be in this location (names must match encounter name).</small>
-    {{ Form::text('encounters', '', ['class' => 'form-control']) }}
-  </div>
+  
   <div class="form-group">
     {{ Form::label('content', 'Content') }}
     <div id="location-notes"></div>
     {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
   </div>
-    <div class="form-group">
-      {{  Form::file('map') }}
-    </div>
+
+  <div class="form-group">
+    {{ Form::label('monsters', 'Monsters') }}
+    <small class="text-secondary">List the monsters that will be in this location (names must be singular and match a monster in the SRD material).</small>
+    {{ Form::text('monsters', '', ['class' => 'form-control']) }}
+  </div>
+  <div class="form-group">
+    {{ Form::label('encounters', 'Encounters') }}
+    <small class="text-secondary">List the encounters that will be in this location (names must match encounter name).</small>
+    {{ Form::text('encounters', '', ['class' => 'form-control']) }}
+  </div>
+
+  <div class="form-group">
+    {{ Form::label('images', 'Images') }}
+    <image-handler></image-handler>
+    {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
+  </div>
     {{ Form::submit('Submit',['class' => 'btn btn-primary']) }}
     <a href="/locations/" class="btn btn-default text-danger">Cancel</a>
 {!! Form::close() !!}

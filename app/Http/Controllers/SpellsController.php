@@ -46,10 +46,10 @@ class SpellsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
         // Show spell detail
-        $spell = Spell::find($id);
+        $spell = Spell::find($name);
         return view('spells.show')->with('spell', $spell);
     }
 
@@ -59,7 +59,7 @@ class SpellsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($name)
     {
         //
     }
@@ -71,7 +71,7 @@ class SpellsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $name)
     {
         //
     }
@@ -82,7 +82,7 @@ class SpellsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($name)
     {
         //
     }
