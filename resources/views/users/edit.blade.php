@@ -73,9 +73,10 @@
     selector: "#sidebar-notes",
     height:400,
     menubar:false,
-    plugins:"autolink autosave link image lists hr table textcolor contextmenu code",
-    toolbar1:"formatselect fontselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code",
-    statusbar: false
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false,
+    content_css:mceCSS,
   });
 </script>
 @endsection

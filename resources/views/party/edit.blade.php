@@ -165,7 +165,8 @@
       menubar:false,
       plugins:mcePlugins,
       toolbar1:mceButtons,
-      statusbar: false
+      statusbar: false,
+      content_css:mceCSS,
     });
     tinymce.init({
       selector: "textarea[name='equipment']",
@@ -173,7 +174,8 @@
       menubar:false,
       plugins:mcePlugins,
       toolbar1:mceButtons,
-      statusbar: false
+      statusbar: false,
+      content_css:mceCSS,
     });
     tinymce.init({
       selector: "textarea[name='notes']",
@@ -181,7 +183,8 @@
       menubar:false,
       plugins:mcePlugins,
       toolbar1:mceButtons,
-      statusbar: false
+      statusbar: false,
+      content_css:mceCSS,
     });
   </script>
 @endsection

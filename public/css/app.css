@@ -15776,6 +15776,11 @@ a.text-dark:focus {
           box-shadow: none !important;
 }
 
+.mce-tinymce.mce-panel #tinymce {
+  margin: 0 !important;
+  font-family: "Lato", sans-serif;
+}
+
 .section-homepage {
   background: white;
 }

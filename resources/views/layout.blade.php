@@ -43,24 +43,10 @@ $user = User::find($user_id);
   <script src="/js/app.js"></script>
   <script src="/tinymce/tinymce.min.js"></script>
   <script>
-    var mcePlugins = "autolink autosave link image lists hr table textcolor contextmenu code";
-    var mceButtons = "formatselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code";
+    var mcePlugins = "autolink autosave link image lists hr table textcolor  code";
+    var mceButtons = "formatselect forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | link unlink image | bullist numlist table code";
+    var mceCSS = "/css/tinymce.css";
   </script>
-  {{--<script src="/quill/dist/quill.min.js"></script>
-  <script>
-  var toolbarOptions = [
-  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-  [{ 'font': [] }],
-  [{ 'color': [] }, { 'background': [] }],        
-  ['bold', 'italic', 'underline', 'strike'],  
-  [{ 'align': [] }],
-  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-  ['link'],
-  ['image'],
-  ['blockquote', 'code-block'],
-  ['clean']                     // remove formatting button
-  ];
-  </script> --}}
   @yield('contentjs')
   
 </body>
