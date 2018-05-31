@@ -39,15 +39,15 @@
           <hr class="pb-3">
         </div>
         <div class="form-group col-sm-6">
-          {{ Form::label('ac', 'AC') }}
+          {{ Form::label('ac', 'Armor Class') }}
           {{ Form::text('ac', '', ['class' => 'form-control', 'placeholder' => 'Armor Class']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{ Form::label('hp', 'HP') }}
+          {{ Form::label('hp', 'Hit Points') }}
           {{ Form::text('hp', '', ['class' => 'form-control', 'placeholder' => 'Hit Points']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{ Form::label('pp', 'PP') }}
+          {{ Form::label('pp', 'Passive Perception') }}
           {{ Form::text('pp', '', ['class' => 'form-control', 'placeholder' => 'Passive Perception']) }}
         </div>
         <div class="form-group col-sm-6">
@@ -66,18 +66,23 @@
           {{ Form::text('str', '', ['class' => 'form-control', 'placeholder' => 'Strength']) }}
         </div>
         <div class="form-group col-sm-3 col-md-2">
+          {{ Form::label('dex', 'DEX') }}
           {{ Form::text('dex', '', ['class' => 'form-control', 'placeholder' => 'Dexterity']) }}
         </div>
         <div class="form-group col-sm-3 col-md-2">
+          {{ Form::label('con', 'CON') }}
           {{ Form::text('con', '', ['class' => 'form-control', 'placeholder' => 'Constitution']) }}
         </div>
         <div class="form-group col-sm-3 col-md-2">
+          {{ Form::label('int', 'INT') }}
           {{ Form::text('int', '', ['class' => 'form-control', 'placeholder' => 'Intelligence']) }}
         </div>
         <div class="form-group col-sm-3 col-md-2">
+          {{ Form::label('wis', 'WIS') }}
           {{ Form::text('wis', '', ['class' => 'form-control', 'placeholder' => 'Wisdom']) }}
         </div>
         <div class="form-group col-sm-3 col-md-2">
+          {{ Form::label('cha', 'CHA') }}
           {{ Form::text('cha', '', ['class' => 'form-control', 'placeholder' => 'Charisma']) }}
         </div>
         <div class="col-sm-12 mb-4">
@@ -138,8 +143,7 @@
 
         <div class="form-group col-sm-12">
           {{ Form::label('notes', 'Notes') }}
-          <div id="char-notes"></div>
-          {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+          {{ Form::textarea('notes', '', ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
         </div>
 
         <div class="form-group col-sm-12">
@@ -160,19 +164,37 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#char-notes', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "textarea[name='abilities']",
+    height:200,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
   });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
+  tinymce.init({
+    selector: "textarea[name='actions']",
+    height:200,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
+  });
+  tinymce.init({
+    selector: "textarea[name='equipment']",
+    height:200,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
+  });
+  tinymce.init({
+    selector: "textarea[name='notes']",
+    height:400,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
+  });
 </script>
 @endsection

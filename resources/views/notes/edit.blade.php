@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-  <h1 class="header">Edit Post</h1>
+  <h1 class="header">Edit Note</h1>
   
 
   {!! Form::open(['action' => ['NotesController@update', $note->id], 'method' => 'POST', 'id' => 'form'] ) !!}
@@ -15,8 +15,7 @@
       </div>
       <div class="form-group">
         {{ Form::label('content', 'Content') }}
-        <div id="note-body">{!! $note->content !!}</div>
-        {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+        {{ Form::textarea('content', $note->content, ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
       </div>
       <div class="form-group">
         {{ Form::label('images', 'Images') }}
@@ -34,19 +33,13 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#note-body', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "textarea[name='content']",
+    height:400,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
   });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
 </script>
 @endsection

@@ -14,8 +14,7 @@
       </div>
       <div class="form-group">
         {{ Form::label('content', 'Notes') }}
-        <div id="encounter-notes">{!! $encounter->content !!}</div>
-        {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+        {{ Form::textarea('content', $encounter->content, ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
       </div>
       
       <div class="form-group">
@@ -39,19 +38,13 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#encounter-notes', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "textarea[name='content']",
+    height:400,
+    menubar:false,
+    plugins:"autolink autosave link image lists hr table textcolor contextmenu code",
+    toolbar1:"formatselect fontselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code",
+    statusbar: false
   });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
 </script>
 @endsection

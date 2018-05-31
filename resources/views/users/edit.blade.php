@@ -47,8 +47,8 @@
         <br>
         <small class="mb-5">These notes will be placed on the right hand side of each page and work as a good place for useful links, campaign
           notes, or helpful reminders.</small>
-        <div id="sidebar-notes" class='form-control'>{!! $user->side_notes !!}</div>
-        {{ Form::text('side_notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+        {{ Form::textarea('side_notes', $user->side_notes, ['id'=>'sidebar-notes', 'class' => 'form-control', 'rows' => '5']) }}
+        
 
       </div>
     </div>
@@ -69,18 +69,13 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#sidebar-notes', {
-    theme: 'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "#sidebar-notes",
+    height:400,
+    menubar:false,
+    plugins:"autolink autosave link image lists hr table textcolor contextmenu code",
+    toolbar1:"formatselect fontselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code",
+    statusbar: false
   });
-
-  var form = document.querySelector('#form');
-  form.onsubmit = function () {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-
-
-</script> @endsection
+</script>
+@endsection

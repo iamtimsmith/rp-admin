@@ -15,8 +15,7 @@
       </div>
       <div class="form-group">
         {{ Form::label('content', 'Content') }}
-        <div id="location-notes">{!! $location->content !!}</div>
-        {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
+        {{ Form::textarea('content', $location->content, ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
       </div>
 
       <div class="form-group">
@@ -46,27 +45,13 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#location-notes', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "textarea[name='content']",
+    height:400,
+    menubar:false,
+    plugins:"autolink autosave link image lists hr table textcolor contextmenu code",
+    toolbar1:"formatselect fontselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code",
+    statusbar: false
   });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
-  // Thumbnail
-  var thumbnail = document.getElementByClassName('thumbnail')[0];
-  var input = document.querySelector('#inputMap');
-  function removePhoto() {
-    input.value = "noimage.png";
-    
-  }
-
 </script>
 @endsection

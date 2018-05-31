@@ -12,7 +12,6 @@ $user = User::find($user_id);
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
 
-
   <link rel="stylesheet" href="/quill/dist/quill.snow.css">
   <link rel="stylesheet" href="/css/app.css">
   <title>{{ config('app.name', 'RP Admin') }}</title>
@@ -42,7 +41,12 @@ $user = User::find($user_id);
 
 
   <script src="/js/app.js"></script>
-  <script src="/quill/dist/quill.min.js"></script>
+  <script src="/tinymce/tinymce.min.js"></script>
+  <script>
+    var mcePlugins = "autolink autosave link image lists hr table textcolor contextmenu code";
+    var mceButtons = "formatselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright alignjustify link unlink image bullist numlist table code";
+  </script>
+  {{--<script src="/quill/dist/quill.min.js"></script>
   <script>
   var toolbarOptions = [
   [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
@@ -56,7 +60,7 @@ $user = User::find($user_id);
   ['blockquote', 'code-block'],
   ['clean']                     // remove formatting button
   ];
-  </script>
+  </script> --}}
   @yield('contentjs')
   
 </body>

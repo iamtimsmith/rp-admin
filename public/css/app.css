@@ -15761,6 +15761,21 @@ a.text-dark:focus {
   list-style-type: circle;
 }
 
+.mce-tinymce.mce-panel {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: 1px solid #ddd !important;
+}
+
+.mce-tinymce.mce-panel .mce-edit-area {
+  border: none;
+}
+
+.mce-tinymce.mce-panel .mce-top-part::before {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .section-homepage {
   background: white;
 }

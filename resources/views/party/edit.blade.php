@@ -111,7 +111,8 @@
         <div class="col-sm-12 mb-4">
           <hr>
           <p class="h5">Abilities</p>
-          {{ Form::textarea('abilities', $char->abilities, ['class' => 'form-control', 'rows' => '5']) }}
+          
+          {{ Form::textarea('abilities', $char->abilities, ['id'=>'char-abilities', 'class' => 'form-control', 'rows' => '5']) }}
           <br>
         </div>
         <div class="col-sm-12 mb-4">
@@ -129,8 +130,7 @@
 
           <div class="form-group col-sm-12">
             {{ Form::label('notes', 'Notes') }}
-            <div id="char-notes">{!! $char->notes !!}</div>
-            {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+            {{ Form::textarea('notes', $char->notes, ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
           </div>
           <div class="form-group col-sm-12">
             {{ Form::label('images', 'Images') }}
@@ -151,19 +151,37 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#char-notes', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
-  });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
-</script>
+    tinymce.init({
+      selector: "textarea[name='abilities']",
+      height:200,
+      menubar:false,
+      plugins:mcePlugins,
+      toolbar1:mceButtons,
+      statusbar: false
+    });
+    tinymce.init({
+      selector: "textarea[name='actions']",
+      height:200,
+      menubar:false,
+      plugins:mcePlugins,
+      toolbar1:mceButtons,
+      statusbar: false
+    });
+    tinymce.init({
+      selector: "textarea[name='equipment']",
+      height:200,
+      menubar:false,
+      plugins:mcePlugins,
+      toolbar1:mceButtons,
+      statusbar: false
+    });
+    tinymce.init({
+      selector: "textarea[name='notes']",
+      height:400,
+      menubar:false,
+      plugins:mcePlugins,
+      toolbar1:mceButtons,
+      statusbar: false
+    });
+  </script>
 @endsection

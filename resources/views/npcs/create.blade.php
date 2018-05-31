@@ -7,33 +7,32 @@
     
       {!! Form::open(['action' => 'NpcsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data', 'class' => 'row', 'id' => 'form'] ) !!}
         <div class="form-group col-sm-12">
-          {{--{{ Form::label('title', 'Character Name') }}--}}
+          {{ Form::label('title', 'Character Name') }}
           {{ Form::text('title', '', ['name' => 'name', 'class' => 'form-control', 'placeholder' => 'Name']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{--{{ Form::label('title', 'Player Name') }}--}}
-          {{ Form::text('title', '', ['name' => 'gender', 'class' => 'form-control', 'placeholder' => 'Gender']) }}
+          {{ Form::label('gender', 'Gender') }}
+          {{ Form::text('gender', '', ['class' => 'form-control', 'placeholder' => 'Gender']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{--{{ Form::label('title', 'AC') }}--}}
-          {{ Form::text('title', '', ['name' => 'race', 'class' => 'form-control', 'placeholder' => 'Race']) }}
+          {{ Form::label('race', 'Race') }}
+          {{ Form::text('race', '', ['class' => 'form-control', 'placeholder' => 'Race']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{--{{ Form::label('title', 'HP') }}--}}
-          {{ Form::text('title', '', ['name' => 'class', 'class' => 'form-control', 'placeholder' => 'Class']) }}
+          {{ Form::label('class', 'Class') }}
+          {{ Form::text('class', '', ['class' => 'form-control', 'placeholder' => 'Class']) }}
         </div>
         <div class="form-group col-sm-6">
-          {{--{{ Form::label('title', 'PP') }}--}}
-          {{ Form::text('title', '', ['name' => 'alignment', 'class' => 'form-control', 'placeholder' => 'Alignment']) }}
+          {{ Form::label('alignment', 'Alignment') }}
+          {{ Form::text('alignment', '', ['class' => 'form-control', 'placeholder' => 'Alignment']) }}
         </div>
         <div class="form-group col-sm-12">
-          {{--{{ Form::label('title', 'PP') }}--}}
-          {{ Form::text('title', '', ['name' => 'affiliation', 'class' => 'form-control', 'placeholder' => 'Affiliation']) }}
+          {{ Form::label('affiliation', 'Affiliation') }}
+          {{ Form::text('affiliation', '', ['class' => 'form-control', 'placeholder' => 'Affiliation']) }}
         </div>
         <div class="form-group col-sm-12">
           {{ Form::label('notes', 'Notes') }}
-          <div id="npc-notes"></div>
-          {{ Form::text('notes', '', ['class' => 'd-none', 'id' => 'content']) }}
+          {{ Form::textarea('notes', '', ['id'=>'content', 'class' => 'form-control', 'rows' => '5']) }}
         </div>
         <div class="form-group col-sm-12">
           {{ Form::label('images', 'Images') }}
@@ -53,19 +52,13 @@
 
 @section('contentjs')
 <script>
-  var quill = new Quill('#npc-notes', {
-    theme:'snow',
-    modules: {
-      toolbar: toolbarOptions
-    }
+  tinymce.init({
+    selector: "textarea[name='notes']",
+    height:400,
+    menubar:false,
+    plugins:mcePlugins,
+    toolbar1:mceButtons,
+    statusbar: false
   });
-  
-  var form = document.querySelector('#form');
-  form.onsubmit = function() {
-    var textarea = document.querySelector('#content');
-    textarea.value = quill.root.innerHTML;
-  }
-  
-
 </script>
 @endsection
