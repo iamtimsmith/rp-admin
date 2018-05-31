@@ -32,7 +32,7 @@
 
       <div class="form-group">
         {{ Form::label('images', 'Images') }}
-        <image-handler :images="{{ $location->images }}"></image-handler>
+        <image-handler :images="[{{ $location->images }}]"></image-handler>
         {{  Form::text('images', '', ['id'=>'inputMap', 'class'=>'d-none']) }}
       </div>
         

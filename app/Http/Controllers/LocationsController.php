@@ -64,6 +64,7 @@ class LocationsController extends Controller
         $location->encounters = $request->input('encounters');
         $location->user_id = auth()->user()->id;
         $location->images = $request->input('images');
+        $location->campaign = $request->input('campaign');
 
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Location Created');
@@ -134,6 +135,7 @@ class LocationsController extends Controller
         $location->encounters = $request->input('encounters');
         $location->content = $request->input('content');
         $location->images = $request->input('images');
+        $location->campaign = $request->input('campaign');
         $location->save();
         return redirect()->route('location', ['id'=>$location->id])->with('success', 'Note Updated');
     }

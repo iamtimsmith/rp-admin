@@ -1,6 +1,6 @@
 <template>
 <div id="sortable">
-  <table-component :data="items" :sort-by="columns[0]" sort-order="asc" filter-placeholder="Search...">
+  <table-component :data="items" :sort-by="columns[0]" sort-order="asc" filter-placeholder="Search..." table-class="table table-striped" show-caption="false">
     <table-column :show="columns[0]">
       <template slot-scope="row">
           <a :href="`/${section}/${row[url]}`">{{ row[columns[0]] }}</a>
@@ -46,6 +46,7 @@ export default {
     position:relative;
     .table-component__filter__field {
     border:white!important;
+    border-bottom:1px solid #ddd!important;
     }
     .table-component__filter__clear {
       position:absolute;
@@ -61,9 +62,13 @@ export default {
     th {
       text-transform:capitalize;
       cursor:pointer;
+      border-top:none;
     }
     tr {
       width:auto;
+    }
+    caption {
+      display:none;
     }
   }
 }

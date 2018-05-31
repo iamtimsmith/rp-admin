@@ -8,7 +8,10 @@
         {{ Form::label('title', 'Title') }}
         {{ Form::text('title', $encounter->title, ['class' => 'form-control']) }}
       </div>
-      
+      <div class="form-group">
+        {{ Form::label('campaign', 'Campaign') }}
+        {{ Form::text('campaign', $encounter->campaign, ['class' => 'form-control']) }}
+      </div>
       <div class="form-group">
         {{ Form::label('content', 'Notes') }}
         <div id="encounter-notes">{!! $encounter->content !!}</div>

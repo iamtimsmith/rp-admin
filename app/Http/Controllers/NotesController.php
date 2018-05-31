@@ -60,6 +60,7 @@ class NotesController extends Controller
         // Create Note to store
         $note = new Note;
         $note->title = $request->input('title');
+        $note->campaign = $request->input('campaign');
         $note->content = $request->input('content');
         $note->user_id = auth()->user()->id;
         $note->images = $request->input('images');
@@ -125,6 +126,7 @@ class NotesController extends Controller
         // Update post
         $note = Note::find($id);
         $note->title = $request->input('title');
+        $note->campaign = $request->input('campaign');
         $note->content = $request->input('content');
         $note->images = $request->input('images');
         $note->save();

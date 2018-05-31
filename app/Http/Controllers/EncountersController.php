@@ -64,6 +64,7 @@ class EncountersController extends Controller
         $encounter->content = $request->input('content');
         $encounter->user_id = auth()->user()->id;
         $encounter->images = $request->input('images');
+        $encounter->campaign = $request->input('campaign');
 
         $encounter->save();
         return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Created');
@@ -128,6 +129,7 @@ class EncountersController extends Controller
         $encounter->monsters = $request->input('monsters');
         $encounter->content = $request->input('content');
         $encounter->images = $request->input('images');
+        $encounter->campaign = $request->input('campaign');
         $encounter->save();
         return redirect()->route('encounter', ['id'=>$encounter->id])->with('success', 'Encounter Updated');
     }

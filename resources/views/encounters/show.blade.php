@@ -28,7 +28,7 @@
   </div>
 
   <div class="col-md-2">
-    <affix class="" relative-element-selector="#show-details" style="width:200px" :offset="{top:50, bottom:20}">
+    <affix class="" relative-element-selector="#show-details" style="width:200px" :offset="{top:50, bottom:-500}">
       {{-- Images --}} 
       @if ($encounter->images !== null )
         <p class="h5 header">Images</p>

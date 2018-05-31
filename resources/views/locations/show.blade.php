@@ -35,7 +35,7 @@
   </div>
 </div>
 <div class="d-none d-md-block col-md-2 on-top">
-    <affix class="" relative-element-selector="#show-details" style="width:150px" :offset="{top:50, bottom:20}">
+    <affix class="" relative-element-selector="#show-details" style="width:150px" :offset="{top:50, bottom:-500}">
         <div>
         {{-- Images --}}
         @if ($location->images !== '[]')

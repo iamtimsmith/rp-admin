@@ -4,7 +4,7 @@
 @section('content')
 <div class="hero">
     <div class="container text-center">
-        <img src="/storage/images/admin-mockup1.png" alt="RP Admin">
+        <img src="/images/mockup_dash.png" alt="RP Admin" height="300">
         <h1>Finally, an easier way to manage your campaign.</h1>
         <a href="/register" class="btn btn-primary btn-lg mt-4" role="button">Try now for free!</a>
     </div>

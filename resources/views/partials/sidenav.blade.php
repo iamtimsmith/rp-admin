@@ -11,7 +11,7 @@ $user = User::find($user_id);
       @guest
         <li class="mt-3 mb-5"><a href="/"><img src="/storage/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
       @else
-        <li class="mt-3 mb-5"><a href="/dashboard"><img src="/storage/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
+        <li class="mt-3 mb-5"><a href="/dashboard"><img src="/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
       @endif
 
       <li class="mt-2"><a href="/dashboard"><span class="ra ra-quill-ink ra-2x"></span><span class="navlabel">Dashboard</span></a></li>
@@ -22,7 +22,6 @@ $user = User::find($user_id);
       <li class="mt-2"><a href="/encounters"><span class="ra ra-crossed-swords ra-2x"></span><span class="navlabel">Encounters</span></a></li>
       <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
       <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
-      {{-- <li class="mt-4"><a href="/settings/{{ $user_id }}"><span class="ra ra-cog ra-2x"></span><span class="navlabel">Settings</span></a></li> --}}
     </ul>
     
   </div>

@@ -9,7 +9,10 @@
     {{ Form::label('title', 'Title') }}
     {{ Form::text('title', '', ['class' => 'form-control']) }}
   </div>
-
+  <div class="form-group">
+    {{ Form::label('campaign', 'Campaign') }}
+    {{ Form::text('campaign', '', ['class' => 'form-control']) }}
+  </div>
   <div class="form-group">
     {{ Form::label('content', 'Notes') }}
     <div id="encounter-notes"></div>

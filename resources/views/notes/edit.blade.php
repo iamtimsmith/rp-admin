@@ -10,6 +10,10 @@
         {{ Form::text('title', $note->title, ['class' => 'form-control']) }}
       </div>
       <div class="form-group">
+        {{ Form::label('campaign', 'Campaign') }}
+        {{ Form::text('campaign', $note->campaign, ['class' => 'form-control']) }}
+      </div>
+      <div class="form-group">
         {{ Form::label('content', 'Content') }}
         <div id="note-body">{!! $note->content !!}</div>
         {{ Form::text('content', '', ['class' => 'd-none', 'id' => 'content']) }}
