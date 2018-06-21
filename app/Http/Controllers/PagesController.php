@@ -23,6 +23,16 @@ class PagesController extends Controller
         return view('about');
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function documentation()
+    {
+        return view('documentation');
+    }
+
     public function license()
     {
         return view('license');

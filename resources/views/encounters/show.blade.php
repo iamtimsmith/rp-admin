@@ -35,17 +35,15 @@
         <thumbnails :images="[{{ $encounter->images }}]"></thumbnails>
       @endif 
       
-      {{-- Monsters --}} @if ( $encounter->monsters !== null )
-      <p class="h5 header mt-5">Monsters</p>
-
-      <ul class="pl-3">
+      {{-- Monsters --}} 
+      @if ( $encounter->monsters !== null )
+        <p class="h5 header mt-5">Monsters</p>
+            
+        <?php $monsters = []; ?>
         @foreach ($names as $name)
-        <?php $stats = Monster::find(trim($name)); ?>
-        <li>
-          <monsters :stats="{{json_encode($stats)}}"></monsters>
-        </li>
+          <?php array_push($monsters, Monster::find(trim($name))); ?>
         @endforeach
-      </ul>
+        <monsters :stats="{{json_encode($monsters)}}"></monsters>
       @endif
 
 

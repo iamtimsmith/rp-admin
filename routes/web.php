@@ -34,6 +34,9 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/license', 'PagesController@license');
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact')->name('contact');
+Route::get('/documentation', 'PagesController@documentation');
 
 // Named Routes
 Route::get('/locations/{id}', 'LocationsController@show')->name('location');

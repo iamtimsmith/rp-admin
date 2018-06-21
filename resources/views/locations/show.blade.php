@@ -48,29 +48,23 @@
         @if ( $location->encounters !== null )
         <p class="h5 header mt-5">Encounters</p>
         
-        <ul class="pl-3">
+          <?php $enc = []; ?>
           @foreach ($encounters as $encounter)
-            <?php $notes = Encounter::find(trim($encounter)); ?>
-            <li>
-              <encounters :notes="{{json_encode($notes)}}"></encounters>
-            </li>
+            <?php array_push($enc, Encounter::find(trim($encounter))); ?>
           @endforeach
-        </ul>
+          <encounters :notes="{{json_encode($enc)}}"></encounters>
         @endif
 
 
         {{-- Monsters --}}
         @if ( $location->monsters !== null )
         <p class="h5 header mt-5">Monsters</p>
-        
-        <ul class="pl-3">
+            
+          <?php $monsters = []; ?>
           @foreach ($names as $name)
-            <?php $stats = Monster::find(trim($name)); ?>
-            <li>
-              <monsters :stats="{{json_encode($stats)}}"></monsters>
-            </li>
+            <?php array_push($monsters, Monster::find(trim($name))); ?>
           @endforeach
-        </ul>
+          <monsters :stats="{{json_encode($monsters)}}"></monsters>
         @endif
 
       </div>

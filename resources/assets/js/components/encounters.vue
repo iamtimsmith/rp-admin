@@ -1,12 +1,18 @@
 <template>
   <div>
-    <a href="javascript:void(0)" @click="showModal">{{ notes.title }}</a>
+    <ul class="pl-0">
+      <li v-for="note in notes">
+        <a href="javascript:void(0)" @click="showModal(note.title)">{{ note.title }}</a>
+      </li>
+    </ul>
     <sweet-modal ref="encounter" class="max-height-500">
-      <h1 class="mt-3">{{ notes.title }}</h1>
+      <sweet-modal-tab v-for="note in notes" :key="note.title" :title="note.title" :id="note.title">
+      <h1>{{ note.title }}</h1>
       <hr>
-      <div v-html="notes.content" class="text-left"></div>
+      <div v-html="note.content" class="text-left"></div>
       <hr>
-      <p class="pl-4 text-left text-capitalize"><strong>Monsters: </strong>{{ notes.monsters }}</p>
+      <p class="pl-4 text-left text-capitalize"><strong>Monsters: </strong>{{ note.monsters }}</p>
+      </sweet-modal-tab>
     </sweet-modal>
   </div>
 </template>
@@ -21,8 +27,8 @@ export default {
     SweetModal, SweetModalTab
   },
   methods: {
-    showModal() {
-      this.$refs.encounter.open();
+    showModal(enc) {
+      this.$refs.encounter.open(enc);
     }
   }
 }

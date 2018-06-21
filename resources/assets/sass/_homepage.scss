@@ -5,6 +5,18 @@ $front_dark:#333;
 .section-homepage {
   background:white;
 
+  p {
+    font-size:1.1rem;
+    line-height:1.5rem;
+  }
+  li {
+    font-size:1.1rem;
+    line-height:2rem;
+  }
+  .content {
+    min-height:500px;
+  }
+
   // Header
   .navbar {
     background:white;
@@ -69,4 +81,20 @@ $front_dark:#333;
       }
     }
   }
+
+  // Documentation
+  .section {
+    padding-top:70px;
+  }
+}
+
+.section-about {
+  p {
+    font-size:1.2em;
+    line-height:1.5em;
+  }
+}
+
+footer {
+  background:$front_grey1;
 }

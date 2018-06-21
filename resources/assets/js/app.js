@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('search', require('./components/Search.vue'));
+Vue.component('offcanvas-home', require('./components/offcanvasHome.vue'));
 Vue.component('offcanvas-left', require('./components/offcanvasLeft.vue'));
 Vue.component('offcanvas-right', require('./components/offcanvasRight.vue'));
 Vue.component('dropdown', require('./components/dropdown.vue'));

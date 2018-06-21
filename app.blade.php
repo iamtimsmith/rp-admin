@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col-12 col-md text-center">
           <a href="/">
-            <img src="/storage/images/d20-dark.png" alt="" width="75">
+            <img src="/images/d20-dark.png" alt="" width="75">
           </a>
           <small class="d-block mt-3 mb-3 text-muted">© 2017-2018</small>
         </div>
@@ -102,6 +102,7 @@
           </ul>
         </div>
       </div>
+      <p class="text-center"><small>RP Admin was made by <a href="https://www.iamtimsmith.com">Tim Smith</a></small></p>
     </div>
   </footer>
 </div>

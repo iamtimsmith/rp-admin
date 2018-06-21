@@ -15785,6 +15785,20 @@ a.text-dark:focus {
   background: white;
 }
 
+.section-homepage p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.section-homepage li {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.section-homepage .content {
+  min-height: 500px;
+}
+
 .section-homepage .navbar {
   background: white;
   -webkit-box-shadow: 0 0 10px #333;
@@ -15859,6 +15873,19 @@ a.text-dark:focus {
 
 .section-homepage .blog .row .card:hover img {
   opacity: 1;
+}
+
+.section-homepage .section {
+  padding-top: 70px;
+}
+
+.section-about p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+footer {
+  background: #fafafa;
 }
 
 body {

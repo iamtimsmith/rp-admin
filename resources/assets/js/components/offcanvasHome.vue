@@ -1,19 +1,17 @@
 <template>
 <div>
-<button class="btn btn-default bg-light text-dark" @click="openLeft"><i class="fa fa-bars"></i></button>
+<button class="btn btn-default bg-dark text-light" @click="openLeft"><i class="fa fa-bars"></i></button>
   <div class="card bg-dark" id="offcanvas-left">
     <button class="btn btn-default bg-dark text-light ml-auto" @click="closeLeft"><i class="fa fa-close"></i></button>
     <div class="card-body">
       <ul>
-          <li class="mt-3 mb-5"><a href="/dashboard"><img src="/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
-          <li class="mt-2"><a href="/dashboard"><span class="ra ra-quill-ink ra-2x"></span><span class="navlabel">Dashboard</span></a></li>
-          <li class="mt-2"><a href="/monsters"><span class="ra ra-hydra ra-2x"></span><span class="navlabel">Monsters</span></a></li>
-          <li class="mt-2"><a href="/spells"><span class="ra ra-flame-symbol ra-2x"></span><span class="navlabel">Spells</span></a></li>
-          <li class="mt-2"><a href="/notes"><span class="ra ra-book ra-2x"></span><span class="navlabel">Notes</span></a></li>
-          <li class="mt-2"><a href="/locations"><span class="fa fa-map-marker ra-2x"></span><span class="navlabel">Locations</span></a></li>
-          <li class="mt-2"><a href="/encounters"><span class="ra ra-crossed-swords ra-2x"></span><span class="navlabel">Encounters</span></a></li>
-          <li class="mt-2"><a href="/npcs"><span class="ra ra-hood ra-2x"></span><span class="navlabel">NPCs</span></a></li>
-          <li class="mt-2"><a href="/party"><span class="ra ra-double-team ra-2x"></span><span class="navlabel">Party</span></a></li>
+          <li class="mt-3 mb-5"><a href="/"><img src="/images/d20.png" alt="RP Admin" class="col-sm-12"></a></li>
+          <li class="mt-2"><a href="/">Home</a></li>
+          <li class="mt-2"><a href="/documentation">Documentation</a></li>
+          <li class="mt-2"><a href="/about">About Us</a></li>
+          <li class="mt-2"><a href="/contact">Contact Us</a></li>
+          <li class="mt-2"><a href="/login">Login</a></li>
+          <li class="mt-2"><a href="/signup">Signup</a></li>
           
       </ul>
     </div>
@@ -79,7 +77,7 @@
         img {
           max-width:100px;
         }
-        .fa, .ra {
+        .fa {
           font-size:0.9rem;
           margin-right:10px;
         }

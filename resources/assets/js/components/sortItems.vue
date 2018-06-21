@@ -57,6 +57,9 @@ export default {
       cursor:pointer;
     }
   }
+  .table-component__table-wrapper {
+    overflow-y:scroll!important;
+  }
   table {
     width:100%;
     th {

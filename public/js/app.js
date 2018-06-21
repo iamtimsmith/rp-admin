@@ -17327,6 +17327,7 @@ window.Vue = __webpack_require__(133);
  */
 
 Vue.component('search', __webpack_require__(137));
+Vue.component('offcanvas-home', __webpack_require__(215));
 Vue.component('offcanvas-left', __webpack_require__(140));
 Vue.component('offcanvas-right', __webpack_require__(146));
 Vue.component('dropdown', __webpack_require__(152));
@@ -29188,7 +29189,7 @@ var staticRenderFns = [
           _c("a", { attrs: { href: "/dashboard" } }, [
             _c("img", {
               staticClass: "col-sm-12",
-              attrs: { src: "/storage/images/d20.png", alt: "RP Admin" }
+              attrs: { src: "/images/d20.png", alt: "RP Admin" }
             })
           ])
         ]),
@@ -31645,7 +31646,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n@-webkit-keyframes animateSuccessTip {\n0% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n54% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n70% {\n    width: 50px;\n    left: -8px;\n    top: 37px;\n}\n84% {\n    width: 17px;\n    left: 21px;\n    top: 48px;\n}\n100% {\n    width: 25px;\n    left: 14px;\n    top: 45px;\n}\n}\n@keyframes animateSuccessTip {\n0% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n54% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n70% {\n    width: 50px;\n    left: -8px;\n    top: 37px;\n}\n84% {\n    width: 17px;\n    left: 21px;\n    top: 48px;\n}\n100% {\n    width: 25px;\n    left: 14px;\n    top: 45px;\n}\n}\n@-webkit-keyframes animateSuccessLong {\n0% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n65% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n84% {\n    width: 55px;\n    right: 0px;\n    top: 35px;\n}\n100% {\n    width: 47px;\n    right: 8px;\n    top: 38px;\n}\n}\n@keyframes animateSuccessLong {\n0% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n65% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n84% {\n    width: 55px;\n    right: 0px;\n    top: 35px;\n}\n100% {\n    width: 47px;\n    right: 8px;\n    top: 38px;\n}\n}\n@-webkit-keyframes rotatePlaceholder {\n0% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n5% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n12% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n100% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n}\n@keyframes rotatePlaceholder {\n0% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n5% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n12% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n100% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n}\n.animateSuccessTip {\n  -webkit-animation: animateSuccessTip 0.75s;\n          animation: animateSuccessTip 0.75s;\n}\n.animateSuccessLong {\n  -webkit-animation: animateSuccessLong 0.75s;\n          animation: animateSuccessLong 0.75s;\n}\n.sweet-modal-icon.sweet-modal-success.animate::after {\n  -webkit-animation: rotatePlaceholder 4.25s ease-in;\n          animation: rotatePlaceholder 4.25s ease-in;\n}\n\n/* Error Icon */\n@-webkit-keyframes animateErrorIcon {\n0% {\n    -webkit-transform: rotateX(100deg);\n            transform: rotateX(100deg);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: rotateX(0deg);\n            transform: rotateX(0deg);\n    opacity: 1;\n}\n}\n@keyframes animateErrorIcon {\n0% {\n    -webkit-transform: rotateX(100deg);\n            transform: rotateX(100deg);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: rotateX(0deg);\n            transform: rotateX(0deg);\n    opacity: 1;\n}\n}\n.animateErrorIcon {\n  -webkit-animation: animateErrorIcon 0.5s;\n          animation: animateErrorIcon 0.5s;\n}\n@-webkit-keyframes animateXMark {\n0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n80% {\n    -webkit-transform: scale(1.15);\n            transform: scale(1.15);\n    margin-top: -6px;\n}\n100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    margin-top: 0;\n    opacity: 1;\n}\n}\n@keyframes animateXMark {\n0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n80% {\n    -webkit-transform: scale(1.15);\n            transform: scale(1.15);\n    margin-top: -6px;\n}\n100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    margin-top: 0;\n    opacity: 1;\n}\n}\n.animateXMark {\n  -webkit-animation: animateXMark 0.5s;\n          animation: animateXMark 0.5s;\n}\n@-webkit-keyframes pulseWarning {\n0% {\n    border-color: #F8D486;\n}\n100% {\n    border-color: #F8BB86;\n}\n}\n@keyframes pulseWarning {\n0% {\n    border-color: #F8D486;\n}\n100% {\n    border-color: #F8BB86;\n}\n}\n.pulseWarning {\n  -webkit-animation: pulseWarning 0.75s infinite alternate;\n          animation: pulseWarning 0.75s infinite alternate;\n}\n@-webkit-keyframes pulseWarningIns {\n0% {\n    background-color: #F8D486;\n}\n100% {\n    background-color: #F8BB86;\n}\n}\n@keyframes pulseWarningIns {\n0% {\n    background-color: #F8D486;\n}\n100% {\n    background-color: #F8BB86;\n}\n}\n.pulseWarningIns {\n  -webkit-animation: pulseWarningIns 0.75s infinite alternate;\n          animation: pulseWarningIns 0.75s infinite alternate;\n}\n@-webkit-keyframes rotate-loading {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes rotate-loading {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.sweet-modal-icon {\n  position: relative;\n  width: 80px;\n  height: 80px;\n  border: 4px solid gray;\n  border-radius: 50%;\n  margin: auto;\n  padding: 0;\n  -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n}\n.sweet-modal-icon.sweet-modal-error {\n    border-color: #F44336;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-x-mark {\n      position: relative;\n      display: block;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line {\n      display: block;\n      position: absolute;\n      top: 37px;\n      height: 5px;\n      width: 47px;\n      background-color: #F44336;\n      border-radius: 2px;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line.sweet-modal-left {\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n        left: 17px;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line.sweet-modal-right {\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n        right: 16px;\n}\n.sweet-modal-icon.sweet-modal-warning {\n    border-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-warning .sweet-modal-body {\n      position: absolute;\n      width: 5px;\n      height: 47px;\n      left: 50%;\n      top: 10px;\n      margin-left: -2px;\n      border-radius: 2px;\n      background-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-warning .sweet-modal-dot {\n      position: absolute;\n      left: 50%;\n      bottom: 10px;\n      width: 7px;\n      height: 7px;\n      margin-left: -3px;\n      border-radius: 50%;\n      background-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-info {\n    border-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-info::before {\n      content: '';\n      position: absolute;\n      width: 5px;\n      height: 29px;\n      left: 50%;\n      bottom: 17px;\n      margin-left: -2px;\n      border-radius: 2px;\n      background-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-info::after {\n      content: '';\n      position: absolute;\n      width: 7px;\n      height: 7px;\n      top: 19px;\n      margin-left: -3px;\n      border-radius: 50%;\n      background-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-success {\n    border-color: #4CAF50;\n}\n.sweet-modal-icon.sweet-modal-success::before, .sweet-modal-icon.sweet-modal-success::after {\n      content: '';\n      position: absolute;\n      border-radius: 40px;\n      width: 60px;\n      height: 120px;\n      background: white;\n      -webkit-transform: rotate(45deg);\n              transform: rotate(45deg);\n}\n.sweet-modal-icon.sweet-modal-success::before {\n      border-radius: 120px 0 0 120px;\n      top: -7px;\n      left: -33px;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      -webkit-transform-origin: 60px 60px;\n      transform-origin: 60px 60px;\n}\n.sweet-modal-icon.sweet-modal-success::after {\n      border-radius: 0 120px 120px 0;\n      top: -11px;\n      left: 30px;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      -webkit-transform-origin: 0px 60px;\n      transform-origin: 0px 60px;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-placeholder {\n      -webkit-box-sizing: content-box;\n              box-sizing: content-box;\n      position: absolute;\n      left: -4px;\n      top: -4px;\n      z-index: 2;\n      width: 80px;\n      height: 80px;\n      border: 4px solid rgba(76, 175, 80, 0.2);\n      border-radius: 50%;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-fix {\n      position: absolute;\n      left: 28px;\n      top: 8px;\n      z-index: 1;\n      width: 7px;\n      height: 90px;\n      background-color: white;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line {\n      display: block;\n      position: absolute;\n      z-index: 2;\n      height: 5px;\n      background-color: #4CAF50;\n      border-radius: 2px;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line.sweet-modal-tip {\n        width: 25px;\n        left: 14px;\n        top: 46px;\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line.sweet-modal-long {\n        width: 47px;\n        right: 8px;\n        top: 38px;\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n}\n.sweet-modal-icon.sweet-modal-custom {\n    border-radius: 0;\n    border: none;\n    background-size: contain;\n    background-position: center center;\n    background-repeat: no-repeat;\n}\n.sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success::before, .sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success::after,\n.sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success .sweet-modal-fix {\n  background-color: #182028;\n}\n.sweet-modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  z-index: 9001;\n  font-size: 14px;\n  -webkit-font-smoothing: antialiased;\n  background: rgba(255, 255, 255, 0.9);\n  opacity: 0;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n  -webkit-transform: translate3D(0, 0, 0);\n          transform: translate3D(0, 0, 0);\n  -webkit-perspective: 500px;\n}\n.sweet-modal-overlay.theme-dark {\n    background: rgba(24, 32, 40, 0.94);\n}\n.sweet-modal-overlay.is-visible {\n    opacity: 1;\n}\n.sweet-modal {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  -webkit-box-shadow: 0px 8px 46px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.03);\n          box-shadow: 0px 8px 46px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.03);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 80%;\n  max-width: 640px;\n  max-height: 100vh;\n  overflow-y: auto;\n  border-radius: 2px;\n  -webkit-transform: scale(0.9) translate(calc(-50% - 32px), -50%);\n          transform: scale(0.9) translate(calc(-50% - 32px), -50%);\n  opacity: 0;\n  -webkit-transition-property: opacity, -webkit-transform;\n  transition-property: opacity, -webkit-transform;\n  transition-property: transform, opacity;\n  transition-property: transform, opacity, -webkit-transform;\n  -webkit-transition-duration: 0.3s;\n          transition-duration: 0.3s;\n  -webkit-transition-delay: 0.05s;\n          transition-delay: 0.05s;\n  -webkit-transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n          transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n}\n.sweet-modal .sweet-box-actions {\n    position: absolute;\n    top: 12px;\n    right: 12px;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close {\n      display: inline-block;\n      cursor: pointer;\n      color: #222C38;\n      text-align: center;\n      width: 42px;\n      height: 42px;\n      line-height: 42px;\n      border-radius: 50%;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg {\n        width: 24px;\n        height: 24px;\n        vertical-align: middle;\n        margin-top: -2px;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg path,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg polygon,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg rect,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg circle {\n          fill: currentColor;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg {\n          fill: currentColor;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close:hover {\n        background: #039BE5;\n        color: #fff;\n}\n.sweet-modal .sweet-title {\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    height: 64px;\n    line-height: 64px;\n    border-bottom: 1px solid #eaeaea;\n    padding-left: 32px;\n    padding-right: 64px;\n}\n.sweet-modal .sweet-title > h2 {\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      overflow: hidden;\n      margin: 0;\n      padding: 0;\n      font-weight: 500;\n      font-size: 22px;\n}\n.sweet-modal ul.sweet-modal-tabs {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: calc(100% + 32px);\n    height: 100%;\n    margin-left: -32px;\n    overflow-x: auto;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab {\n      display: block;\n      height: 100%;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a {\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        padding-left: 20px;\n        padding-right: 20px;\n        color: #222C38;\n        text-decoration: none;\n        text-align: center;\n        height: 100%;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-title {\n          display: block;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon {\n          display: block;\n          line-height: 1.0;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n            width: 16px;\n            height: 16px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg path,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg polygon,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg rect,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg circle, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img path,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img polygon,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img rect,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img circle {\n              fill: currentColor;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n              fill: currentColor;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon + span.sweet-modal-tab-title {\n          line-height: 1.0;\n          margin-top: 8px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab:first-child a {\n        padding-left: 32px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab.active a {\n        font-weight: 600;\n        color: #039BE5;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab.disabled a {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n        cursor: default;\n        pointer-events: none;\n        color: #999;\n}\n.sweet-modal.has-tabs:not(.has-title) .sweet-title {\n    height: 84px;\n    line-height: 84px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs {\n    width: 100%;\n    height: 48px;\n    margin: 0;\n    border-bottom: 1px solid #eaeaea;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a {\n      margin-top: -4px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon {\n        display: inline-block;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n          vertical-align: middle;\n          margin-top: -2px;\n          margin-right: 8px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-title {\n        display: inline-block;\n}\n.sweet-modal .sweet-content {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-left: 32px;\n    padding-right: 32px;\n    padding-top: 24px;\n    padding-bottom: 24px;\n    line-height: 1.5;\n}\n.sweet-modal .sweet-content .sweet-content-content {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n}\n.sweet-modal .sweet-content .sweet-modal-tab:not(.active) {\n      display: none;\n}\n.sweet-modal .sweet-content .sweet-modal-icon {\n      margin-bottom: 36px;\n}\n.sweet-modal .sweet-buttons {\n    text-align: right;\n    padding-left: 20px;\n    padding-right: 20px;\n    padding-top: 12px;\n    padding-bottom: 12px;\n}\n.sweet-modal .sweet-content + .sweet-buttons {\n    border-top: 1px solid #eaeaea;\n}\n.sweet-modal.is-alert .sweet-content {\n    display: block;\n    text-align: center;\n    font-size: 16px;\n    padding-top: 64px;\n    padding-bottom: 64px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content {\n    padding-top: 32px;\n    padding-bottom: 32px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content .sweet-content-content {\n      padding-left: 32px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content .sweet-modal-icon {\n      margin-bottom: 0;\n}\n.sweet-modal:not(.has-content) .sweet-modal-icon {\n    margin-bottom: 0;\n}\n.sweet-modal.theme-dark {\n    background: #182028;\n    color: #fff;\n}\n.sweet-modal.theme-dark .sweet-box-actions .sweet-action-close {\n      color: #fff;\n}\n.sweet-modal.theme-dark .sweet-title {\n      border-bottom-color: #090c0f;\n      -webkit-box-shadow: 0px 1px 0px #273442;\n              box-shadow: 0px 1px 0px #273442;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li a {\n      color: #fff;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li.active a {\n      color: #039BE5;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li.disabled a {\n      color: #3e5368;\n}\n.sweet-modal.theme-dark.has-tabs.has-title ul.sweet-modal-tabs {\n      border-bottom-color: #090c0f;\n      -webkit-box-shadow: 0px 1px 0px #273442;\n              box-shadow: 0px 1px 0px #273442;\n}\n.sweet-modal.theme-dark .sweet-content + .sweet-buttons {\n      border-top-color: #273442;\n      -webkit-box-shadow: 0px -1px 0px #090c0f;\n              box-shadow: 0px -1px 0px #090c0f;\n}\n.sweet-modal .sweet-buttons,\n  .sweet-modal .sweet-content {\n    opacity: 0;\n    -webkit-transition-property: opacity, -webkit-transform;\n    transition-property: opacity, -webkit-transform;\n    transition-property: transform, opacity;\n    transition-property: transform, opacity, -webkit-transform;\n    -webkit-transition-duration: 0.3s;\n            transition-duration: 0.3s;\n    -webkit-transition-delay: 0.09s;\n            transition-delay: 0.09s;\n    -webkit-transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n            transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n}\n.sweet-modal .sweet-content {\n    -webkit-transform: translateY(-8px);\n            transform: translateY(-8px);\n}\n.sweet-modal .sweet-buttons {\n    -webkit-transform: translateY(16px);\n            transform: translateY(16px);\n}\n.sweet-modal.is-visible {\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    opacity: 1;\n}\n.sweet-modal.is-visible .sweet-buttons,\n    .sweet-modal.is-visible .sweet-content {\n      -webkit-transform: none;\n              transform: none;\n      opacity: 1;\n}\n.sweet-modal.bounce {\n    -webkit-animation-name: bounce;\n            animation-name: bounce;\n    -webkit-animation-duration: 0.3s;\n            animation-duration: 0.3s;\n    -webkit-animation-iteration-count: 2;\n            animation-iteration-count: 2;\n    -webkit-animation-direction: alternate;\n            animation-direction: alternate;\n}\n@media screen and (min-width: 601px) {\n@-webkit-keyframes bounce {\n0% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n50% {\n        -webkit-transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n                transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n}\n100% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n}\n@keyframes bounce {\n0% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n50% {\n        -webkit-transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n                transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n}\n100% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n}\n}\n@media screen and (max-width: 600px) {\n.sweet-modal.is-mobile-fullscreen {\n      width: 100%;\n      height: 100vh;\n      left: 0;\n      top: 0;\n      -webkit-transform: scale(0.9);\n              transform: scale(0.9);\n}\n.sweet-modal.is-mobile-fullscreen.is-visible {\n        -webkit-transform: none;\n                transform: none;\n}\n.sweet-modal.is-mobile-fullscreen .sweet-buttons {\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      position: absolute;\n      bottom: 0;\n      left: 0;\n      width: 100%;\n}\n}\n", ""]);
+exports.push([module.i, "\n@-webkit-keyframes animateSuccessTip {\n0% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n54% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n70% {\n    width: 50px;\n    left: -8px;\n    top: 37px;\n}\n84% {\n    width: 17px;\n    left: 21px;\n    top: 48px;\n}\n100% {\n    width: 25px;\n    left: 14px;\n    top: 45px;\n}\n}\n@keyframes animateSuccessTip {\n0% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n54% {\n    width: 0;\n    left: 1px;\n    top: 19px;\n}\n70% {\n    width: 50px;\n    left: -8px;\n    top: 37px;\n}\n84% {\n    width: 17px;\n    left: 21px;\n    top: 48px;\n}\n100% {\n    width: 25px;\n    left: 14px;\n    top: 45px;\n}\n}\n@-webkit-keyframes animateSuccessLong {\n0% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n65% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n84% {\n    width: 55px;\n    right: 0px;\n    top: 35px;\n}\n100% {\n    width: 47px;\n    right: 8px;\n    top: 38px;\n}\n}\n@keyframes animateSuccessLong {\n0% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n65% {\n    width: 0;\n    right: 46px;\n    top: 54px;\n}\n84% {\n    width: 55px;\n    right: 0px;\n    top: 35px;\n}\n100% {\n    width: 47px;\n    right: 8px;\n    top: 38px;\n}\n}\n@-webkit-keyframes rotatePlaceholder {\n0% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n5% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n12% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n100% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n}\n@keyframes rotatePlaceholder {\n0% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n5% {\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n}\n12% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n100% {\n    -webkit-transform: rotate(-405deg);\n            transform: rotate(-405deg);\n}\n}\n.animateSuccessTip {\n  -webkit-animation: animateSuccessTip 0.75s;\n          animation: animateSuccessTip 0.75s;\n}\n.animateSuccessLong {\n  -webkit-animation: animateSuccessLong 0.75s;\n          animation: animateSuccessLong 0.75s;\n}\n.sweet-modal-icon.sweet-modal-success.animate::after {\n  -webkit-animation: rotatePlaceholder 4.25s ease-in;\n          animation: rotatePlaceholder 4.25s ease-in;\n}\n\n/* Error Icon */\n@-webkit-keyframes animateErrorIcon {\n0% {\n    -webkit-transform: rotateX(100deg);\n            transform: rotateX(100deg);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: rotateX(0deg);\n            transform: rotateX(0deg);\n    opacity: 1;\n}\n}\n@keyframes animateErrorIcon {\n0% {\n    -webkit-transform: rotateX(100deg);\n            transform: rotateX(100deg);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: rotateX(0deg);\n            transform: rotateX(0deg);\n    opacity: 1;\n}\n}\n.animateErrorIcon {\n  -webkit-animation: animateErrorIcon 0.5s;\n          animation: animateErrorIcon 0.5s;\n}\n@-webkit-keyframes animateXMark {\n0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n80% {\n    -webkit-transform: scale(1.15);\n            transform: scale(1.15);\n    margin-top: -6px;\n}\n100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    margin-top: 0;\n    opacity: 1;\n}\n}\n@keyframes animateXMark {\n0% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n50% {\n    -webkit-transform: scale(0.4);\n            transform: scale(0.4);\n    margin-top: 26px;\n    opacity: 0;\n}\n80% {\n    -webkit-transform: scale(1.15);\n            transform: scale(1.15);\n    margin-top: -6px;\n}\n100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    margin-top: 0;\n    opacity: 1;\n}\n}\n.animateXMark {\n  -webkit-animation: animateXMark 0.5s;\n          animation: animateXMark 0.5s;\n}\n@-webkit-keyframes pulseWarning {\n0% {\n    border-color: #F8D486;\n}\n100% {\n    border-color: #F8BB86;\n}\n}\n@keyframes pulseWarning {\n0% {\n    border-color: #F8D486;\n}\n100% {\n    border-color: #F8BB86;\n}\n}\n.pulseWarning {\n  -webkit-animation: pulseWarning 0.75s infinite alternate;\n          animation: pulseWarning 0.75s infinite alternate;\n}\n@-webkit-keyframes pulseWarningIns {\n0% {\n    background-color: #F8D486;\n}\n100% {\n    background-color: #F8BB86;\n}\n}\n@keyframes pulseWarningIns {\n0% {\n    background-color: #F8D486;\n}\n100% {\n    background-color: #F8BB86;\n}\n}\n.pulseWarningIns {\n  -webkit-animation: pulseWarningIns 0.75s infinite alternate;\n          animation: pulseWarningIns 0.75s infinite alternate;\n}\n@-webkit-keyframes rotate-loading {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes rotate-loading {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.sweet-modal-icon {\n  position: relative;\n  width: 80px;\n  height: 80px;\n  border: 4px solid gray;\n  border-radius: 50%;\n  margin: auto;\n  padding: 0;\n  -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n}\n.sweet-modal-icon.sweet-modal-error {\n    border-color: #F44336;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-x-mark {\n      position: relative;\n      display: block;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line {\n      display: block;\n      position: absolute;\n      top: 37px;\n      height: 5px;\n      width: 47px;\n      background-color: #F44336;\n      border-radius: 2px;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line.sweet-modal-left {\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n        left: 17px;\n}\n.sweet-modal-icon.sweet-modal-error .sweet-modal-line.sweet-modal-right {\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n        right: 16px;\n}\n.sweet-modal-icon.sweet-modal-warning {\n    border-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-warning .sweet-modal-body {\n      position: absolute;\n      width: 5px;\n      height: 47px;\n      left: 50%;\n      top: 10px;\n      margin-left: -2px;\n      border-radius: 2px;\n      background-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-warning .sweet-modal-dot {\n      position: absolute;\n      left: 50%;\n      bottom: 10px;\n      width: 7px;\n      height: 7px;\n      margin-left: -3px;\n      border-radius: 50%;\n      background-color: #FF9800;\n}\n.sweet-modal-icon.sweet-modal-info {\n    border-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-info::before {\n      content: '';\n      position: absolute;\n      width: 5px;\n      height: 29px;\n      left: 50%;\n      bottom: 17px;\n      margin-left: -2px;\n      border-radius: 2px;\n      background-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-info::after {\n      content: '';\n      position: absolute;\n      width: 7px;\n      height: 7px;\n      top: 19px;\n      margin-left: -3px;\n      border-radius: 50%;\n      background-color: #039BE5;\n}\n.sweet-modal-icon.sweet-modal-success {\n    border-color: #4CAF50;\n}\n.sweet-modal-icon.sweet-modal-success::before, .sweet-modal-icon.sweet-modal-success::after {\n      content: '';\n      position: absolute;\n      border-radius: 40px;\n      width: 60px;\n      height: 120px;\n      background: white;\n      -webkit-transform: rotate(45deg);\n              transform: rotate(45deg);\n}\n.sweet-modal-icon.sweet-modal-success::before {\n      border-radius: 120px 0 0 120px;\n      top: -7px;\n      left: -33px;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      -webkit-transform-origin: 60px 60px;\n      transform-origin: 60px 60px;\n}\n.sweet-modal-icon.sweet-modal-success::after {\n      border-radius: 0 120px 120px 0;\n      top: -11px;\n      left: 30px;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      -webkit-transform-origin: 0px 60px;\n      transform-origin: 0px 60px;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-placeholder {\n      -webkit-box-sizing: content-box;\n              box-sizing: content-box;\n      position: absolute;\n      left: -4px;\n      top: -4px;\n      z-index: 2;\n      width: 80px;\n      height: 80px;\n      border: 4px solid rgba(76, 175, 80, 0.2);\n      border-radius: 50%;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-fix {\n      position: absolute;\n      left: 28px;\n      top: 8px;\n      z-index: 1;\n      width: 7px;\n      height: 90px;\n      background-color: white;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line {\n      display: block;\n      position: absolute;\n      z-index: 2;\n      height: 5px;\n      background-color: #4CAF50;\n      border-radius: 2px;\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line.sweet-modal-tip {\n        width: 25px;\n        left: 14px;\n        top: 46px;\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n}\n.sweet-modal-icon.sweet-modal-success .sweet-modal-line.sweet-modal-long {\n        width: 47px;\n        right: 8px;\n        top: 38px;\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n}\n.sweet-modal-icon.sweet-modal-custom {\n    border-radius: 0;\n    border: none;\n    background-size: contain;\n    background-position: center center;\n    background-repeat: no-repeat;\n}\n.sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success::before, .sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success::after,\n.sweet-modal.theme-dark .sweet-modal-icon.sweet-modal-success .sweet-modal-fix {\n  background-color: #182028;\n}\n.sweet-modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  z-index: 9001;\n  font-size: 14px;\n  -webkit-font-smoothing: antialiased;\n  background: rgba(255, 255, 255, 0.9);\n  opacity: 0;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n  -webkit-transform: translate3D(0, 0, 0);\n          transform: translate3D(0, 0, 0);\n  -webkit-perspective: 500px;\n}\n.sweet-modal-overlay.theme-dark {\n    background: rgba(24, 32, 40, 0.94);\n}\n.sweet-modal-overlay.is-visible {\n    opacity: 1;\n}\n.sweet-modal {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  -webkit-box-shadow: 0px 8px 46px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.03);\n          box-shadow: 0px 8px 46px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.03);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 50%;\n  max-width: none;\n  max-height: 100vh;\n  overflow-y: auto;\n  border-radius: 2px;\n  -webkit-transform: scale(0.9) translate(calc(-50% - 32px), -50%);\n          transform: scale(0.9) translate(calc(-50% - 32px), -50%);\n  opacity: 0;\n  -webkit-transition-property: opacity, -webkit-transform;\n  transition-property: opacity, -webkit-transform;\n  transition-property: transform, opacity;\n  transition-property: transform, opacity, -webkit-transform;\n  -webkit-transition-duration: 0.3s;\n          transition-duration: 0.3s;\n  -webkit-transition-delay: 0.05s;\n          transition-delay: 0.05s;\n  -webkit-transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n          transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n}\n@media (max-width: 769px) {\n.sweet-modal {\n      width: 100% !important;\n}\n}\n.sweet-modal .sweet-box-actions {\n    position: absolute;\n    top: 12px;\n    right: 12px;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close {\n      display: inline-block;\n      cursor: pointer;\n      color: #222C38;\n      text-align: center;\n      width: 42px;\n      height: 42px;\n      line-height: 42px;\n      border-radius: 50%;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg {\n        width: 24px;\n        height: 24px;\n        vertical-align: middle;\n        margin-top: -2px;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg path,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg polygon,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg rect,\n        .sweet-modal .sweet-box-actions .sweet-action-close svg circle {\n          fill: currentColor;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close svg {\n          fill: currentColor;\n}\n.sweet-modal .sweet-box-actions .sweet-action-close:hover {\n        background: #039BE5;\n        color: #fff;\n}\n.sweet-modal .sweet-title {\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    height: 64px;\n    line-height: 64px;\n    border-bottom: 1px solid #eaeaea;\n    padding-left: 32px;\n    padding-right: 64px;\n}\n.sweet-modal .sweet-title > h2 {\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      overflow: hidden;\n      margin: 0;\n      padding: 0;\n      font-weight: 500;\n      font-size: 22px;\n}\n.sweet-modal ul.sweet-modal-tabs {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: calc(100% + 32px);\n    height: 100%;\n    margin-left: -32px;\n    overflow-x: auto;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab {\n      display: block;\n      height: 100%;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a {\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        overflow: hidden;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        padding-left: 20px;\n        padding-right: 20px;\n        color: #222C38;\n        text-decoration: none;\n        text-align: center;\n        height: 100%;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-title {\n          display: block;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon {\n          display: block;\n          line-height: 1.0;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n            width: 16px;\n            height: 16px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg path,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg polygon,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg rect,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg circle, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img path,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img polygon,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img rect,\n            .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img circle {\n              fill: currentColor;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n              fill: currentColor;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon + span.sweet-modal-tab-title {\n          line-height: 1.0;\n          margin-top: 8px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab:first-child a {\n        padding-left: 32px;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab.active a {\n        font-weight: 600;\n        color: #039BE5;\n}\n.sweet-modal ul.sweet-modal-tabs li.sweet-modal-tab.disabled a {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n        cursor: default;\n        pointer-events: none;\n        color: #999;\n}\n.sweet-modal.has-tabs:not(.has-title) .sweet-title {\n    height: 84px;\n    line-height: 84px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs {\n    width: 100%;\n    height: 48px;\n    margin: 0;\n    border-bottom: 1px solid #eaeaea;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a {\n      margin-top: -4px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon {\n        display: inline-block;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon svg, .sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-icon img {\n          vertical-align: middle;\n          margin-top: -2px;\n          margin-right: 8px;\n}\n.sweet-modal.has-tabs.has-title ul.sweet-modal-tabs li.sweet-modal-tab a span.sweet-modal-tab-title {\n        display: inline-block;\n}\n.sweet-modal .sweet-content {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-left: 32px;\n    padding-right: 32px;\n    padding-top: 24px;\n    padding-bottom: 24px;\n    line-height: 1.5;\n}\n.sweet-modal .sweet-content .sweet-content-content {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      font-size: 0.9em;\n}\n.sweet-modal .sweet-content .sweet-modal-tab:not(.active) {\n      display: none;\n}\n.sweet-modal .sweet-content .sweet-modal-icon {\n      margin-bottom: 36px;\n}\n.sweet-modal .sweet-buttons {\n    text-align: right;\n    padding-left: 20px;\n    padding-right: 20px;\n    padding-top: 12px;\n    padding-bottom: 12px;\n}\n.sweet-modal .sweet-content + .sweet-buttons {\n    border-top: 1px solid #eaeaea;\n}\n.sweet-modal.is-alert .sweet-content {\n    display: block;\n    text-align: center;\n    font-size: 16px;\n    padding-top: 64px;\n    padding-bottom: 64px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content {\n    padding-top: 32px;\n    padding-bottom: 32px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content .sweet-content-content {\n      padding-left: 32px;\n}\n.sweet-modal.has-tabs.has-icon .sweet-content .sweet-modal-icon {\n      margin-bottom: 0;\n}\n.sweet-modal:not(.has-content) .sweet-modal-icon {\n    margin-bottom: 0;\n}\n.sweet-modal.theme-dark {\n    background: #182028;\n    color: #fff;\n}\n.sweet-modal.theme-dark .sweet-box-actions .sweet-action-close {\n      color: #fff;\n}\n.sweet-modal.theme-dark .sweet-title {\n      border-bottom-color: #090c0f;\n      -webkit-box-shadow: 0px 1px 0px #273442;\n              box-shadow: 0px 1px 0px #273442;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li a {\n      color: #fff;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li.active a {\n      color: #039BE5;\n}\n.sweet-modal.theme-dark ul.sweet-modal-tabs li.disabled a {\n      color: #3e5368;\n}\n.sweet-modal.theme-dark.has-tabs.has-title ul.sweet-modal-tabs {\n      border-bottom-color: #090c0f;\n      -webkit-box-shadow: 0px 1px 0px #273442;\n              box-shadow: 0px 1px 0px #273442;\n}\n.sweet-modal.theme-dark .sweet-content + .sweet-buttons {\n      border-top-color: #273442;\n      -webkit-box-shadow: 0px -1px 0px #090c0f;\n              box-shadow: 0px -1px 0px #090c0f;\n}\n.sweet-modal .sweet-buttons,\n  .sweet-modal .sweet-content {\n    opacity: 0;\n    -webkit-transition-property: opacity, -webkit-transform;\n    transition-property: opacity, -webkit-transform;\n    transition-property: transform, opacity;\n    transition-property: transform, opacity, -webkit-transform;\n    -webkit-transition-duration: 0.3s;\n            transition-duration: 0.3s;\n    -webkit-transition-delay: 0.09s;\n            transition-delay: 0.09s;\n    -webkit-transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n            transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);\n}\n.sweet-modal .sweet-content {\n    -webkit-transform: translateY(-8px);\n            transform: translateY(-8px);\n}\n.sweet-modal .sweet-buttons {\n    -webkit-transform: translateY(16px);\n            transform: translateY(16px);\n}\n.sweet-modal.is-visible {\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    opacity: 1;\n}\n.sweet-modal.is-visible .sweet-buttons,\n    .sweet-modal.is-visible .sweet-content {\n      -webkit-transform: none;\n              transform: none;\n      opacity: 1;\n}\n.sweet-modal.bounce {\n    -webkit-animation-name: bounce;\n            animation-name: bounce;\n    -webkit-animation-duration: 0.3s;\n            animation-duration: 0.3s;\n    -webkit-animation-iteration-count: 2;\n            animation-iteration-count: 2;\n    -webkit-animation-direction: alternate;\n            animation-direction: alternate;\n}\n@media screen and (min-width: 601px) {\n@-webkit-keyframes bounce {\n0% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n50% {\n        -webkit-transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n                transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n}\n100% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n}\n@keyframes bounce {\n0% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n50% {\n        -webkit-transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n                transform: scale(1.02) translate(calc(-50% + 8px), -50%);\n}\n100% {\n        -webkit-transform: scale(1) translate(-50%, -50%);\n                transform: scale(1) translate(-50%, -50%);\n}\n}\n}\n@media screen and (max-width: 600px) {\n.sweet-modal.is-mobile-fullscreen {\n      width: 100%;\n      height: 100vh;\n      left: 0;\n      top: 0;\n      -webkit-transform: scale(0.9);\n              transform: scale(0.9);\n}\n.sweet-modal.is-mobile-fullscreen.is-visible {\n        -webkit-transform: none;\n                transform: none;\n}\n.sweet-modal.is-mobile-fullscreen .sweet-buttons {\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      position: absolute;\n      bottom: 0;\n      left: 0;\n      width: 100%;\n}\n}\n", ""]);
 
 // exports
 
@@ -32783,6 +32784,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -32791,8 +32798,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     SweetModal: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["a" /* SweetModal */], SweetModalTab: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["b" /* SweetModalTab */]
   },
   methods: {
-    showModal: function showModal() {
-      this.$refs.monster.open();
+    showModal: function showModal(name) {
+      this.$refs.monster.open(name);
     }
   }
 });
@@ -32809,278 +32816,322 @@ var render = function() {
     "div",
     [
       _c(
-        "a",
-        { attrs: { href: "javascript:void(0)" }, on: { click: _vm.showModal } },
-        [_vm._v(_vm._s(_vm.stats.name))]
+        "ul",
+        { staticClass: "pl-0" },
+        _vm._l(_vm.stats, function(monster) {
+          return _c("li", { key: monster.name }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "javascript:void(0)" },
+                on: {
+                  click: function($event) {
+                    _vm.showModal(monster.name)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(monster.name))]
+            )
+          ])
+        })
       ),
       _vm._v(" "),
-      _c("sweet-modal", { ref: "monster", staticClass: "max-height-500" }, [
-        _c("h1", { staticClass: "mt-3" }, [_vm._v(_vm._s(_vm.stats.name))]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            _vm._s(_vm.stats.size) +
-              " " +
-              _vm._s(_vm.stats.type) +
-              " " +
-              _vm._s(_vm.stats.subtype) +
-              ", " +
-              _vm._s(_vm.stats.alignment)
+      _c(
+        "sweet-modal",
+        { ref: "monster", staticClass: "max-height-500" },
+        _vm._l(_vm.stats, function(monster) {
+          return _c(
+            "sweet-modal-tab",
+            {
+              key: monster.name,
+              attrs: { title: monster.name, id: monster.name }
+            },
+            [
+              _c("h1", {}, [_vm._v(_vm._s(monster.name))]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  _vm._s(monster.size) +
+                    " " +
+                    _vm._s(monster.type) +
+                    " " +
+                    _vm._s(monster.subtype) +
+                    ", " +
+                    _vm._s(monster.alignment)
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("ul", [
+                _c("li", [
+                  _c("strong", [_vm._v("Armor Class")]),
+                  _vm._v(" " + _vm._s(monster.armor_class))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Hit Points")]),
+                  _vm._v(" " + _vm._s(monster.hit_points))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Speed")]),
+                  _vm._v(" " + _vm._s(monster.speed))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "row abilities" }, [
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("STR")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.str))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("DEX")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.dex))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("CON")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.con))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("INT")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.int))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("WIS")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.wis))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 col-sm" }, [
+                  _c("p", [_c("strong", [_vm._v("CHA")])]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(monster.cha))])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("ul", [
+                _c("li", { staticClass: "saving-throws" }, [
+                  _c("strong", [_vm._v("Saving Throws")]),
+                  _vm._v(" "),
+                  monster.str_save !== 0
+                    ? _c("span", [_vm._v(" Str +" + _vm._s(monster.str_save))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.dex_save !== 0
+                    ? _c("span", [_vm._v(" Dex +" + _vm._s(monster.dex_save))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.con_save !== 0
+                    ? _c("span", [_vm._v(" Con +" + _vm._s(monster.con_save))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.int_save !== 0
+                    ? _c("span", [_vm._v(" Int +" + _vm._s(monster.int_save))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.wis_save !== 0
+                    ? _c("span", [_vm._v(" Wis +" + _vm._s(monster.wis_save))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.cha_save !== 0
+                    ? _c("span", [_vm._v(" Cha +" + _vm._s(monster.cha_save))])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "skills" }, [
+                  _c("strong", [_vm._v("Skills")]),
+                  _vm._v(" "),
+                  monster.acrobatics !== 0
+                    ? _c("span", [
+                        _vm._v(" Acrobatics +" + _vm._s(monster.acrobatics))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.animal_handling !== 0
+                    ? _c("span", [
+                        _vm._v(
+                          " Animal Handling +" + _vm._s(monster.animal_handling)
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.arcana !== 0
+                    ? _c("span", [_vm._v(" Arcana +" + _vm._s(monster.arcana))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.athletics !== 0
+                    ? _c("span", [
+                        _vm._v(" Athletics +" + _vm._s(monster.athletics))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.deception !== 0
+                    ? _c("span", [
+                        _vm._v(" Deception +" + _vm._s(monster.deception))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.history !== 0
+                    ? _c("span", [
+                        _vm._v(" History +" + _vm._s(monster.history))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.insight !== 0
+                    ? _c("span", [
+                        _vm._v(" Insight +" + _vm._s(monster.insight))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.intimidation !== 0
+                    ? _c("span", [
+                        _vm._v(" Intimidation +" + _vm._s(monster.intimidation))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.investigation !== 0
+                    ? _c("span", [
+                        _vm._v(
+                          " Investigation +" + _vm._s(monster.investigation)
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.medicine !== 0
+                    ? _c("span", [
+                        _vm._v(" Medicine +" + _vm._s(monster.medicine))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.nature !== 0
+                    ? _c("span", [_vm._v(" Nature +" + _vm._s(monster.nature))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.perception !== 0
+                    ? _c("span", [
+                        _vm._v(" Perception +" + _vm._s(monster.perception))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.performance !== 0
+                    ? _c("span", [
+                        _vm._v(" Performance +" + _vm._s(monster.performance))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.persuasion !== 0
+                    ? _c("span", [
+                        _vm._v(" Persuasion +" + _vm._s(monster.persuasion))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.religion !== 0
+                    ? _c("span", [
+                        _vm._v(" Religion +" + _vm._s(monster.religion))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.sleight_of_hand !== 0
+                    ? _c("span", [
+                        _vm._v(
+                          " Sleight of Hand +" + _vm._s(monster.sleight_of_hand)
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.stealth !== 0
+                    ? _c("span", [
+                        _vm._v(" Stealth +" + _vm._s(monster.stealth))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  monster.survival !== 0
+                    ? _c("span", [
+                        _vm._v(" Survival +" + _vm._s(monster.survival))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Damage Vulnerabilities")]),
+                  _vm._v(" " + _vm._s(monster.damage_vulnerabilities))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Damage Resistance")]),
+                  _vm._v(" " + _vm._s(monster.damage_resistance))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Damage Immmunities")]),
+                  _vm._v(" " + _vm._s(monster.damage_immunities))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Condition Immmunities")]),
+                  _vm._v(" " + _vm._s(monster.condition_immunities))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Senses")]),
+                  _vm._v(" " + _vm._s(monster.senses))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Languages")]),
+                  _vm._v(" " + _vm._s(monster.languages))
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Challenge Rating")]),
+                  _vm._v(" " + _vm._s(monster.challenge_rating))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "text-left",
+                domProps: { innerHTML: _vm._s(monster.special_abilities) }
+              }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("h5", { staticClass: "border-bottom text-left" }, [
+                _vm._v("ACTIONS")
+              ]),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "text-left",
+                domProps: { innerHTML: _vm._s(monster.actions) }
+              }),
+              _vm._v(" "),
+              _c("hr", { staticClass: "mt-5 mb-2" }),
+              _vm._v(" "),
+              _c("small", [
+                _vm._v("This is SRD material and falls under the "),
+                _c("a", { attrs: { href: "/license" } }, [
+                  _vm._v("OGL License")
+                ]),
+                _vm._v(".")
+              ])
+            ]
           )
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("strong", [_vm._v("Armor Class")]),
-            _vm._v(" " + _vm._s(_vm.stats.armor_class))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Hit Points")]),
-            _vm._v(" " + _vm._s(_vm.stats.hit_points))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Speed")]),
-            _vm._v(" " + _vm._s(_vm.stats.speed))
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row abilities" }, [
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("STR")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.str))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("DEX")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.dex))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("CON")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.con))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("INT")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.int))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("WIS")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.wis))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm" }, [
-            _c("p", [_c("strong", [_vm._v("CHA")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.stats.cha))])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", { staticClass: "saving-throws" }, [
-            _c("strong", [_vm._v("Saving Throws")]),
-            _vm._v(" "),
-            _vm.stats.str_save !== 0
-              ? _c("span", [_vm._v(" Str +" + _vm._s(_vm.stats.str_save))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.dex_save !== 0
-              ? _c("span", [_vm._v(" Dex +" + _vm._s(_vm.stats.dex_save))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.con_save !== 0
-              ? _c("span", [_vm._v(" Con +" + _vm._s(_vm.stats.con_save))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.int_save !== 0
-              ? _c("span", [_vm._v(" Int +" + _vm._s(_vm.stats.int_save))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.wis_save !== 0
-              ? _c("span", [_vm._v(" Wis +" + _vm._s(_vm.stats.wis_save))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.cha_save !== 0
-              ? _c("span", [_vm._v(" Cha +" + _vm._s(_vm.stats.cha_save))])
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "skills" }, [
-            _c("strong", [_vm._v("Skills")]),
-            _vm._v(" "),
-            _vm.stats.acrobatics !== 0
-              ? _c("span", [
-                  _vm._v(" Acrobatics +" + _vm._s(_vm.stats.acrobatics))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.animal_handling !== 0
-              ? _c("span", [
-                  _vm._v(
-                    " Animal Handling +" + _vm._s(_vm.stats.animal_handling)
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.arcana !== 0
-              ? _c("span", [_vm._v(" Arcana +" + _vm._s(_vm.stats.arcana))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.athletics !== 0
-              ? _c("span", [
-                  _vm._v(" Athletics +" + _vm._s(_vm.stats.athletics))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.deception !== 0
-              ? _c("span", [
-                  _vm._v(" Deception +" + _vm._s(_vm.stats.deception))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.history !== 0
-              ? _c("span", [_vm._v(" History +" + _vm._s(_vm.stats.history))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.insight !== 0
-              ? _c("span", [_vm._v(" Insight +" + _vm._s(_vm.stats.insight))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.intimidation !== 0
-              ? _c("span", [
-                  _vm._v(" Intimidation +" + _vm._s(_vm.stats.intimidation))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.investigation !== 0
-              ? _c("span", [
-                  _vm._v(" Investigation +" + _vm._s(_vm.stats.investigation))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.medicine !== 0
-              ? _c("span", [_vm._v(" Medicine +" + _vm._s(_vm.stats.medicine))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.nature !== 0
-              ? _c("span", [_vm._v(" Nature +" + _vm._s(_vm.stats.nature))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.perception !== 0
-              ? _c("span", [
-                  _vm._v(" Perception +" + _vm._s(_vm.stats.perception))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.performance !== 0
-              ? _c("span", [
-                  _vm._v(" Performance +" + _vm._s(_vm.stats.performance))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.persuasion !== 0
-              ? _c("span", [
-                  _vm._v(" Persuasion +" + _vm._s(_vm.stats.persuasion))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.religion !== 0
-              ? _c("span", [_vm._v(" Religion +" + _vm._s(_vm.stats.religion))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.sleight_of_hand !== 0
-              ? _c("span", [
-                  _vm._v(
-                    " Sleight of Hand +" + _vm._s(_vm.stats.sleight_of_hand)
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.stealth !== 0
-              ? _c("span", [_vm._v(" Stealth +" + _vm._s(_vm.stats.stealth))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.stats.survival !== 0
-              ? _c("span", [_vm._v(" Survival +" + _vm._s(_vm.stats.survival))])
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Damage Vulnerabilities")]),
-            _vm._v(" " + _vm._s(_vm.stats.damage_vulnerabilities))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Damage Resistance")]),
-            _vm._v(" " + _vm._s(_vm.stats.damage_resistance))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Damage Immmunities")]),
-            _vm._v(" " + _vm._s(_vm.stats.damage_immunities))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Condition Immmunities")]),
-            _vm._v(" " + _vm._s(_vm.stats.condition_immunities))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Senses")]),
-            _vm._v(" " + _vm._s(_vm.stats.senses))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Languages")]),
-            _vm._v(" " + _vm._s(_vm.stats.languages))
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("strong", [_vm._v("Challenge Rating")]),
-            _vm._v(" " + _vm._s(_vm.stats.challenge_rating))
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", {
-          staticClass: "text-left",
-          domProps: { innerHTML: _vm._s(_vm.stats.special_abilities) }
-        }),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("h5", { staticClass: "border-bottom text-left" }, [
-          _vm._v("ACTIONS")
-        ]),
-        _vm._v(" "),
-        _c("div", {
-          staticClass: "text-left",
-          domProps: { innerHTML: _vm._s(_vm.stats.actions) }
-        }),
-        _vm._v(" "),
-        _c("hr", { staticClass: "mt-5 mb-2" }),
-        _vm._v(" "),
-        _c("small", [
-          _vm._v("This is SRD material and falls under the "),
-          _c("a", { attrs: { href: "/license" } }, [_vm._v("OGL License")]),
-          _vm._v(".")
-        ])
-      ])
+        })
+      )
     ],
     1
   )
@@ -33206,6 +33257,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -33214,8 +33271,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     SweetModal: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["a" /* SweetModal */], SweetModalTab: __WEBPACK_IMPORTED_MODULE_0_sweet_modal_vue__["b" /* SweetModalTab */]
   },
   methods: {
-    showModal: function showModal() {
-      this.$refs.encounter.open();
+    showModal: function showModal(enc) {
+      this.$refs.encounter.open(enc);
     }
   }
 });
@@ -33232,28 +33289,53 @@ var render = function() {
     "div",
     [
       _c(
-        "a",
-        { attrs: { href: "javascript:void(0)" }, on: { click: _vm.showModal } },
-        [_vm._v(_vm._s(_vm.notes.title))]
+        "ul",
+        { staticClass: "pl-0" },
+        _vm._l(_vm.notes, function(note) {
+          return _c("li", [
+            _c(
+              "a",
+              {
+                attrs: { href: "javascript:void(0)" },
+                on: {
+                  click: function($event) {
+                    _vm.showModal(note.title)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(note.title))]
+            )
+          ])
+        })
       ),
       _vm._v(" "),
-      _c("sweet-modal", { ref: "encounter", staticClass: "max-height-500" }, [
-        _c("h1", { staticClass: "mt-3" }, [_vm._v(_vm._s(_vm.notes.title))]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", {
-          staticClass: "text-left",
-          domProps: { innerHTML: _vm._s(_vm.notes.content) }
-        }),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("p", { staticClass: "pl-4 text-left text-capitalize" }, [
-          _c("strong", [_vm._v("Monsters: ")]),
-          _vm._v(_vm._s(_vm.notes.monsters))
-        ])
-      ])
+      _c(
+        "sweet-modal",
+        { ref: "encounter", staticClass: "max-height-500" },
+        _vm._l(_vm.notes, function(note) {
+          return _c(
+            "sweet-modal-tab",
+            { key: note.title, attrs: { title: note.title, id: note.title } },
+            [
+              _c("h1", [_vm._v(_vm._s(note.title))]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "text-left",
+                domProps: { innerHTML: _vm._s(note.content) }
+              }),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("p", { staticClass: "pl-4 text-left text-capitalize" }, [
+                _c("strong", [_vm._v("Monsters: ")]),
+                _vm._v(_vm._s(note.monsters))
+              ])
+            ]
+          )
+        })
+      )
     ],
     1
   )
@@ -33354,7 +33436,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n#sortable .table-component__filter {\n  position: relative;\n}\n#sortable .table-component__filter .table-component__filter__field {\n    border: white !important;\n    border-bottom: 1px solid #ddd !important;\n}\n#sortable .table-component__filter .table-component__filter__clear {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 10px;\n    font-size: 1.5em;\n    cursor: pointer;\n}\n#sortable table {\n  width: 100%;\n}\n#sortable table th {\n    text-transform: capitalize;\n    cursor: pointer;\n    border-top: none;\n}\n#sortable table tr {\n    width: auto;\n}\n#sortable table caption {\n    display: none;\n}\n", ""]);
+exports.push([module.i, "\n#sortable .table-component__filter {\n  position: relative;\n}\n#sortable .table-component__filter .table-component__filter__field {\n    border: white !important;\n    border-bottom: 1px solid #ddd !important;\n}\n#sortable .table-component__filter .table-component__filter__clear {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 10px;\n    font-size: 1.5em;\n    cursor: pointer;\n}\n#sortable .table-component__table-wrapper {\n  overflow-y: scroll !important;\n}\n#sortable table {\n  width: 100%;\n}\n#sortable table th {\n    text-transform: capitalize;\n    cursor: pointer;\n    border-top: none;\n}\n#sortable table tr {\n    width: auto;\n}\n#sortable table caption {\n    display: none;\n}\n", ""]);
 
 // exports
 
@@ -35199,7 +35281,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
         computed: {
             fullTableClass: function fullTableClass() {
-                return (0, _helpers.classList)('table-component__table', this.tableClass);
+                return (0, _helpers.classList)('table-component__table table table-striped', this.tableClass);
             },
             fullTableHeadClass: function fullTableHeadClass() {
                 return (0, _helpers.classList)('table-component__table__head', this.theadClass);
@@ -35215,7 +35297,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     return 'Table not sorted';
                 }
 
-                return 'Table sorted by ' + this.sort.fieldName + ' ' + (this.sort.order === 'asc' ? '(ascending)' : '(descending)');
+                //return 'Table sorted by ' + this.sort.fieldName + ' ' + (this.sort.order === 'asc' ? '(ascending)' : '(descending)');
             },
             usesLocalData: function usesLocalData() {
                 return Array.isArray(this.data);
@@ -38510,6 +38592,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_139__;
 /******/ ]);
 });
 
+
 /***/ }),
 /* 192 */
 /***/ (function(module, exports) {
@@ -40126,6 +40209,241 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(216)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(218)
+/* template */
+var __vue_template__ = __webpack_require__(219)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-3060657f"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/offcanvasHome.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3060657f", Component.options)
+  } else {
+    hotAPI.reload("data-v-3060657f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(217);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("11142910", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3060657f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./offcanvasHome.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3060657f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./offcanvasHome.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.btn-default[data-v-3060657f] {\n  margin-top: 5px;\n  border: none !important;\n}\n.btn-default .fa-bars[data-v-3060657f] {\n    font-size: 1.5rem;\n}\n#offcanvas-left[data-v-3060657f] {\n  visibility: hidden;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: -300px;\n  width: 300px;\n  z-index: 9;\n  -webkit-transition: all .3s;\n  transition: all .3s;\n}\n#offcanvas-left.showing[data-v-3060657f] {\n    visibility: visible;\n    left: 0;\n}\n#offcanvas-left .card-body[data-v-3060657f] {\n    overflow-y: scroll;\n}\n#offcanvas-left a[data-v-3060657f] {\n    color: #fff;\n}\n#offcanvas-left button[data-v-3060657f] {\n    width: 50px;\n}\n#offcanvas-left button .fa-close[data-v-3060657f] {\n      font-size: 1.5rem;\n}\n#offcanvas-left ul[data-v-3060657f] {\n    list-style: none;\n    padding: 0;\n}\n#offcanvas-left ul li a[data-v-3060657f] {\n      font-size: 1.1rem;\n      text-decoration: none !important;\n}\n#offcanvas-left ul li a img[data-v-3060657f] {\n        max-width: 100px;\n}\n#offcanvas-left ul li a .fa[data-v-3060657f] {\n        font-size: 0.9rem;\n        margin-right: 10px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 218 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    openLeft: function openLeft() {
+      var offcanvas = document.getElementById('offcanvas-left');
+      offcanvas.classList.add('showing');
+    },
+    closeLeft: function closeLeft() {
+      var offcanvas = document.getElementById('offcanvas-left');
+      offcanvas.classList.remove('showing');
+    }
+  }
+});
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-default bg-dark text-light",
+        on: { click: _vm.openLeft }
+      },
+      [_c("i", { staticClass: "fa fa-bars" })]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "card bg-dark", attrs: { id: "offcanvas-left" } },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-default bg-dark text-light ml-auto",
+            on: { click: _vm.closeLeft }
+          },
+          [_c("i", { staticClass: "fa fa-close" })]
+        ),
+        _vm._v(" "),
+        _vm._m(0)
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body" }, [
+      _c("ul", [
+        _c("li", { staticClass: "mt-3 mb-5" }, [
+          _c("a", { attrs: { href: "/" } }, [
+            _c("img", {
+              staticClass: "col-sm-12",
+              attrs: { src: "/images/d20.png", alt: "RP Admin" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/" } }, [_vm._v("Home")])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/documentation" } }, [
+            _vm._v("Documentation")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/about" } }, [_vm._v("About Us")])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/contact" } }, [_vm._v("Contact Us")])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/login" } }, [_vm._v("Login")])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mt-2" }, [
+          _c("a", { attrs: { href: "/signup" } }, [_vm._v("Signup")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3060657f", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
