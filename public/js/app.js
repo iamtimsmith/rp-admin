@@ -33436,7 +33436,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n#sortable .table-component__filter {\n  position: relative;\n}\n#sortable .table-component__filter .table-component__filter__field {\n    border: white !important;\n    border-bottom: 1px solid #ddd !important;\n}\n#sortable .table-component__filter .table-component__filter__clear {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 10px;\n    font-size: 1.5em;\n    cursor: pointer;\n}\n#sortable .table-component__table-wrapper {\n  overflow-y: scroll !important;\n}\n#sortable table {\n  width: 100%;\n}\n#sortable table th {\n    text-transform: capitalize;\n    cursor: pointer;\n    border-top: none;\n}\n#sortable table tr {\n    width: auto;\n}\n#sortable table caption {\n    display: none;\n}\n", ""]);
+exports.push([module.i, "\n#sortable .table-component__filter {\n  position: relative;\n}\n#sortable .table-component__filter .table-component__filter__field {\n    border: white !important;\n    border-bottom: 1px solid #ddd !important;\n}\n#sortable .table-component__filter .table-component__filter__clear {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 10px;\n    font-size: 1.5em;\n    cursor: pointer;\n}\n#sortable .table-component__table-wrapper {\n  overflow-x: scroll !important;\n}\n#sortable table {\n  width: 100%;\n}\n#sortable table th {\n    text-transform: capitalize;\n    cursor: pointer;\n    border-top: none;\n}\n#sortable table tr {\n    width: auto;\n}\n#sortable table caption {\n    display: none;\n}\n", ""]);
 
 // exports
 

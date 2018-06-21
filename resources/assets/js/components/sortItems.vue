@@ -58,7 +58,7 @@ export default {
     }
   }
   .table-component__table-wrapper {
-    overflow-y:scroll!important;
+    overflow-x:scroll!important;
   }
   table {
     width:100%;
