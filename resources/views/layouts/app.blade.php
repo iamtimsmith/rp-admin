@@ -29,7 +29,9 @@
         <a class="navbar-brand" href="{{ url('/') }}">
           {{ config('app.name', 'Laravel') }}
         </a>
-        <offcanvas-home />
+        <div class="d-md-none">
+          <offcanvas-home />
+        </div>
         
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
