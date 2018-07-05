@@ -15830,6 +15830,12 @@ a.text-dark:focus {
           align-items: center;
 }
 
+.section-homepage .hero img {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+}
+
 .section-homepage .features {
   background: #fafafa;
 }

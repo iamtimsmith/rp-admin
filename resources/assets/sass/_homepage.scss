@@ -36,6 +36,11 @@ $front_dark:#333;
     display:flex;
     justify-content:center;
     align-items:center;
+    img {
+      width:450px;
+      max-width:100%;
+      height:auto;
+    }
   }
 
   .features {
